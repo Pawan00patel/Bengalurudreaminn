@@ -48,9 +48,6 @@ const Footer: FC = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">BD</span>
-              </div>
               <h2 className="text-2xl font-bold">Bengaluru Dreamin</h2>
             </div>
             <p className="text-gray-400 text-base mt-3">
