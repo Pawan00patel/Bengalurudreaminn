@@ -1,0 +1,27 @@
+/* Custom styles */
+.gradient-bg {
+  background: linear-gradient(135deg, var(--bs-primary) 0%, var(--bs-purple) 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--bs-primary) 0%, var(--bs-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.section-padding {
+  padding: 5rem 0;
+}
+
+.bg-gradient-light {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}

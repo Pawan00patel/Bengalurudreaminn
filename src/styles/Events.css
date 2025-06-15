@@ -1,0 +1,24 @@
+.hover-lift:hover {
+  transform: translateY(-5px) !important;
+}
+
+[data-aos] {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+[data-aos="fade-right"] {
+  transform: translateX(-50px);
+}
+
+[data-aos="fade-left"] {
+  transform: translateX(50px);
+}
+
+[data-aos].aos-animate {
+  transform: translateX(0);
+}
