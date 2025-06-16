@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { coreTeam, PUBLIC_URL } from '../../data/constants';
 import '../../styles/CoreTeam.css';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 interface ModalProps {
   member: typeof coreTeam[0];
