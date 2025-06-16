@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './layout/Header';
 import Footer from './layout/Footer';
 import Home from './pages/Home';
-import CoreTeam from './sections/CoreTeam';
+import CoreTeam from './pages/CoreTeam';
 
 
 const App: React.FC = () => {
@@ -14,7 +14,7 @@ const App: React.FC = () => {
         <Header />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/coreteam" component={CoreTeam} />
+          <Route path="/core-team" component={CoreTeam} />
         </Switch>
         <Footer />
 

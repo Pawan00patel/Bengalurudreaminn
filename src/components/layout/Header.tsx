@@ -13,21 +13,19 @@ const Header: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
   const handleNavigation = (href: string): void => {
     setIsMenuOpen(false);
     
-    if (href.startsWith('#') && location.pathname === '/') {
-      const element = document.querySelector(href);
-      element?.scrollIntoView({ behavior: 'smooth' });
-    } else if (href.startsWith('#') && location.pathname !== '/') {
-      // If we're not on the home page but clicked a hash link,
-      // we'll scroll after the navigation completes
-      setTimeout(() => {
+    if (href.startsWith('#')) {
+      if (location.pathname === '/') {
         const element = document.querySelector(href);
         element?.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
+      } else {
+        // If we're not on the home page, first navigate to home
+        window.location.href = '/' + href;
+      }
     } else {
+      // For non-hash routes (like /core-team), just let the Link component handle it
       scrollToTop();
     }
   };

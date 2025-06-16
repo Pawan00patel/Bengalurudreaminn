@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../ui/Button';
 import StatCard from '../ui/StatCard';
-import { stats } from '../../data/constants';
+import { stats, PUBLIC_URL } from '../../data/constants';
 
 const Hero: React.FC = () => {
   return (
@@ -97,8 +97,7 @@ const Hero: React.FC = () => {
               <div className="col-sm-6">
                 <div className="card h-100 border-0 shadow-sm">
                   <div className="card-body p-4">
-                    <div className="d-flex align-items-center mb-3">
-                      <img src="/images/icons/social-media.gif" alt="Networking" className="me-3" style={{ width: "24px" }} />
+                    <div className="d-flex align-items-center mb-3">                      <img src={`${PUBLIC_URL}/images/icons/social-media.gif`} alt="Networking" className="me-3" style={{ width: "24px" }} />
                       <h4 className="card-title mb-0">Networking</h4>
                     </div>
                     <p className="card-text text-muted">
@@ -112,7 +111,7 @@ const Hero: React.FC = () => {
                 <div className="card h-100 border-0 shadow-sm">
                   <div className="card-body p-4">
                     <div className="d-flex align-items-center mb-3">
-                      <img src="/images/icons/social-care.gif" alt="Social Causes" className="me-3" style={{ width: "24px" }} />
+                      <img src={`${PUBLIC_URL}/images/icons/social-care.gif`} alt="Social Causes" className="me-3" style={{ width: "24px" }} />
                       <h4 className="card-title mb-0">Social Causes</h4>
                     </div>
                     <p className="card-text text-muted">
@@ -126,7 +125,7 @@ const Hero: React.FC = () => {
                 <div className="card h-100 border-0 shadow-sm">
                   <div className="card-body p-4">
                     <div className="d-flex align-items-center mb-3">
-                      <img src="/images/icons/speaker.gif" alt="Great Speakers" className="me-3" style={{ width: "24px" }} />
+                      <img src={`${PUBLIC_URL}/images/icons/speaker.gif`} alt="Great Speakers" className="me-3" style={{ width: "24px" }} />
                       <h4 className="card-title mb-0">Great Speakers</h4>
                     </div>
                     <p className="card-text text-muted">
@@ -140,7 +139,7 @@ const Hero: React.FC = () => {
                 <div className="card h-100 border-0 shadow-sm">
                   <div className="card-body p-4">
                     <div className="d-flex align-items-center mb-3">
-                      <img src="/images/icons/party.gif" alt="Have Fun" className="me-3" style={{ width: "24px" }} />
+                      <img src={`${PUBLIC_URL}/images/icons/party.gif`} alt="Have Fun" className="me-3" style={{ width: "24px" }} />
                       <h4 className="card-title mb-0">Have Fun</h4>
                     </div>
                     <p className="card-text text-muted">
