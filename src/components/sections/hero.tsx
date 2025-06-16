@@ -1,7 +1,9 @@
 import React from 'react';
 import Button from '../ui/Button';
 import StatCard from '../ui/StatCard';
-import { stats, PUBLIC_URL } from '../../data/constants';
+import { stats } from '../../data/constants';
+
+const PUBLIC_URL = process.env.PUBLIC_URL || '';
 
 const Hero: React.FC = () => {
   return (
