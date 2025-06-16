@@ -1,5 +1,4 @@
 import React from 'react';
-import { Leaf } from 'lucide-react';
 import ReasonCard from '../ui/ReasonCard';
 import { reasons } from '../../data/constants';
 
@@ -28,7 +27,7 @@ const About: React.FC = () => {
         {/* Sustainability Section */}
         <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-2xl">
           <div className="flex items-center justify-center space-x-4 mb-6">
-            <Leaf className="w-8 h-8 text-green-600" />
+            {/* <Leaf className="w-8 h-8 text-green-600" /> */}
             <h3 className="text-2xl font-bold text-gray-800">Our Commitment to Sustainability</h3>
           </div>
           <p className="text-center text-gray-600 max-w-3xl mx-auto">

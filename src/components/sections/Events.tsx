@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { events } from '../../data/constants';
-import { Calendar, Users, MapPin } from 'lucide-react';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import '../../styles/Events.css';
@@ -23,15 +22,14 @@ const Events: React.FC = () => {
       year: 'numeric'
     }).format(date);
   };
-
-  const getEventIcon = (type: string) => {
+  const getEventIcon = (type: string): string => {
     switch (type) {
       case 'workshop':
-        return Calendar;
+        return '📅';
       case 'meetup':
-        return Users;
+        return '👥';
       default:
-        return MapPin;
+        return '📍';
     }
   };
 
@@ -64,10 +62,7 @@ const Events: React.FC = () => {
           ></div>
 
           {/* Events */}
-          <div className="row g-5">
-            {events.map((event, index) => {
-              const Icon = getEventIcon(event.type);
-              return (
+          <div className="row g-5">            {events.map((event, index) => (
                 <div
                   key={event.id}
                   className={`col-lg-6 ${
@@ -100,9 +95,10 @@ const Events: React.FC = () => {
                         {formatDate(event.date)}
                       </div>
 
-                      <div className="d-flex align-items-start gap-3 mb-3">
-                        <div className={`p-3 rounded-3 bg-${event.type === 'meetup' ? 'primary' : 'success'} bg-opacity-10`}>
-                          <Icon className={`text-${event.type === 'meetup' ? 'primary' : 'success'}`} size={24} />
+                      <div className="d-flex align-items-start gap-3 mb-3">                        <div className={`p-3 rounded-3 bg-${event.type === 'meetup' ? 'primary' : 'success'} bg-opacity-10`}>
+                          <span className={`text-${event.type === 'meetup' ? 'primary' : 'success'} fs-4`}>
+                            {getEventIcon(event.type)}
+                          </span>
                         </div>
                         <div>
                           <h4 className="fw-bold mb-1">{event.title}</h4>
@@ -114,10 +110,8 @@ const Events: React.FC = () => {
                       
                       <p className="text-muted mb-0">{event.description}</p>
                     </div>
-                  </div>
-                </div>
-              );
-            })}
+                  </div>                </div>
+            ))}
           </div>
         </div>
       </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Leaf } from 'lucide-react';
 import Button from '../ui/Button';
 import StatCard from '../ui/StatCard';
 import { stats } from '../../data/constants';
@@ -12,7 +11,7 @@ const Hero: React.FC = () => {
         <div className="text-center">
           {/* Go Green Badge */}
           <div className="flex items-center justify-center space-x-2 mb-6">
-            <Leaf className="w-6 h-6 text-green-600" />
+            {/* <Leaf className="w-6 h-6 text-green-600" /> */}
             <span className="text-green-600 font-semibold">Go Green Initiative</span>
           </div>
           
