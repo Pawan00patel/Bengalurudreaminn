@@ -1,5 +1,4 @@
 import React from 'react';
-import { Calendar, ArrowRight } from 'lucide-react';
 import { Event } from '../../types';
 
 interface EventCardProps {
@@ -9,7 +8,7 @@ interface EventCardProps {
 const EventCard: React.FC<EventCardProps> = ({ event }) => {
   return (    <div className="card bg-light border-0 p-4">
       <div className="d-flex justify-content-between align-items-center mb-4">
-        <Calendar className="text-primary" size={32} />
+        <span className="text-primary fs-4">📅</span>
         <span className="badge bg-primary rounded-pill">
           {event.attendees}
         </span>
@@ -24,7 +23,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
       </p>
       
       <button className="text-blue-600 font-semibold hover:text-blue-800 transition-colors flex items-center">
-        Learn More <ArrowRight className="w-4 h-4 ml-1" />
+        Learn More →
       </button>
     </div>
   );

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { coreTeam, PUBLIC_URL } from '../../data/constants';
-//import { X } from 'lucide-react';
 import '../../styles/CoreTeam.css';
 
 interface ModalProps {

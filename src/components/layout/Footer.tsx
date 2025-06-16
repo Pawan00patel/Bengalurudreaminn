@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react';
-//import { MapPin, ChevronUp } from 'lucide-react';
-import { FC } from 'react';
+import React, { useState, useEffect, FC } from 'react';
 
 const Footer: FC = () => {
   const [isVisible, setIsVisible] = useState(false);
