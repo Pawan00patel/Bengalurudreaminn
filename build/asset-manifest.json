@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/BengalurudreaminnDemo/static/css/main.d5b8749f.css",
+    "main.js": "/BengalurudreaminnDemo/static/js/main.ac612540.js",
+    "index.html": "/BengalurudreaminnDemo/index.html",
+    "main.d5b8749f.css.map": "/BengalurudreaminnDemo/static/css/main.d5b8749f.css.map",
+    "main.ac612540.js.map": "/BengalurudreaminnDemo/static/js/main.ac612540.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d5b8749f.css",
+    "static/js/main.ac612540.js"
+  ]
+}
