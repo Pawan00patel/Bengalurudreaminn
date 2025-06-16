@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { navItems } from '../../data/constants';
+import { navItems, PUBLIC_URL } from '../../data/constants';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -44,7 +44,7 @@ const Header: React.FC = () => {
       <div className="container position-relative py-2">{/* Brand Name */}
         <Link className="navbar-brand d-flex align-items-center gap-2" to="/" onClick={scrollToTop}>
           <img 
-            src="/images/logos/New-Dreamin-Logo-White.png"
+            src={`${PUBLIC_URL}/images/logos/New-Dreamin-Logo-White.png`}
             alt="Bengaluru Dreamin Logo"
             style={{ height: "40px" }}
             className="d-inline-block align-text-top"

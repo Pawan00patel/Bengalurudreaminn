@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/BengalurudreaminnDemo/static/css/main.d5b8749f.css",
-    "main.js": "/BengalurudreaminnDemo/static/js/main.ac612540.js",
-    "index.html": "/BengalurudreaminnDemo/index.html",
-    "main.d5b8749f.css.map": "/BengalurudreaminnDemo/static/css/main.d5b8749f.css.map",
-    "main.ac612540.js.map": "/BengalurudreaminnDemo/static/js/main.ac612540.js.map"
+    "main.css": "/Bengalurudreaminn/static/css/main.d5b8749f.css",
+    "main.js": "/Bengalurudreaminn/static/js/main.ac612540.js",
+    "index.html": "/Bengalurudreaminn/index.html",
+    "main.d5b8749f.css.map": "/Bengalurudreaminn/static/css/main.d5b8749f.css.map",
+    "main.ac612540.js.map": "/Bengalurudreaminn/static/js/main.ac612540.js.map"
   },
   "entrypoints": [
     "static/css/main.d5b8749f.css",

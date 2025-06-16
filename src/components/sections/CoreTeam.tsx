@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { coreTeam } from '../../data/constants';
-import { X } from 'lucide-react';
+import { coreTeam, PUBLIC_URL } from '../../data/constants';
+//import { X } from 'lucide-react';
 import '../../styles/CoreTeam.css';
 
 interface ModalProps {
@@ -27,7 +27,7 @@ const Modal: React.FC<ModalProps> = ({ member, onClose }) => {
               <div className="col-md-5 text-center">
                 <div className="rounded-circle overflow-hidden mx-auto mb-4" style={{ width: '200px', height: '200px' }}>
                   <img 
-                    src={member.image} 
+                    src={`${PUBLIC_URL}${member.image}`} 
                     alt={member.name}
                     className="w-100 h-100 object-fit-cover"
                   />
@@ -71,7 +71,7 @@ const CoreTeam: React.FC = () => {
                   <div className="rounded-circle overflow-hidden mx-auto mb-4 position-relative" 
                        style={{ width: '200px', height: '200px', border: '4px solid #6f42c1' }}>
                     <img 
-                      src={member.image} 
+                      src={`${PUBLIC_URL}${member.image}`} 
                       alt={member.name}
                       className="w-100 h-100 object-fit-cover transition"
                     />

@@ -1,11 +1,13 @@
-import { Users, Calendar, MapPin, Star, Heart, Leaf, Award } from 'lucide-react';
 import { Speaker, Reason, Stat, Event, NavItem, CoreTeamMember } from '../types';
 
-export const navItems: NavItem[] = [  { id: 'home', label: 'Home', href: '/' },
+export const PUBLIC_URL = process.env.PUBLIC_URL || '';
+
+export const navItems: NavItem[] = [
+  { id: 'home', label: 'Home', href: '/' },
   { id: 'about', label: 'About', href: '#about' },
   { id: 'speakers', label: 'Speakers', href: '#speakers' },
   { id: 'events', label: 'Events', href: '#events' },
-  { id: 'coreteam', label: 'Core Team', href: '/coreteam' },
+  { id: 'core-team', label: 'Core Team', href: '#core-team' },
   { id: 'contact', label: 'Contact', href: '#contact' },
 ];
 
@@ -53,25 +55,25 @@ export const reasons: Reason[] = [
     id: 'networking',
     title: "Greatest Minds Together",
     description: "Network with the most brilliant minds in the Salesforce community under one roof",
-    icon: Users
+    icon: 'users'
   },
   {
     id: 'learning',
     title: "Learn from the Best",
     description: "Speakers with the greatest minds and ideas will share their knowledge and expertise",
-    icon: Award
+    icon: 'award'
   },
   {
     id: 'social-impact',
     title: "Social Impact",
     description: "Join hands with us in focusing on various social movements and community initiatives",
-    icon: Heart
+    icon: 'heart'
   },
   {
     id: 'after-party',
     title: "Unforgettable After Party",
     description: "Experience a wonderful after party that you absolutely wouldn't want to miss",
-    icon: Star
+    icon: 'star'
   }
 ];
 

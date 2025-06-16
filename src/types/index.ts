@@ -27,7 +27,7 @@ export interface Reason {
   id: string;
   title: string;
   description: string;
-  icon: React.ReactNode;
+  icon: string;
 }
 
 export interface Stat {
