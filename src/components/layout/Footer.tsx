@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MapPin, ChevronUp } from 'lucide-react';
+//import { MapPin, ChevronUp } from 'lucide-react';
 import { FC } from 'react';
 
 const Footer: FC = () => {
@@ -140,7 +140,6 @@ const Footer: FC = () => {
             <h3 className="text-lg font-semibold mb-3">Location</h3>
             <address className="not-italic">
               <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-gray-400 mt-1 flex-shrink-0" />
                 <div className="text-gray-400">
                   <p className="font-medium">Sheraton Grand Whitefield</p>
                   <p className="mt-1">Bengaluru, Karnataka</p>
