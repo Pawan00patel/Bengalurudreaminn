@@ -2,13 +2,12 @@
   "name": "my-react-app",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://pawan00patel.github.io/Bengalurudreaminn",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "test": "react-scripts test",    "eject": "react-scripts eject",
+    "deploy": "npm run build && git add . && git commit -m \"Deploy to bg-demo\" && git push origin bg-demo"
   },
   "dependencies": {
     "@tabler/icons-react": "^3.34.0",
