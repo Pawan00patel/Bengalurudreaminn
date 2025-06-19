@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './layout/Header';
-import Footer from './layout/Footer';
 import Home from './pages/Home';
-import CoreTeam from './pages/CoreTeam';
-
+import OurTeam from './pages/OurTeam';
+import Gallery from './pages/Gallery';
+import Footer from './layout/footer';
 
 const App: React.FC = () => {
   return (
@@ -14,10 +14,10 @@ const App: React.FC = () => {
         <Header />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/core-team" component={CoreTeam} />
+          <Route path="/our-team" component={OurTeam} />
+          <Route path="/gallery" component={Gallery} />
         </Switch>
         <Footer />
-
       </div>
     </Router>
   );

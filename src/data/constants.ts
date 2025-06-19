@@ -7,7 +7,8 @@ export const navItems: NavItem[] = [
   { id: 'about', label: 'About', href: '#about' },
   { id: 'speakers', label: 'Speakers', href: '#speakers' },
   { id: 'events', label: 'Events', href: '#events' },
-  { id: 'core-team', label: 'Core Team', href: '/core-team' },
+  { id: 'our-team', label: 'Our Team', href: '/our-team' },
+  { id: 'gallery', label: 'Gallery', href: '/gallery' },
   { id: 'contact', label: 'Contact', href: '#contact' },
 ];
 
@@ -242,5 +243,98 @@ export const events: Event[] = [
     description: "Workshop at New Horizon Management Studies along with 150+ students",
     attendees: "150+",
     type: 'workshop'
+  }
+];
+
+export const eventFounders = [
+  {
+    name: 'Akshay Vasu',
+    title: 'Co-Founder & Speaker Relations Head',
+    image: '/images/coreteamandfounders/Akshay-1-scaled.jpg',
+    bio: [
+      'Salesforce Senior Developer at Anteriad with 4x Salesforce Certifications.',
+      'Leading the Bengaluru Salesforce User Group, mentor for J2S.',
+      'Loves giving back to the community, telling stories, Creating Content in Social Media Platforms, writing poems in Kannada and English. Also, enjoys reading books.'
+    ],
+    linkedin: '',
+    x: ''
+  },
+  {
+    name: 'Seshagiri Thamalalla',
+    title: 'Co-Founder & Partner Relations Head',
+    image: '/images/coreteamandfounders/Sesha-bro-dp.jpg',
+    bio: [
+      'Salesforce Product Specialist at Cloudbyz with 7x Salesforce Certified.',
+      'Currently leading Bengaluru Admin Group and also a Speaker & Mentor for J2S program.',
+      'Passionate in teaching Salesforce to college students and college professionals. Loves consulting businesses for free as he believes a country will grow by great talent and quality businesses.'
+    ],
+    linkedin: '',
+    x: ''
+  },
+  {
+    name: 'Rupalika Sahoo',
+    title: 'Co-Founder & Salesforce Relations Head',
+    image: '/images/coreteamandfounders/Rupalika-1-1.jpg',
+    bio: [
+      'Salesforce Senior Consultant at one of the Big4 with 14x Salesforce Certified Developer.',
+      'Leading Bengaluru Women In Tech Group, mentor for J2S.',
+      'Believes in giving back to the community. Loves to travel and mountains are her calling. Enjoys doing art and crafts.'
+    ],
+    linkedin: '',
+    x: ''
+  }
+];
+
+
+export const advisoryTeam = [
+  {
+    name: 'Nalini Krishnan',
+    title: 'Head - Sourcing, Competency & Governance - Salesforce Practice, TCS',
+    image: '/images/coreteamandfounders/Nalini-Mam.jpeg',
+    bio: [
+      "With an impressive career spanning 24 years, Nalini currently holds the esteemed position of Head of Sourcing, Competency, and Governance - Salesforce Practice at TCS. Her journey is a testament to her unwavering dedication, unparalleled expertise and visionary leadership in nurturing talent within the tech community.",
+      "Nalini's deep-rooted passion for community-led initiatives is well known, having played instrumental roles in various impactful endeavours. Her commitment to mentoring and uplifting the next generation of Salesforce enthusiasts has left an indelible mark, shaping the future trajectory of our ecosystem."
+    ],
+    linkedin: '',
+    x: ''
+  },
+  {
+    name: 'Shibu Abraham',
+    title: 'Salesforce MVP, APAC Head - Salesforce Practice, UST',
+    image: '/images/coreteamandfounders/SAGH.png',
+    bio: [
+      "Shibu, a Salesforce MVP, Marketing Champion and Golden Hoodie recipient, brings a wealth of experience and leadership to our team. With an impressive 17-year journey in the Salesforce ecosystem, Shibu currently heads the APAC Salesforce Practice at UST.",
+      "Beyond his remarkable achievements, what truly sets Shibu apart is his unwavering commitment to empowering others. He generously shares his expertise through blogs, videos, webinars and user group sessions, constantly inspiring our community to learn and grow together.",
+      "Shibu's extensive experience collaborating with customers and partners on diverse Salesforce implementation initiatives speaks volumes about his expertise and passion for driving meaningful impact."
+    ],
+    linkedin: '',
+    x: ''
+  },
+  {
+    name: 'Kannan Narayanan',
+    title: 'Salesforce MVP & Unit Technology Officer ( CTO of Salesforce Practice), Infosys',
+    image: '/images/coreteamandfounders/WhatsApp-Image-2024-03-16-at-11.46.28-AM.jpeg',
+    bio: [
+      "Kannan brings a wealth of experience, boasting over 11 years of invaluable contributions to the Salesforce community. As a Salesforce MVP and a seasoned Practitioner, he is not just a leader but a true trailblazer with over 50 Salesforce credentials under his belt.",
+      "From providing top-notch advisory architectural services to spearheading solution delivery excellence, Kannan has spearheaded the end-to-end journey of five AppExchange listings, from conceptualization to fully-fledged solutions.",
+      "But Kannan's impact extends far beyond the boardroom. As a dedicated volunteer at the NASSCOM Industry Mentoring Program and a Trailblazer Community Leader, he's shaping the next generation of tech enthusiasts and architects.",
+      "Within his current role, Kannan heads the CoE - Architecture practice and Technology Consulting Group, where he's led the delivery of over 300 tools, accelerators, and reusable assets for the Salesforce practice. His commitment to nurturing talent is unmatched, having mentored and enabled practitioners with countless certifications and accreditations."
+    ],
+    linkedin: '',
+    x: ''
+  },
+  {
+    name: 'Roshan K',
+    title: 'Founder & Host - The Salesforce Club',
+    image: '/images/coreteamandfounders/JPEG-image.jpeg',
+    bio: [
+      "He is the founder and CEO of Altokk Software Solutions and also hosts insightful conversations at The Salesforce Club",
+      "With over a decade of experience in the Salesforce ecosystem, Roshan brings a wealth of expertise and passion to our team.",
+      "He is an active member and leader within the Salesforce Trailblazer Community, you'll often find Roshan at in-person events, whether as a Host, speaker, panelist or enthusiastic attendee!",
+      "With the privilege of working with both Enterprise and SMB customers, Roshan has played diverse roles across various projects, including Developer, Analyst, Tech Lead, Scrum Master and more.",
+      "Career counselling holds a special place in Roshan's heart, offering guidance on building sustainable careers within the Salesforce ecosystem."
+    ],
+    linkedin: '',
+    x: ''
   }
 ];
