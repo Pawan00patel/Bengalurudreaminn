@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { navItems, PUBLIC_URL } from '../../data/constants';
+import './Header.css';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -68,7 +69,7 @@ const Header: React.FC = () => {
             {navItems.map((item) => (
               <li className="nav-item" key={item.id}>
                 <Link 
-                  className="nav-link text-white" 
+                  className="nav-link text-white nav-link-underline" 
                   to={item.href}
                   onClick={() => handleNavigation(item.href)}
                 >
