@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import Button from '../ui/Button';
-import StatCard from '../ui/StatCard';
+// import Button from '../ui/Button';
+// import StatCard from '../ui/StatCard';
 import Video from '../ui/Video';
-import { stats } from '../../data/constants';
+// import { stats } from '../../data/constants';
 
 const Hero: React.FC = () => {
   useEffect(() => {
