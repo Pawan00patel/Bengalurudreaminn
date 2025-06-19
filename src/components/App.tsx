@@ -5,7 +5,8 @@ import Header from './layout/Header';
 import Home from './pages/Home';
 import OurTeam from './pages/OurTeam';
 import Gallery from './pages/Gallery';
-import Footer from './layout/footer';
+import Footer from './layout/Footer';
+
 
 const App: React.FC = () => {
   return (
