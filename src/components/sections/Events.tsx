@@ -62,55 +62,70 @@ const Events: React.FC = () => {
           ></div>
 
           {/* Events */}
-          <div className="row g-5">            {events.map((event, index) => (
+          <div className="row g-5">
+            {events.map((event, index) => (
+              <div
+                key={event.id}
+                className={`col-lg-6 ${
+                  index % 2 === 0 ? 'offset-lg-0' : 'offset-lg-6'
+                }`}
+              >
                 <div
-                  key={event.id}
-                  className={`col-lg-6 ${
-                    index % 2 === 0 ? 'offset-lg-0' : 'offset-lg-6'
-                  }`}
+                  className="position-relative"
+                  data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
+                  data-aos-delay={index * 100}
                 >
+                  {/* Timeline dot */}
                   <div
-                    className="position-relative"
-                    data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
-                    data-aos-delay={index * 100}
-                  >
-                    {/* Timeline dot */}
-                    <div
-                      className="position-absolute top-0"
-                      style={{
-                        [index % 2 === 0 ? 'right' : 'left']: '-35px',
-                        width: '20px',
-                        height: '20px',
-                        backgroundColor: event.type === 'meetup' ? '#0d6efd' : '#198754',
-                        borderRadius: '50%',
-                        zIndex: 1,
-                        transform: 'translateX(50%)',
-                      }}
-                    ></div>
-                    
-                    {/* Card */}
-                    <div className="card shadow-sm border-0 p-4 hover-lift">
-                      {/* Event Date */}
-                      <div className="text-muted mb-3 fw-semibold">
-                        {formatDate(event.date)}
-                      </div>
+                    className="position-absolute top-0"
+                    style={{
+                      [index % 2 === 0 ? 'right' : 'left']: '-35px',
+                      width: '20px',
+                      height: '20px',
+                      backgroundColor: event.type === 'meetup' ? '#0d6efd' : '#198754',
+                      borderRadius: '50%',
+                      zIndex: 1,
+                      transform: 'translateX(50%)',
+                    }}
+                  ></div>
 
-                      <div className="d-flex align-items-start gap-3 mb-3">                        <div className={`p-3 rounded-3 bg-${event.type === 'meetup' ? 'primary' : 'success'} bg-opacity-10`}>
-                          <span className={`text-${event.type === 'meetup' ? 'primary' : 'success'} fs-4`}>
-                            {getEventIcon(event.type)}
-                          </span>
-                        </div>
-                        <div>
-                          <h4 className="fw-bold mb-1">{event.title}</h4>
-                          <span className="badge bg-primary rounded-pill">
-                            {event.attendees} Attendees
-                          </span>
-                        </div>
-                      </div>
-                      
-                      <p className="text-muted mb-0">{event.description}</p>
+                  {/* Card */}
+                  <div className="card shadow-sm border-0 p-4 hover-lift rounded-3">
+                    {/* Event Date */}
+                    <div className="text-muted mb-3 fw-semibold">
+                      {formatDate(event.date)}
                     </div>
-                  </div>                </div>
+
+                    <div className="d-flex align-items-start gap-3 mb-3">
+                      <div className={`p-3 rounded-3 bg-${event.type === 'meetup' ? 'primary' : 'success'} bg-opacity-10`}>
+                        <span className={`text-${event.type === 'meetup' ? 'primary' : 'success'} fs-4`}>
+                          {getEventIcon(event.type)}
+                        </span>
+                      </div>
+                      <div>
+                        <h4 className="fw-bold mb-1">{event.title}</h4>
+                        <span className="badge bg-primary rounded-pill">
+                          {event.attendees} Attendees
+                        </span>
+                      </div>
+                    </div>
+
+                    <p className="text-muted mb-0">{event.description}</p>
+                  </div>
+
+                  {/* Timeline line animation */}
+                  <div
+                    className="position-absolute top-0 start-50 translate-middle-x timeline-line"
+                    style={{
+                      width: '2px',
+                      height: '100%',
+                      backgroundColor: '#e9ecef',
+                      zIndex: -1, /* Ensure it stays behind the cards */
+                      animation: 'fill-line 2s ease-in-out forwards'
+                    }}
+                  ></div>
+                </div>
+              </div>
             ))}
           </div>
         </div>

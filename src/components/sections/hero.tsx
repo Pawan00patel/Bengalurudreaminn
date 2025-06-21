@@ -15,9 +15,9 @@ const Hero: React.FC = () => {
     checkVideo();
   }, []);
   return (
-    <section id="home" className="position-relative min-vh-100 p-0 m-0" style={{overflow: 'hidden'}}>
+    <section id="home" className="position-relative min-vh-100 p-0 m-0" style={{overflow: 'hidden', marginBottom: '0'}}>
       {/* Video Background */}
-      <div className="position-fixed top-0 start-0 w-100 h-100" style={{ zIndex: 0, minHeight: '100vh', minWidth: '100vw', overflow: 'hidden' }}>
+      <div className="position-absolute top-0 start-0 w-100 h-100" style={{ zIndex: 0, minHeight: '100vh', minWidth: '100vw', overflow: 'hidden', pointerEvents: 'none', marginBottom: '0' }}>
         <Video
           sources={[
             {
@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
           ]}
           width="100%"
           height="100%"
-          style={{ objectFit: 'cover', width: '100vw', height: '100vh' }}
+          style={{ objectFit: 'cover', width: '100vw', height: '100vh', marginBottom: '0' }}
           autoPlay
           muted
           loop
@@ -38,7 +38,8 @@ const Hero: React.FC = () => {
           className="position-absolute top-0 start-0 w-100 h-100"
           style={{ 
             backgroundColor: 'rgba(0, 0, 0, 0.5)',
-            zIndex: 1 
+            zIndex: 1,
+            marginBottom: '0' 
           }}
         />
       </div>
@@ -56,6 +57,22 @@ const Hero: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Call to Action at Bottom
+      <div style={{position: 'absolute', left: 0, right: 0, bottom: 0, zIndex: 3}}>
+        <div className="w-100 py-5" style={{background: '#0a74ff'}}>
+          <div className="container text-center">
+            <h2 className="fw-bold display-4 text-white mb-3">Ready to Join the Carnival?</h2>
+            <p className="lead text-dark mb-4">
+              Be part of a movement that's shaping the future of the Salesforce ecosystem. Come, Network, Learn and Have Fun!
+            </p>
+            <div className="d-flex flex-column flex-md-row justify-content-center gap-3">
+              <a href="#register" className="btn btn-light btn-lg rounded-pill px-5 fw-semibold mb-2 mb-md-0">Register Now</a>
+              <a href="#schedule" className="btn btn-outline-light btn-lg rounded-pill px-5 fw-semibold">View Schedule</a>
+            </div>
+          </div>
+        </div>
+      </div> */}
     </section>
   );
 };
