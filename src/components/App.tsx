@@ -11,13 +11,15 @@ import Footer from './layout/Footer';
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="d-flex flex-column min-vh-100 bg-gradient-to-br from-blue-50 to-indigo-100">
         <Header />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/our-team" component={OurTeam} />
-          <Route path="/gallery" component={Gallery} />
-        </Switch>
+        <div className="flex-grow-1">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/our-team" component={OurTeam} />
+            <Route path="/gallery" component={Gallery} />
+          </Switch>
+        </div>
         <Footer />
       </div>
     </Router>

@@ -1,5 +1,5 @@
 import React from 'react';
-import ReasonCard from '../ui/ReasonCard';
+// ReasonCard import removed
 import { reasons } from '../../data/constants';
 
 const About: React.FC = () => {
@@ -15,13 +15,6 @@ const About: React.FC = () => {
             In a world where technology evolves at breakneck speed, Bengaluru Dreamin 
             stands out as a beacon of innovation and inclusivity.
           </p>
-        </div>
-
-        {/* Reasons Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {reasons.map((reason) => (
-            <ReasonCard key={reason.id} reason={reason} />
-          ))}
         </div>
 
         {/* Sustainability Section */}
