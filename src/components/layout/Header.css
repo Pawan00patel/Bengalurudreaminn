@@ -1,3 +1,10 @@
+.navbar {
+  background: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.08);
+}
+
 .nav-link-underline {
   position: relative;
   transition: color 0.2s;

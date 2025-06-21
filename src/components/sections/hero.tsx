@@ -1,8 +1,5 @@
 import React, { useEffect } from 'react';
-// import Button from '../ui/Button';
-// import StatCard from '../ui/StatCard';
 import Video from '../ui/Video';
-// import { stats } from '../../data/constants';
 
 const Hero: React.FC = () => {
   useEffect(() => {
@@ -18,9 +15,9 @@ const Hero: React.FC = () => {
     checkVideo();
   }, []);
   return (
-    <section id="home" className="position-relative min-vh-100">
+    <section id="home" className="position-relative min-vh-100 p-0 m-0" style={{overflow: 'hidden'}}>
       {/* Video Background */}
-      <div className="position-absolute top-0 start-0 w-100 h-100" style={{ zIndex: 0 }}>
+      <div className="position-fixed top-0 start-0 w-100 h-100" style={{ zIndex: 0, minHeight: '100vh', minWidth: '100vw', overflow: 'hidden' }}>
         <Video
           sources={[
             {
@@ -30,7 +27,7 @@ const Hero: React.FC = () => {
           ]}
           width="100%"
           height="100%"
-          style={{ objectFit: 'cover' }}
+          style={{ objectFit: 'cover', width: '100vw', height: '100vh' }}
           autoPlay
           muted
           loop
@@ -48,9 +45,9 @@ const Hero: React.FC = () => {
 
       
       {/* Why Bengaluru Dreamin Section */}
-      <div className="container position-relative py-5">
-        <div className="row align-items-center">
-          <div className="col-lg-5">
+      <div className="container position-absolute top-50 start-50 translate-middle" style={{ zIndex: 2 }}>
+        <div className="row justify-content-center align-items-center">
+          <div className="col-lg-8 text-center">
             <h2 className="display-4 mb-4 text-white">WHY Bengaluru Dreamin'?</h2>
             <p className="lead text-white">
               Because we're not just another tech event—we're a catalyst for transformation
