@@ -11,7 +11,7 @@ const OurTeamPage: React.FC = () => {
   return (
     <div className="container py-5">
       <h1 className="text-center mb-4">Our Team</h1>
-      <ul className="nav nav-tabs justify-content-center mb-4">
+      <ul className="nav nav-tabs justify-content-center mb-4" style={{ backdropFilter: 'blur(10px)', backgroundColor: 'rgba(255, 255, 255, 0.8)', borderRadius: '8px' }}>
         <li className="nav-item">
           <NavLink className="nav-link" activeClassName="active" to={`${url}/event-founders`}>
             Event Founders

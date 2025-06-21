@@ -4,15 +4,17 @@ import About from '../sections/About';
 import Speakers from '../sections/Speakers';
 import Events from '../sections/Events';
 import CTA from '../sections/CTA';
+import Footer from '../layout/Footer';
 
 const Home: React.FC = () => {
   return (
     <main>
       <Hero />
-      <About />
-      <Speakers />
+      {/* <About /> */}
+      {/* <Speakers /> */}
       <Events />
-      <CTA />
+      {/* <CTA /> */}
+      {/* <Footer/> */}
     </main>
   );
 };

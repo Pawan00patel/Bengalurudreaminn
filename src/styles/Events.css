@@ -22,3 +22,22 @@
 [data-aos].aos-animate {
   transform: translateX(0);
 }
+
+/* Timeline line animation */
+@keyframes fill-line {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+.timeline-line {
+  animation: fill-line 2s ease-in-out forwards;
+}
+
+/* Rounded card styles */
+.card {
+  border-radius: 0.75rem; /* Ensure rounded corners */
+}

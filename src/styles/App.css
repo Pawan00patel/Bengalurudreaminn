@@ -5,6 +5,7 @@
 
 .gradient-text {
   background: linear-gradient(135deg, var(--bs-primary) 0%, var(--bs-purple) 100%);
+  background-clip: text; /* Standard property for compatibility */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -24,4 +25,13 @@
 
 .bg-gradient-light {
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* Ensure no gaps between hero and next section */
+#home {
+  margin-bottom: 0;
+}
+
+#home + * {
+  margin-top: 0;
 }

@@ -9,7 +9,7 @@ export const navItems: NavItem[] = [
   { id: 'events', label: 'Events', href: '#events' },
   { id: 'our-team', label: 'Our Team', href: '/our-team' },
   { id: 'gallery', label: 'Gallery', href: '/gallery' },
-  { id: 'contact', label: 'Contact', href: '#contact' },
+  { id: 'contact', label: 'Contact', href: '/contact-us' },
 ];
 
 export const speakers: Speaker[] = [
