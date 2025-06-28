@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Hero from '../sections/hero';
 import Events from '../sections/Events';
-import Testimonials from '../sections/Testimonials';
+
 
 const Home: React.FC = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
