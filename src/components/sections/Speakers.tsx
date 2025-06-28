@@ -1,70 +1,60 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { speakers } from '../../data/constants';
+import '../../styles/Speakers.css';
 
 const Speakers: React.FC = () => {
-  return (
-    <section id="speakers" className="py-5 bg-light">
-      <div className="container">
-        {/* Section Header */}
-        <div className="text-center mb-5">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Meet Our Speakers
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Learn from industry leaders, Salesforce MVPs, and community champions
-            who are shaping the future of the Salesforce ecosystem.
-          </p>
-        </div>
+  const [search, setSearch] = useState('');
 
-        {/* Speakers Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {speakers.map((speaker) => (
-            <div key={speaker.id} className="bg-white rounded-lg shadow-md p-5">
-              <img
-                src={speaker.image}
-                alt={speaker.name}
-                className="w-32 h-32 object-cover rounded-full mx-auto mb-4"
-              />
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                {speaker.name}
-              </h3>
-              <p className="text-gray-600 mb-1">{speaker.role}</p>
-              <p className="text-gray-500 mb-1">{speaker.company}</p>
-              {speaker.badges && (
-                <div className="d-flex flex-wrap justify-content-center gap-2 mb-2">
-                  {speaker.badges.map((badge, idx) => (
-                    <span
-                      key={idx}
-                      className="badge bg-primary text-white px-2 py-1"
-                    >
-                      {badge}
-                    </span>
-                  ))}
+  const filteredSpeakers = speakers.filter((speaker) => {
+    const content = `${speaker.name} ${speaker.topic} ${speaker.experience}`;
+    return content.toLowerCase().includes(search.toLowerCase());
+  });
+
+  return (
+    <div className="speakersPage">
+      <div className="speakersPage--header">
+        <h1>Speakers</h1>
+      </div>
+      <div className="speakersPage--container">
+        <div className="speakers--search">
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search speakers..."
+            className="speakers--input"
+          />
+        </div>
+        <div className="speakers--grid">
+          {filteredSpeakers.length === 0 ? (
+            <p className="no-speakers">No speakers found.</p>
+          ) : (
+            filteredSpeakers.map((speaker) => (
+              <div key={speaker.id} className="speaker-card-modern">
+                <div className="speaker-img-container">
+                  <img
+                    src={speaker.image}
+                    alt={speaker.name}
+                    className="speaker-img-modern"
+                  />
                 </div>
-              )}
-              {speaker.certifications && (
-                <p className="text-sm text-gray-600 mb-1">
-                  {speaker.certifications}
-                </p>
-              )}
-              {speaker.experience && (
-                <p className="text-sm text-gray-600 mb-1">
-                  {speaker.experience}
-                </p>
-              )}
-              {speaker.specialty && (
-                <p className="text-sm text-primary mb-1">
-                  {speaker.specialty}
-                </p>
-              )}
-              {speaker.bio && (
-                <p className="text-muted small mt-2">{speaker.bio}</p>
-              )}
-            </div>
-          ))}
+                <div className="speaker-content-block card-blur-content">
+                  <h3 className="speaker-name-modern">{speaker.name}</h3>
+                  <p className="speaker-role-modern">{speaker.topic}</p>
+                  <p className="speaker-experience-modern">{speaker.experience}</p>
+                  {speaker.dateSpoken && (
+                    <p className="speaker-date-modern">Spoke on: {speaker.dateSpoken}</p>
+                  )}
+                  {speaker.linkedin && (
+                    <a href={speaker.linkedin} target="_blank" rel="noopener noreferrer" className="speaker-linkedin-modern">Know more</a>
+                  )}
+                </div>
+              </div>
+            ))
+          )}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

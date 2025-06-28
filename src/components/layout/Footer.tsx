@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="w-100 bg-dark text-white py-4">
+    <footer className="w-100 bg-dark text-white py-4 footer-blur">
       <div className="container-fluid">
         <div className="row align-items-center">
           {/* Logo/Brand */}
@@ -16,49 +16,46 @@ const Footer: React.FC = () => {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white text-decoration-none"
-                style={{ transition: 'color 0.3s' }}
-                onMouseOver={e => (e.currentTarget.style.color = '#E4405F')}
-                onMouseOut={e => (e.currentTarget.style.color = 'white')}
+                aria-label="Instagram"
               >
-                Instagram
+                <img
+                  src="/images/socialmediaicons/icons8-instagram-48.png"
+                  alt="Instagram"
+                  style={{ width: 28, height: 28 }}
+                />
               </a>
               <a
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white text-decoration-none"
-                style={{ transition: 'color 0.3s' }}
-                onMouseOver={e => (e.currentTarget.style.color = '#FF0000')}
-                onMouseOut={e => (e.currentTarget.style.color = 'white')}
+                aria-label="YouTube"
               >
-                YouTube
+                <img
+                  src="/images/socialmediaicons/icons8-youtube-48.png"
+                  alt="YouTube"
+                  style={{ width: 28, height: 28 }}
+                />
               </a>
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white text-decoration-none"
-                style={{ transition: 'color 0.3s' }}
-                onMouseOver={e => (e.currentTarget.style.color = '#0077B5')}
-                onMouseOut={e => (e.currentTarget.style.color = 'white')}
+                aria-label="LinkedIn"
               >
-                LinkedIn
+                <img
+                  src="/images/socialmediaicons/icons8-linkedin-48.png"
+                  alt="LinkedIn"
+                  style={{ width: 28, height: 28 }}
+                />
               </a>
-              <a
-                href="/contact"
-                className="text-white text-decoration-none"
-                style={{ transition: 'color 0.3s' }}
-                onMouseOver={e => (e.currentTarget.style.color = '#28a745')}
-                onMouseOut={e => (e.currentTarget.style.color = 'white')}
-              >
-                Contact Us
-              </a>
+          
             </div>
           </div>
           {/* Made with Love */}
           <div className="col-md-4 col-12 text-center text-md-end">
-            <small className="text-light">Made with ❤️ for Bengaluru Dreaminn</small>
+            <small className="text-light">
+              Made with ❤️ for Bengaluru Dreaminn
+            </small>
           </div>
         </div>
         {/* Copyright */}

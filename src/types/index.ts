@@ -13,14 +13,11 @@ export interface User {
 export interface Speaker {
   id: string;
   name: string;
-  role: string;
-  company: string;
+  topic: string;
   experience?: string;
-  certifications?: string;
-  specialty?: string;
-  badges?: string[];
   image: string;
-  bio?: string;
+  linkedin?: string;
+  dateSpoken?: string;
 }
 
 export interface Reason {
@@ -57,6 +54,8 @@ export interface CoreTeamMember {
   role: string;
   image: string;
   bio: string[];
+  linkedin?: string;
+  x?: string;
 }
 
 export interface ButtonProps {
@@ -67,4 +66,13 @@ export interface ButtonProps {
   onClick?: () => void;
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
+}
+
+
+export interface Testimonial {
+  id: number;
+  name: string;
+  title: string;
+  text: string;
+  image: string;
 }

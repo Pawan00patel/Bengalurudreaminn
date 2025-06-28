@@ -4,50 +4,51 @@ export const PUBLIC_URL = process.env.PUBLIC_URL || '';
 
 export const navItems: NavItem[] = [
   { id: 'home', label: 'Home', href: '/' },
-  { id: 'about', label: 'About', href: '#about' },
-  { id: 'speakers', label: 'Speakers', href: '#speakers' },
-  { id: 'events', label: 'Events', href: '#events' },
+  { id: 'about', label: 'About', href: '/about' },
+  { id: 'speakers', label: 'Speakers', href: '/speakers' },
+  { id: 'events', label: 'Events', href: '/events' },
   { id: 'our-team', label: 'Our Team', href: '/our-team' },
   { id: 'gallery', label: 'Gallery', href: '/gallery' },
   { id: 'contact', label: 'Contact', href: '/contact-us' },
+  { id: 'sponsors', label: 'Sponsors', href: '/sponsors' },
 ];
 
 export const speakers: Speaker[] = [
   {
     id: 'nalini-sharma',
     name: "Nalini Sharma",
-    role: "Head - Sourcing, Competency & Governance",
-    company: "TCS",
+    topic: "Driving Salesforce Adoption in Large Enterprises",
     experience: "24 years",
-    image: "/api/placeholder/150/150",
-    bio: "With an impressive career spanning 24 years, Nalini currently holds the esteemed position of Head of Sourcing, Competency, and Governance - Salesforce Practice at TCS."
+    image: '/images/coreteamandfounders/Sukesh-1-1.jpg',
+    linkedin: 'https://www.linkedin.com/in/nalinik/',
+    dateSpoken: '2023-06-24'
   },
   {
     id: 'shibu-mathew',
     name: "Shibu Mathew",
-    role: "Salesforce MVP, APAC Head",
-    company: "UST",
-    badges: ["MVP", "Marketing Champion", "Golden Hoodie"],
-    image: "/api/placeholder/150/150",
-    bio: "Shibu brings a wealth of experience and leadership with an impressive 17-year journey in the Salesforce ecosystem."
+    topic: "Salesforce Best Practices and Tips",
+    experience: "17 years",
+    image:'/images/coreteamandfounders/Sukesh-1-1.jpg',
+    linkedin: 'https://www.linkedin.com/in/nalinik/',
+    dateSpoken: '2023-10-28'
   },
   {
     id: 'kannan-narayanan',
     name: "Kannan Narayanan",
-    role: "Salesforce MVP & Unit Technology Officer",
-    company: "Infosys",
-    certifications: "50+ Salesforce credentials",
-    image: "/api/placeholder/150/150",
-    bio: "Kannan brings over 11 years of invaluable contributions to the Salesforce community as a Salesforce MVP and seasoned Practitioner."
+    topic: "Advanced Salesforce Architectures",
+    experience: "11 years",
+    image:'/images/coreteamandfounders/Sukesh-1-1.jpg',
+    linkedin: 'https://www.linkedin.com/in/nalinik/',
+    dateSpoken: '2024-02-10'
   },
   {
     id: 'roshan-dsouza',
     name: "Roshan D'Souza",
-    role: "Founder & Host",
-    company: "The Salesforce Club",
-    specialty: "Career Counselling",
-    image: "/api/placeholder/150/150",
-    bio: "Founder and CEO of Altokk Software Solutions and host of insightful conversations at The Salesforce Club."
+    topic: "Building a Career in Salesforce",
+    experience: "10 years",
+    image: '/images/coreteamandfounders/Sukesh-1-1.jpg',
+    linkedin: 'https://www.linkedin.com/in/nalinik/',
+    dateSpoken: '2023-07-22'
   }
 ];
 
@@ -95,7 +96,9 @@ export const coreTeam: CoreTeamMember[] = [
       'Salesforce SMTS at Athenahealth with 7x Salesforce and ServiceMax Certifications.',
       'Created impact in many women who took a career break by teaching them the Salesforce and helped them to get hired into Salesforce ecosystem.',
       'Passionate about mentoring and enabling individuals interested in Salesforce, including students and professionals, to be part of the ecosystem.'
-    ]
+    ],
+    linkedin: 'https://www.linkedin.com/in/aishwaryaprak/',
+    x: ''
   },
   {
     id: 'sukesh-koppineedi',
@@ -107,7 +110,9 @@ export const coreTeam: CoreTeamMember[] = [
       'J2S Success Story, J2S Brand Ambassador and featured in the Salesforce Developers Blog - "Journey to Salesforce Goes Global."',
       'I\'m an extrovert, always excited and enthusiastic about helping fellow trailblazers in the Salesforce community.',
       'Actively engaged on all major Social Media Platforms. Passionate about watching and playing Cricket and Badminton.'
-    ]
+    ],
+    linkedin: 'https://www.linkedin.com/in/sukesh-koppineedi-225612120/',
+    x: ''
   },
   {
     id: 'sudeer-kamat',
@@ -119,7 +124,9 @@ export const coreTeam: CoreTeamMember[] = [
       'Co-Leading the Company Wide Salesforce Developer Group',
       'Mentor at Trailblazer Mentorship Program.',
       'Loves sharing new Salesforce Updates on Social Media, Also a Design Lover.'
-    ]
+    ],
+    linkedin: 'https://www.linkedin.com/in/sudeerkamat/',
+    x: ''
   },
   {
     id: 'Chaitra C S',
@@ -131,7 +138,9 @@ export const coreTeam: CoreTeamMember[] = [
       'Active member of Bengaluru Salesforce Developer Group',
       'Passionate about creating engaging social media content',
       'Manages financial planning and budgeting for community events'
-    ]
+    ],
+    linkedin: 'https://www.linkedin.com/in/chaitra-c-s-064246193/',
+    x: ''
   },
   {
     id: 'Pawna Kumar Patel R',
@@ -143,7 +152,9 @@ export const coreTeam: CoreTeamMember[] = [
       'Specializes in planning and executing large-scale tech conferences',
       'Strong network within the Salesforce ecosystem',
       'Dedicated to creating memorable event experiences'
-    ]
+    ],
+    linkedin: 'https://www.linkedin.com/in/pawan-kumar-patel-r-7445ba202/',
+    x: ''
   }
 ];
 
@@ -256,7 +267,7 @@ export const eventFounders = [
       'Leading the Bengaluru Salesforce User Group, mentor for J2S.',
       'Loves giving back to the community, telling stories, Creating Content in Social Media Platforms, writing poems in Kannada and English. Also, enjoys reading books.'
     ],
-    linkedin: '',
+    linkedin: 'https://in.linkedin.com/in/akshay-vasu',
     x: ''
   },
   {
@@ -268,7 +279,7 @@ export const eventFounders = [
       'Currently leading Bengaluru Admin Group and also a Speaker & Mentor for J2S program.',
       'Passionate in teaching Salesforce to college students and college professionals. Loves consulting businesses for free as he believes a country will grow by great talent and quality businesses.'
     ],
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/thamalalla',
     x: ''
   },
   {
@@ -280,7 +291,7 @@ export const eventFounders = [
       'Leading Bengaluru Women In Tech Group, mentor for J2S.',
       'Believes in giving back to the community. Loves to travel and mountains are her calling. Enjoys doing art and crafts.'
     ],
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/rupalika-sahoo-831663107',
     x: ''
   }
 ];
@@ -295,7 +306,7 @@ export const advisoryTeam = [
       "With an impressive career spanning 24 years, Nalini currently holds the esteemed position of Head of Sourcing, Competency, and Governance - Salesforce Practice at TCS. Her journey is a testament to her unwavering dedication, unparalleled expertise and visionary leadership in nurturing talent within the tech community.",
       "Nalini's deep-rooted passion for community-led initiatives is well known, having played instrumental roles in various impactful endeavours. Her commitment to mentoring and uplifting the next generation of Salesforce enthusiasts has left an indelible mark, shaping the future trajectory of our ecosystem."
     ],
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/nalinik/',
     x: ''
   },
   {
@@ -307,7 +318,7 @@ export const advisoryTeam = [
       "Beyond his remarkable achievements, what truly sets Shibu apart is his unwavering commitment to empowering others. He generously shares his expertise through blogs, videos, webinars and user group sessions, constantly inspiring our community to learn and grow together.",
       "Shibu's extensive experience collaborating with customers and partners on diverse Salesforce implementation initiatives speaks volumes about his expertise and passion for driving meaningful impact."
     ],
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/shibua/',
     x: ''
   },
   {
@@ -320,7 +331,7 @@ export const advisoryTeam = [
       "But Kannan's impact extends far beyond the boardroom. As a dedicated volunteer at the NASSCOM Industry Mentoring Program and a Trailblazer Community Leader, he's shaping the next generation of tech enthusiasts and architects.",
       "Within his current role, Kannan heads the CoE - Architecture practice and Technology Consulting Group, where he's led the delivery of over 300 tools, accelerators, and reusable assets for the Salesforce practice. His commitment to nurturing talent is unmatched, having mentored and enabled practitioners with countless certifications and accreditations."
     ],
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/kannan-narayanan-architect/',
     x: ''
   },
   {
@@ -334,7 +345,7 @@ export const advisoryTeam = [
       "With the privilege of working with both Enterprise and SMB customers, Roshan has played diverse roles across various projects, including Developer, Analyst, Tech Lead, Scrum Master and more.",
       "Career counselling holds a special place in Roshan's heart, offering guidance on building sustainable careers within the Salesforce ecosystem."
     ],
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/roshankotla/',
     x: ''
   }
 ];

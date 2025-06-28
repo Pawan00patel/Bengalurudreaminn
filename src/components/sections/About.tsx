@@ -1,37 +1,44 @@
-import React from 'react';
-// ReasonCard import removed
-import { reasons } from '../../data/constants';
+import React, { useEffect } from 'react';
+import '../../styles/About.css';
+import { aboutData } from '../../data/aboutData';
 
 const About: React.FC = () => {
-  return (    <section id="about" className="py-5 bg-white">
-      <div className="container">
-        {/* Section Header */}
-        <div className="text-center mb-5">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Why Choose Bengaluru Dreamin?
-          </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-            Because we're not just another tech event—we're a catalyst for change. 
-            In a world where technology evolves at breakneck speed, Bengaluru Dreamin 
-            stands out as a beacon of innovation and inclusivity.
-          </p>
-        </div>
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-        {/* Sustainability Section */}
-        <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-2xl">
-          <div className="flex items-center justify-center space-x-4 mb-6">
-            {/* <Leaf className="w-8 h-8 text-green-600" /> */}
-            <h3 className="text-2xl font-bold text-gray-800">Our Commitment to Sustainability</h3>
-          </div>
-          <p className="text-center text-gray-600 max-w-3xl mx-auto">
-            Our commitment to "Go Green" sets us apart, signaling our dedication to 
-            sustainability and environmental stewardship. Join us in making a positive 
-            impact on our planet while advancing your Salesforce career.
+  return (
+    <div className="about" id="about">
+      <div className="line-styling">
+        <div className="style-circle"></div>
+        <div className="style-circle"></div>
+        <div className="style-line"></div>
+      </div>
+      <div className="about-body">
+        <div className="about-description">
+          <h2>{aboutData.title}</h2>
+          <p className="text-lg md:text-xl font-light text-gray-200 mb-8 text-left">
+            {aboutData.intro}
           </p>
+          <div className="space-y-6 text-base md:text-lg leading-relaxed text-gray-100">
+            {aboutData.paragraphs.map((para, idx) => (
+              <p key={idx} dangerouslySetInnerHTML={{ __html: para }} />
+            ))}
+          </div>
+        </div>
+        <div className="about-img">
+          <img
+            src={aboutData.image === 2 ? '/images/Gallary/Others/1-3-1-scaled.jpg' : '/images/aboutimg2.png'}
+            alt="About section visual"
+          />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
 export default About;
+
+
+
+

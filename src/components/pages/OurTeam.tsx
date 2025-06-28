@@ -9,7 +9,7 @@ import Volunteers from '../sections/Volunteers';
 const OurTeamPage: React.FC = () => {
   const { path, url } = useRouteMatch();
   return (
-    <div className="container py-5">
+    <div className="our-team-page-bg w-100 py-5" style={{ minHeight: '100vh' }}>
       <h1 className="text-center mb-4">Our Team</h1>
       <ul className="nav nav-tabs justify-content-center mb-4" style={{ backdropFilter: 'blur(10px)', backgroundColor: 'rgba(255, 255, 255, 0.8)', borderRadius: '8px' }}>
         <li className="nav-item">

@@ -28,3 +28,87 @@
 .core-team-modal {
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+.card-coreteam-modern {
+    background: transparent;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    overflow: hidden;
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card-coreteam-modern:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(255, 87, 34, 0.18);
+}
+.img-coreteam-modern {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 0;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+.img-coreteam-container {
+    width: 100%;
+    height: 260px;
+    background: #181818;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.img-coreteam-container:hover .img-coreteam-modern {
+    transform: scale(1.12);
+}
+
+/* Modern dark background for Our Team page */
+.our-team-page-bg {
+    background: #232323;
+    min-height: 100vh;
+    color: #fff;
+}
+
+/* Nav tabs styling */
+.nav-tabs {
+    background: #232323 !important;
+    border: none;
+    border-radius: 12px;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+}
+.nav-tabs .nav-link {
+    color: #fff !important;
+    background: transparent;
+    border: none;
+    border-radius: 8px 8px 0 0;
+    margin: 0 0.5rem;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:hover {
+    background: rgba(255, 255, 255, 0.18) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 16px rgba(255,255,255,0.12);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.18);
+}
+
+/* Remove default border */
+.nav-tabs .nav-link:focus {
+    box-shadow: none;
+}
+
+.card-blur-content {
+    background: rgba(30, 30, 30, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 0 0 12px 12px;
+    padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+}
