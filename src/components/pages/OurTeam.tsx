@@ -9,10 +9,10 @@ import Volunteers from '../sections/Volunteers';
 const OurTeamPage: React.FC = () => {
   const { path, url } = useRouteMatch();
   return (
-    <div className="our-team-page-bg w-100 py-5" style={{ minHeight: '100vh' }}>
+    <div className="our-team-page-bg w-100 py-5" style={{ minHeight: '100vh', background: 'linear-gradient(135deg,rgb(0, 0, 0) 0%,rgb(0, 0, 0) 50%,rgb(87, 32, 32) 100%)', color: '#fff', overflow: 'hidden' }}>
       <h1 className="text-center mb-4">Our Team</h1>
-      <ul className="nav nav-tabs justify-content-center mb-4" style={{ backdropFilter: 'blur(10px)', backgroundColor: 'rgba(255, 255, 255, 0.8)', borderRadius: '8px' }}>
-        <li className="nav-item">
+      <ul className="nav nav-tabs justify-content-center mb-4" style={{ backdropFilter: 'blur(10px)', backgroundColor: 'rgba(0, 0, 0, 0.8)', borderRadius: '8px' }}>
+        <li className="nav-item" >
           <NavLink className="nav-link" activeClassName="active" to={`${url}/event-founders`}>
             Event Founders
           </NavLink>

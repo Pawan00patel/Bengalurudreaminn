@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Hero from '../sections/hero';
-import Events from '../sections/Events';
+import AnimatedStats from '../sections/AnimatedStats';
+
 
 
 const Home: React.FC = () => {
@@ -22,7 +23,8 @@ const Home: React.FC = () => {
   return (
     <main>
       <Hero />
-      <Events />
+      <AnimatedStats />
+     
      
       {showScrollTop && (
         <button
@@ -32,14 +34,14 @@ const Home: React.FC = () => {
             bottom: '2rem',
             right: '2rem',
             zIndex: 1000,
-            background: '#222',
+            background: 'grey',
             color: '#fff',
             border: 'none',
             borderRadius: '50%',
             width: '48px',
             height: '48px',
             fontSize: '2rem',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
+            boxShadow: '0 2px 8px rgba(177, 169, 169, 0.2)',
             cursor: 'pointer',
             transition: 'opacity 0.3s',
             opacity: 0.85

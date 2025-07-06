@@ -1,0 +1,22 @@
+.blog-page h1 {
+  font-weight: 700;
+}
+.blog-card {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  border-radius: 12px;
+  transition: box-shadow 0.2s;
+}
+.blog-card:hover {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.16);
+}
+.card-img-top {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+.card-text {
+  font-size: 1rem;
+}

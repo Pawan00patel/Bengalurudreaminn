@@ -31,10 +31,6 @@ const Header: React.FC = () => {
     }
   };
 
-  useEffect(() => {
-    scrollToTop();
-  }, [location.pathname]);
-
   return (
     <nav className="navbar navbar-expand-lg navbar-dark sticky-top" style={{
         background: '#000000',
@@ -66,7 +62,7 @@ const Header: React.FC = () => {
         {/* Navigation Items */}
         <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`} id="navbarNav">
           <ul className="navbar-nav ms-auto">
-            {navItems.map((item) => (
+            {navItems.filter(item => item.id !== 'our-initiatives').map((item) => (
               <li className="nav-item" key={item.id}>
                 <Link 
                   className="nav-link text-white nav-link-underline" 

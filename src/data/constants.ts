@@ -9,6 +9,8 @@ export const navItems: NavItem[] = [
   { id: 'events', label: 'Events', href: '/events' },
   { id: 'our-team', label: 'Our Team', href: '/our-team' },
   { id: 'gallery', label: 'Gallery', href: '/gallery' },
+  { id: 'blog', label: 'Blog', href: '/blog' },
+  { id: 'our-initiatives', label: 'Our Initiatives', href: '/our-initiatives' },
   { id: 'contact', label: 'Contact', href: '/contact-us' },
   { id: 'sponsors', label: 'Sponsors', href: '/sponsors' },
 ];
@@ -92,6 +94,7 @@ export const coreTeam: CoreTeamMember[] = [
     name: 'Aishwarya Prakash',
     role: 'Volunteers & Working Professionals Training Head',
     image: '/images/coreteamandfounders/Aish-scaled.jpg',
+    year: 2023,
     bio: [
       'Salesforce SMTS at Athenahealth with 7x Salesforce and ServiceMax Certifications.',
       'Created impact in many women who took a career break by teaching them the Salesforce and helped them to get hired into Salesforce ecosystem.',
@@ -105,6 +108,7 @@ export const coreTeam: CoreTeamMember[] = [
     name: 'Sukesh Koppineedi',
     role: 'Marketing & Procurement Head',
     image: '/images/coreteamandfounders/Sukesh-1-1.jpg',
+    year: 2024,
     bio: [
       'Senior Software Engineer with 8x Salesforce-certified, 1x Salesforce Accredited Certified, 1x MuleSoft Certified, 1x Copado Certified, and All Star Ranger in Trailhead.',
       'J2S Success Story, J2S Brand Ambassador and featured in the Salesforce Developers Blog - "Journey to Salesforce Goes Global."',
@@ -119,6 +123,7 @@ export const coreTeam: CoreTeamMember[] = [
     name: 'Sudeer Kamat',
     role: 'Creativity & Alignment Head',
     image: '/images/coreteamandfounders/Sudeer-1-2.png',
+    year: 2023,
     bio: [
       'Lead Software Engineer with 8x Salesforce certifications.',
       'Co-Leading the Company Wide Salesforce Developer Group',
@@ -133,6 +138,7 @@ export const coreTeam: CoreTeamMember[] = [
     name: 'Chaitra C S',
     role: 'J2S & Students Training Head',
     image: '/images/coreteamandfounders/IMG_20230923_094227.jpg',
+    year: 2024,
     bio: [
       'Salesforce Developer with expertise in Lightning Web Components',
       'Active member of Bengaluru Salesforce Developer Group',
@@ -146,7 +152,38 @@ export const coreTeam: CoreTeamMember[] = [
     id: 'Pawna Kumar Patel R',
     name: 'Pawna Kumar Patel R',
     role: 'Event Management Lead',
-    image: '/images/coreteamandfounders/Screenshot 2023-05-29 062920.png',
+    image: '/images/coreteamandfounders/pawan-scaled.jpg',
+    year: 2023,
+    bio: [
+      'Experienced Event Coordinator with focus on Salesforce community events',
+      'Specializes in planning and executing large-scale tech conferences',
+      'Strong network within the Salesforce ecosystem',
+      'Dedicated to creating memorable event experiences'
+    ],
+    linkedin: 'https://www.linkedin.com/in/pawan-kumar-patel-r-7445ba202/',
+    x: ''
+  },
+   {
+    id: 'Shravani Nevagi',
+    name: 'Shravani Nevagi',
+    role: 'Design Lead',
+    image: '/images/coreteamandfounders/ShravaniNevagi.jpg',
+    year: 2024,
+    bio: [
+      'Experienced Event Coordinator with focus on Salesforce community events',
+      'Specializes in planning and executing large-scale tech conferences',
+      'Strong network within the Salesforce ecosystem',
+      'Dedicated to creating memorable event experiences'
+    ],
+    linkedin: 'https://www.linkedin.com/in/pawan-kumar-patel-r-7445ba202/',
+    x: ''
+  },
+   {
+    id: 'Hira Khan',
+    name: 'Hira Khan',
+    role: 'Event Management Lead',
+    image: '/images/coreteamandfounders/IMG_20221219_193542_536-Hira-Kholkar (1).webp',
+    year: 2023,
     bio: [
       'Experienced Event Coordinator with focus on Salesforce community events',
       'Specializes in planning and executing large-scale tech conferences',
@@ -262,6 +299,7 @@ export const eventFounders = [
     name: 'Akshay Vasu',
     title: 'Co-Founder & Speaker Relations Head',
     image: '/images/coreteamandfounders/Akshay-1-scaled.jpg',
+    year: 2023,
     bio: [
       'Salesforce Senior Developer at Anteriad with 4x Salesforce Certifications.',
       'Leading the Bengaluru Salesforce User Group, mentor for J2S.',
@@ -274,6 +312,7 @@ export const eventFounders = [
     name: 'Seshagiri Thamalalla',
     title: 'Co-Founder & Partner Relations Head',
     image: '/images/coreteamandfounders/Sesha-bro-dp.jpg',
+    year: 2024,
     bio: [
       'Salesforce Product Specialist at Cloudbyz with 7x Salesforce Certified.',
       'Currently leading Bengaluru Admin Group and also a Speaker & Mentor for J2S program.',
@@ -286,6 +325,7 @@ export const eventFounders = [
     name: 'Rupalika Sahoo',
     title: 'Co-Founder & Salesforce Relations Head',
     image: '/images/coreteamandfounders/Rupalika-1-1.jpg',
+    year: 2023,
     bio: [
       'Salesforce Senior Consultant at one of the Big4 with 14x Salesforce Certified Developer.',
       'Leading Bengaluru Women In Tech Group, mentor for J2S.',
@@ -296,12 +336,12 @@ export const eventFounders = [
   }
 ];
 
-
 export const advisoryTeam = [
   {
     name: 'Nalini Krishnan',
     title: 'Head - Sourcing, Competency & Governance - Salesforce Practice, TCS',
     image: '/images/coreteamandfounders/Nalini-Mam.jpeg',
+    year: 2023,
     bio: [
       "With an impressive career spanning 24 years, Nalini currently holds the esteemed position of Head of Sourcing, Competency, and Governance - Salesforce Practice at TCS. Her journey is a testament to her unwavering dedication, unparalleled expertise and visionary leadership in nurturing talent within the tech community.",
       "Nalini's deep-rooted passion for community-led initiatives is well known, having played instrumental roles in various impactful endeavours. Her commitment to mentoring and uplifting the next generation of Salesforce enthusiasts has left an indelible mark, shaping the future trajectory of our ecosystem."
@@ -313,6 +353,7 @@ export const advisoryTeam = [
     name: 'Shibu Abraham',
     title: 'Salesforce MVP, APAC Head - Salesforce Practice, UST',
     image: '/images/coreteamandfounders/SAGH.png',
+    year: 2024,
     bio: [
       "Shibu, a Salesforce MVP, Marketing Champion and Golden Hoodie recipient, brings a wealth of experience and leadership to our team. With an impressive 17-year journey in the Salesforce ecosystem, Shibu currently heads the APAC Salesforce Practice at UST.",
       "Beyond his remarkable achievements, what truly sets Shibu apart is his unwavering commitment to empowering others. He generously shares his expertise through blogs, videos, webinars and user group sessions, constantly inspiring our community to learn and grow together.",
@@ -325,6 +366,7 @@ export const advisoryTeam = [
     name: 'Kannan Narayanan',
     title: 'Salesforce MVP & Unit Technology Officer ( CTO of Salesforce Practice), Infosys',
     image: '/images/coreteamandfounders/WhatsApp-Image-2024-03-16-at-11.46.28-AM.jpeg',
+    year: 2023,
     bio: [
       "Kannan brings a wealth of experience, boasting over 11 years of invaluable contributions to the Salesforce community. As a Salesforce MVP and a seasoned Practitioner, he is not just a leader but a true trailblazer with over 50 Salesforce credentials under his belt.",
       "From providing top-notch advisory architectural services to spearheading solution delivery excellence, Kannan has spearheaded the end-to-end journey of five AppExchange listings, from conceptualization to fully-fledged solutions.",
@@ -338,6 +380,7 @@ export const advisoryTeam = [
     name: 'Roshan K',
     title: 'Founder & Host - The Salesforce Club',
     image: '/images/coreteamandfounders/JPEG-image.jpeg',
+    year: 2024,
     bio: [
       "He is the founder and CEO of Altokk Software Solutions and also hosts insightful conversations at The Salesforce Club",
       "With over a decade of experience in the Salesforce ecosystem, Roshan brings a wealth of expertise and passion to our team.",

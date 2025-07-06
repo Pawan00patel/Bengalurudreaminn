@@ -11,6 +11,11 @@ import About from './sections/About';
 import Sponsors from './sections/Sponsors';
 import SponsorPage from './sections/SponsorPage';
 import Speakers from './sections/Speakers';
+import Blog from './sections/Blog';
+import BlogDetail from './sections/BlogDetail';
+import Events from './sections/Events';
+
+
 
 const App: React.FC = () => {
   return (
@@ -27,6 +32,11 @@ const App: React.FC = () => {
             <Route path="/our-team" component={OurTeam} />
             <Route path="/gallery" component={Gallery} />
             <Route path="/contact-us" component={ContactUs} />
+            <Route exact path="/blog" component={Blog} />
+            <Route path="/blog/:slug" component={BlogDetail} />
+            <Route path="/events" component={Events} />
+           
+        
           </Switch>
         </div>
         <Footer />
