@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Hero from '../sections/hero';
+// import Hero from '../sections/hero';
 import AnimatedStats from '../sections/AnimatedStats';
 import UpcomingEventsComponent from './UpcomingEventsComponent';
 import HomepageCTA from './HomepageCTA';
