@@ -1,0 +1,158 @@
+/* src/styles/UpcomingEventsComponent.css */
+
+.upcoming-events-section {
+  width: 100%;
+  max-width: 90vw;
+  margin: 0 auto;
+  padding: 3rem 0 2rem 0;
+}
+.upcoming-events-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.upcoming-events-header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+}
+.upcoming-events-header p {
+  color: #6b7280;
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.upcoming-events-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .upcoming-events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .upcoming-events-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.event-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  min-height: 20rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+  cursor: pointer;
+  background: #fff;
+}
+.event-card:hover {
+  transform: scale(1.045);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+  z-index: 2;
+}
+.event-card .event-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.18;
+  pointer-events: none;
+}
+.event-card .event-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.event-card .event-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.event-card .event-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.event-card .event-meta span {
+  color: #f3f4f6;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.event-card .event-timer {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.event-card .event-timer-unit {
+  background: rgba(0,0,0,0.18);
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  min-width: 3.5rem;
+}
+.event-card .event-register-btn {
+  width: 100%;
+  background: rgba(255,255,255,0.18);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.75rem 0;
+  margin-top: auto;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.event-card .event-register-btn:hover {
+  background: rgba(255,255,255,0.32);
+}
+
+/* CTA Section */
+.upcoming-events-cta {
+  margin-top: 3rem;
+  text-align: center;
+  background: linear-gradient(90deg, #6366f1, #a21caf);
+  border-radius: 1.25rem;
+  padding: 2.5rem 1.5rem;
+  color: #fff;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+}
+.upcoming-events-cta h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.upcoming-events-cta p {
+  color: #f3f4f6;
+  margin-bottom: 1.5rem;
+}
+.upcoming-events-cta .cta-btn {
+  background: #fff;
+  color: #7c3aed;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.75rem 2rem;
+  margin: 0 0.5rem;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+.upcoming-events-cta .cta-btn:hover {
+  background: #ede9fe;
+  color: #4f46e5;
+}

@@ -1,0 +1,229 @@
+/* src/styles/HomepageCTA.css */
+
+.homepage-cta-bg {
+  min-height: 480px;
+  border-radius: 2.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .homepage-cta-bg {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.cta-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 600px;
+  min-height: 260px;
+}
+.cta-copado-img {
+  max-width: 600px;
+  width: 300px;
+  height: 400px;
+  border-radius: 1rem;
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 4px 32px 0 rgba(31, 38, 135, 0.18);
+}
+@media (max-width: 768px) {
+  .homepage-cta-bg {
+    flex-direction: column;
+    border-radius: 1.5rem;
+    padding: 1.5rem 0;
+  }
+  .cta-image-container {
+    min-width: 180px;
+    min-height: 180px;
+    padding-bottom: 1.5rem;
+  }
+  .cta-copado-img {
+    max-width: 200px;
+    border-radius: 1.5rem;
+  }
+}
+
+/* .bg-gradient-copado {
+  background: linear-gradient(120deg, #2b2eec 0%, #6c2ebf 50%, #1e90e8 100%);
+} */
+
+.cta-btn-primary {
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  box-shadow: 0 4px 16px 0 rgba(44, 62, 135, 0.18);
+  border-radius: 9999px;
+}
+
+.cta-btn-primary:hover {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* .cta-btn-secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.3);
+  transition: background 0.3s, border 0.3s, color 0.3s;
+} */
+
+/* .cta-btn-secondary:hover {
+  background: rgba(255,255,255,0.08);
+  border: 2px solid #fff;
+  color: #fff;
+} */
+
+.cta-btn-modern {
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 6px 24px 0 rgba(44, 62, 135, 0.18);
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.cta-btn-modern:hover, .cta-btn-modern:focus {
+  color: #fff;
+  transform: scale(1.06);
+  box-shadow: 0 8px 32px 0 rgba(44, 62, 135, 0.22);
+}
+.cta-btn-modern span {
+  background: rgba(255,255,255,0.18);
+  border-radius: 9999px;
+  padding: 0.5rem 1.25rem;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.cta-btn-gradient {
+  background: linear-gradient(90deg, #4e9fff 0%, #a259e6 100%);
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 4px 16px 0 rgba(44, 62, 135, 0.18);
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.cta-btn-gradient:hover, .cta-btn-gradient:focus {
+  background: linear-gradient(90deg, #3b82f6 0%, #a259e6 100%);
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 8px 32px 0 rgba(44, 62, 135, 0.22);
+}
+
+.cta-btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.4);
+  transition: background 0.3s, border 0.3s, color 0.3s;
+}
+.cta-btn-outline:hover, .cta-btn-outline:focus {
+  border: 2px solid #fff;
+  color: #fff;
+  background: rgba(255,255,255,0.04);
+}
+/* Add this to your HomepageCTA.css */
+.homepage-cta-bg {
+  min-height: 480px;
+  border-radius: 2.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .homepage-cta-bg {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Ensure text container is properly centered */
+.homepage-cta-bg .flex-1:last-child {
+  text-align: center;
+}
+
+
+/* Float animation for the image */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Fade in from left animation */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide in from right animation */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation classes */
+.animate-fadeInLeft {
+  animation: fadeInLeft 0.8s ease-out;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.8s ease-out;
+}
+
+/* Delay classes for staggered animations */
+.delay-200 {
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+  animation-fill-mode: both;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+.delay-700 {
+  animation-delay: 0.7s;
+}
+
+.delay-1000 {
+  animation-delay: 1s;
+}
+
