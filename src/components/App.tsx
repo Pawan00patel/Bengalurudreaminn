@@ -13,9 +13,10 @@ import SponsorPage from './sections/SponsorPage';
 import Speakers from './sections/Speakers';
 import Blog from './sections/Blog';
 import BlogDetail from './sections/BlogDetail';
+
+import CopadoCon2025 from './pages/CopadoCon2025';
 import Events from './sections/Events';
-
-
+           
 
 const App: React.FC = () => {
   return (
@@ -35,6 +36,7 @@ const App: React.FC = () => {
             <Route exact path="/blog" component={Blog} />
             <Route path="/blog/:slug" component={BlogDetail} />
             <Route path="/events" component={Events} />
+            <Route path="/copadocon2025" component={CopadoCon2025} />
            
         
           </Switch>

@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
         <div className="row align-items-center">
           {/* Logo/Brand */}
           <div className="col-md-4 col-12 text-center text-md-start mb-3 mb-md-0">
-            <h5 className="mb-0 fw-bold">Bengaluru DreamInn</h5>
+            <h5 className="mb-0 fw-bold">Bengaluru Dreamin</h5>
           </div>
           {/* Social Media Links */}
           <div className="col-md-4 col-12 text-center mb-3 mb-md-0">
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
           {/* Made with Love */}
           <div className="col-md-4 col-12 text-center text-md-end">
             <small className="text-light">
-              Made with ❤️ for Bengaluru Dreaminn
+              Made with ❤️ for Bengaluru Dreamin'
             </small>
           </div>
         </div>
@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
         <div className="row">
           <div className="col-12 text-center">
             <small className="">
-              © {new Date().getFullYear()} Bengaluru DreamInn. All rights reserved.
+              © {new Date().getFullYear()} Bengaluru Dreamin'. All rights reserved.
             </small>
           </div>
         </div>

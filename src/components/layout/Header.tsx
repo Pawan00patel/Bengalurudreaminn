@@ -5,7 +5,31 @@ import './Header.css';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
+
+  React.useEffect(() => {
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+          if (currentScrollY > lastScrollY && currentScrollY > 60) {
+            setShowHeader(false); // scrolling down
+          } else {
+            setShowHeader(true); // scrolling up
+          }
+          setLastScrollY(currentScrollY);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+    // eslint-disable-next-line
+  }, [lastScrollY]);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -26,25 +50,31 @@ const Header: React.FC = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark sticky-top" style={{
-      background: '#000000',
-      backgroundImage: 'linear-gradient(to right, #434343, #000000)'
-    }}>
+    <nav
+      className="navbar navbar-expand-lg navbar-dark sticky-top"
+      style={{
+        background: '#000000',
+        backgroundImage: 'linear-gradient(to right, #434343, #000000)',
+        transition: 'transform 0.3s',
+        transform: showHeader ? 'translateY(0)' : 'translateY(-100%)',
+        zIndex: 1050
+      }}
+    >
       <div className="container position-relative py-2">
         <Link className="navbar-brand d-flex align-items-center gap-2" to="/" onClick={scrollToTop}>
-          <img 
+          <img
             src={`${PUBLIC_URL}/images/logos/New-Dreamin-Logo-White.png`}
             alt="Bengaluru Dreamin Logo"
             style={{ height: '40px' }}
             className="d-inline-block align-text-top"
           />
         </Link>
-        <button 
-          className="navbar-toggler" 
-          type="button" 
+        <button
+          className="navbar-toggler"
+          type="button"
           onClick={toggleMenu}
-          aria-controls="navbarNav" 
-          aria-expanded={isMenuOpen} 
+          aria-controls="navbarNav"
+          aria-expanded={isMenuOpen}
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
@@ -53,8 +83,8 @@ const Header: React.FC = () => {
           <ul className="navbar-nav ms-auto">
             {navItems.filter(item => item.id !== 'our-initiatives').map(item => (
               <li className="nav-item" key={item.id}>
-                <Link 
-                  className="nav-link text-white nav-link-underline" 
+                <Link
+                  className="nav-link text-white nav-link-underline"
                   to={item.href}
                   onClick={() => handleNavigation(item.href)}
                 >
