@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 const navItems = [
-  { label: 'About', path: '/copadocon2025/about' },
+    { label: 'About', path: '/copadocon2025/about' },
   { label: 'Sponsors', path: '/copadocon2025/sponsors' },
   { label: 'Agenda', path: '/copadocon2025/agenda' },
   { label: 'Speakers', path: '/copadocon2025/speakers' },
   { label: 'Others', path: '/copadocon2025/others' },
+
 ];
 
 const CopadoConNav: React.FC = () => {
@@ -88,6 +89,7 @@ const CopadoConNav: React.FC = () => {
           </li>
         ))}
       </ul>
+ 
       <style>{`
         @media (max-width: 700px) {
           .copado-nav-list {

@@ -21,28 +21,42 @@ import Events from './sections/Events';
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="d-flex flex-column min-vh-100 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <Header />
-        <div className="flex-grow-1">
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/speakers" component={Speakers} />
-            <Route path="/about" component={About} />
-            <Route exact path="/sponsors" component={Sponsors} />
-            <Route path="/sponsors/:sponsorId" component={SponsorPage} />
-            <Route path="/our-team" component={OurTeam} />
-            <Route path="/gallery" component={Gallery} />
-            <Route path="/contact-us" component={ContactUs} />
-            <Route exact path="/blog" component={Blog} />
-            <Route path="/blog/:slug" component={BlogDetail} />
-            <Route path="/events" component={Events} />
-            <Route path="/copadocon2025" component={CopadoCon2025} />
-           
-        
-          </Switch>
-        </div>
-        <Footer />
-      </div> 
+      <Switch>
+        {/* Main site routes with header/footer */}
+        <Route
+          path="/copadocon2025-single"
+          render={() => (
+            <div className="d-flex flex-column min-vh-100 bg-gradient-to-br from-blue-50 to-indigo-100">
+              {/* No Header or Footer for CopadoCon2025SingleNav */}
+              {React.createElement(require('./pages/CopadoCon2025SingleNav').default)}
+            </div>
+          )}
+        />
+        <Route
+          render={() => (
+            <div className="d-flex flex-column min-vh-100 bg-gradient-to-br from-blue-50 to-indigo-100">
+              <Header />
+              <div className="flex-grow-1">
+                <Switch>
+                  <Route exact path="/" component={Home} />
+                  <Route path="/speakers" component={Speakers} />
+                  <Route path="/about" component={About} />
+                  <Route exact path="/sponsors" component={Sponsors} />
+                  <Route path="/sponsors/:sponsorId" component={SponsorPage} />
+                  <Route path="/our-team" component={OurTeam} />
+                  <Route path="/gallery" component={Gallery} />
+                  <Route path="/contact-us" component={ContactUs} />
+                  <Route exact path="/blog" component={Blog} />
+                  <Route path="/blog/:slug" component={BlogDetail} />
+                  <Route path="/events" component={Events} />
+                  <Route path="/copadocon2025" component={CopadoCon2025} />
+                </Switch>
+              </div>
+              <Footer />
+            </div>
+          )}
+        />
+      </Switch>
     </Router>
   );
 };

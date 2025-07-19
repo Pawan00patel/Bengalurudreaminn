@@ -92,6 +92,15 @@ const Header: React.FC = () => {
                 </Link>
               </li>
             ))}
+            <li className="nav-item">
+              <Link
+                className="nav-link text-white nav-link-underline"
+                to="/copadocon2025-single"
+                onClick={() => handleNavigation('/copadocon2025-single')}
+              >
+                CopadoCon 2025 v2
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
