@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Switch, Route, Redirect, NavLink, useRouteMatch } from 'react-router-dom';
+import { Switch, Route, Redirect, NavLink } from 'react-router-dom';
 import About from './copadocon2025/About';
 import Sponsors from './copadocon2025/Sponsors';
 import Agenda from './copadocon2025/Agenda';
