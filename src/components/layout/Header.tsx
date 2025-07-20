@@ -63,7 +63,7 @@ const Header: React.FC = () => {
       <div className="container position-relative py-2">
         <a
           className="navbar-brand d-flex align-items-center gap-2"
-          href="http://localhost:3000/"
+          href="/"
         >
           <img
             src={`${PUBLIC_URL}/images/logos/New-Dreamin-Logo-White.png`}

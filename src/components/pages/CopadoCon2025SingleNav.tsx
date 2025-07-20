@@ -109,7 +109,7 @@ const CopadoCon2025SingleNav: React.FC = () => {
           padding: '0.5rem 2rem',
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
-            <a href="http://localhost:3000/" style={{ display: 'inline-block' }}>
+            <a href="/" style={{ display: 'inline-block' }}>
               <img src={process.env.PUBLIC_URL + '/images/logos/New-Dreamin-Logo-White.png'} alt="Bengaluru Dreamin Logo" style={{ height: 36 }} />
             </a>
           </div>
@@ -341,7 +341,7 @@ const CopadoCon2025SingleNav: React.FC = () => {
         @media (max-width: 768px) {
           header nav ul.copado-nav-list {
             flex-direction: column !important;
-            background: rgba(255,255,255,0.98);
+            background: rgba(0, 0, 0, 0.98);
             position: absolute;
             top: 56px;
             left: 0;
