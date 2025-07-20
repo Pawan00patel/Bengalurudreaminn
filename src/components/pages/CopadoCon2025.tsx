@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route, Switch, Redirect, NavLink } from 'react-router-dom';
 import About from './copadocon2025/About';
 import Sponsors from './copadocon2025/Sponsors';
@@ -16,16 +16,26 @@ const navItems = [
 
 const CopadoCon2025: React.FC = () => {
   const [navOpen, setNavOpen] = useState(false);
+  const [logoVisible, setLogoVisible] = useState(false);
+  const [titleVisible, setTitleVisible] = useState(false);
+  useEffect(() => {
+    setTimeout(() => setLogoVisible(true), 100);
+    setTimeout(() => setTitleVisible(true), 400);
+  }, []);
   return (
     <main style={{
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #111212ff 0%, #041c38ff 100%)',
+      background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)',
       padding: '3rem 0 0 0',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'flex-start',
+      position: 'relative',
+      overflow: 'hidden',
     }}>
+      {/* Floating particles and shapes */}
+      <BackgroundParticles />
       <div style={{
         background: '#faffffc9',
         borderRadius: 18,
@@ -49,7 +59,9 @@ const CopadoCon2025: React.FC = () => {
                 width: '80vw',
                 marginBottom: 12,
                 cursor: 'pointer',
-                transition: 'transform 0.2s',
+                opacity: logoVisible ? 1 : 0,
+                transform: logoVisible ? 'translateY(0)' : 'translateY(24px)',
+                transition: 'opacity 0.8s, transform 0.8s',
               }}
               className="copado-logo"
             />
@@ -110,8 +122,10 @@ const CopadoCon2025: React.FC = () => {
                     padding: '0 0.5rem',
                     display: 'block',
                     minHeight: 44,
+                    transition: 'color 0.3s, background 0.3s, transform 0.3s',
                   }}
                   onClick={() => setNavOpen(false)}
+                  className="copado-nav-link"
                 >
                   {item.label}
                 </NavLink>
@@ -166,12 +180,40 @@ const CopadoCon2025: React.FC = () => {
               margin: 0 !important;
             }
           }
+          .copado-nav-link {
+            transition: color 0.3s, background 0.3s, transform 0.3s;
+          }
+          .copado-nav-link:hover {
+            color: #0070f3;
+            background: rgba(0,112,243,0.08);
+            transform: scale(1.04);
+          }
+          .copado-cta-btn {
+            animation: copadoPulse 2s infinite;
+          }
+          @keyframes copadoPulse {
+            0% { box-shadow: 0 0 0 0 #0070f3; }
+            70% { box-shadow: 0 0 0 10px rgba(0,112,243,0); }
+            100% { box-shadow: 0 0 0 0 #0070f3; }
+          }
+          .copado-logo {
+            transition: opacity 0.8s, transform 0.8s;
+          }
+          .copado-title {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s, transform 0.7s;
+          }
+          .copado-title.visible {
+            opacity: 1;
+            transform: translateY(0);
+          }
         `}</style>
         <div className="copado-content">
           <Switch>
             <Route exact path="/copadocon2025" render={() => (
               <div style={{ textAlign: 'center', marginTop: 40, marginBottom: 40 }}>
-                <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16 }}>Welcome to CopadoCon 2025!</h2>
+                <h2 className={`copado-title${titleVisible ? ' visible' : ''}`} style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16 }}>Welcome to CopadoCon 2025!</h2>
                 <p style={{ fontSize: '1.15rem', color: '#333', marginBottom: 24 }}>
                   Join us for the premier event for DevOps, Salesforce, and cloud professionals.<br />
                   Discover innovation, network with industry leaders, and be part of the future.
@@ -190,6 +232,7 @@ const CopadoCon2025: React.FC = () => {
                     boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
                     marginTop: 16,
                   }}
+                  className="copado-cta-btn"
                 >
                   Learn More
                 </NavLink>
@@ -210,6 +253,51 @@ const CopadoCon2025: React.FC = () => {
       </div>
     </main>
   );
+
+  // Floating background particles and shapes
+  function BackgroundParticles() {
+    return (
+      <>
+        {/* Dots */}
+        {[...Array(18)].map((_, i) => (
+          <span
+            key={i}
+            style={{
+              position: 'absolute',
+              top: `${10 + Math.sin(i) * 60 + (i * 30)}px`,
+              left: `${20 + Math.cos(i) * 80 + (i * 40)}px`,
+              width: 8,
+              height: 8,
+              borderRadius: '50%',
+              background: 'rgba(0,112,243,0.18)',
+              animation: `floatDot${i} 6s ease-in-out infinite`,
+              opacity: 0.5,
+              zIndex: 0,
+            }}
+          />
+        ))}
+        {/* Geometric shapes */}
+        <svg style={{ position: 'absolute', top: 120, left: 60, opacity: 0.12, zIndex: 0 }} width="60" height="60">
+          <circle cx="30" cy="30" r="24" fill="#0070f3" />
+        </svg>
+        <svg style={{ position: 'absolute', bottom: 80, right: 80, opacity: 0.12, zIndex: 0 }} width="70" height="70">
+          <polygon points="35,10 60,60 10,60" fill="#00D4AA" />
+        </svg>
+        <svg style={{ position: 'absolute', top: 220, right: 120, opacity: 0.10, zIndex: 0 }} width="50" height="50">
+          <polygon points="25,5 45,45 5,45" fill="#FF6B35" />
+        </svg>
+        {/* Keyframes for floating dots */}
+        <style>{`
+          ${[...Array(18)].map((_, i) => `@keyframes floatDot${i} {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(${8 + (i % 3) * 6}px); }
+            100% { transform: translateY(0); }
+          }`).join('\n')}
+        `}</style>
+      </>
+    );
+  }
+// ...existing code...
 };
 
 export default CopadoCon2025;

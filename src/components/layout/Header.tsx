@@ -61,14 +61,17 @@ const Header: React.FC = () => {
       }}
     >
       <div className="container position-relative py-2">
-        <Link className="navbar-brand d-flex align-items-center gap-2" to="/" onClick={scrollToTop}>
+        <a
+          className="navbar-brand d-flex align-items-center gap-2"
+          href="http://localhost:3000/"
+        >
           <img
             src={`${PUBLIC_URL}/images/logos/New-Dreamin-Logo-White.png`}
             alt="Bengaluru Dreamin Logo"
             style={{ height: '40px' }}
             className="d-inline-block align-text-top"
           />
-        </Link>
+        </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -96,7 +99,7 @@ const Header: React.FC = () => {
               <Link
                 className="nav-link text-white nav-link-underline"
                 to="/copadocon2025-single"
-                onClick={() => handleNavigation('/copadocon2025-single')}
+                onClick={scrollToTop}
               >
                 CopadoCon 2025 v2
               </Link>
