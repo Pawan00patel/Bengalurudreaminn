@@ -64,7 +64,7 @@ const Header: React.FC = () => {
         <a
           className="navbar-brand d-flex align-items-center gap-2"
           href="/"
-          style={{ marginLeft: '-20px' }}
+          style={{ marginLeft: '1px' }}
         >
           <img
             src={`${PUBLIC_URL}/images/logos/New-Dreamin-Logo-White.png`}
