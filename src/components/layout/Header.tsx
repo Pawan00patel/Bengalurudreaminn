@@ -64,11 +64,12 @@ const Header: React.FC = () => {
         <a
           className="navbar-brand d-flex align-items-center gap-2"
           href="/"
+          style={{ marginLeft: '-20px' }}
         >
           <img
             src={`${PUBLIC_URL}/images/logos/New-Dreamin-Logo-White.png`}
             alt="Bengaluru Dreamin Logo"
-            style={{ height: '40px' }}
+            style={{ height: '36px' }}
             className="d-inline-block align-text-top"
           />
         </a>
