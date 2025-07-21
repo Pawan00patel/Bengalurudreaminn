@@ -1,65 +1,65 @@
 import React, { useState } from 'react';
 
-const speakers = [
-  {
-    name: 'Sarah Franklin',
-    title: 'President & CMO',
-    company: 'Salesforce',
-    photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&q=80',
-  },
-  {
-    name: 'Parker Harris',
-    title: 'Co-founder',
-    company: 'Salesforce',
-    photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&q=80',
-  },
-  {
-    name: 'Kavindra Patel',
-    title: 'SVP & GM, Trailhead',
-    company: 'Salesforce',
-    photo: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&q=80',
-  },
-  {
-    name: 'Guillaume Roques',
-    title: 'DevRel',
-    company: 'Salesforce',
-    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80',
-  },
-];
+// const speakers = [
+//   {
+//     name: 'Sarah Franklin',
+//     title: 'President & CMO',
+//     company: 'Salesforce',
+//     photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&q=80',
+//   },
+//   {
+//     name: 'Parker Harris',
+//     title: 'Co-founder',
+//     company: 'Salesforce',
+//     photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&q=80',
+//   },
+//   {
+//     name: 'Kavindra Patel',
+//     title: 'SVP & GM, Trailhead',
+//     company: 'Salesforce',
+//     photo: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&q=80',
+//   },
+//   {
+//     name: 'Guillaume Roques',
+//     title: 'DevRel',
+//     company: 'Salesforce',
+//     photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80',
+//   },
+// ];
 
-const team = [
-  {
-    name: 'Rakesh Kumar',
-    role: 'Lead Organizer',
-    photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&q=80',
-  },
-  {
-    name: 'Priya Sharma',
-    role: 'Sponsorship Lead',
-    photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=80',
-  },
-  {
-    name: 'Amit Singh',
-    role: 'Marketing & Comms',
-    photo: 'https://images.unsplash.com/photo-1557862921-37829c790f19?w=500&q=80',
-  },
-  {
-    name: 'Sunita Patil',
-    role: 'Volunteer Coordinator',
-    photo: 'https://images.unsplash.com/photo-1610216705422-caa3fc2bab7e?w=500&q=80',
-  },
-];
+// const team = [
+//   {
+//     name: 'Rakesh Kumar',
+//     role: 'Lead Organizer',
+//     photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&q=80',
+//   },
+//   {
+//     name: 'Priya Sharma',
+//     role: 'Sponsorship Lead',
+//     photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=80',
+//   },
+//   {
+//     name: 'Amit Singh',
+//     role: 'Marketing & Comms',
+//     photo: 'https://images.unsplash.com/photo-1557862921-37829c790f19?w=500&q=80',
+//   },
+//   {
+//     name: 'Sunita Patil',
+//     role: 'Volunteer Coordinator',
+//     photo: 'https://images.unsplash.com/photo-1610216705422-caa3fc2bab7e?w=500&q=80',
+//   },
+// ];
 
-const sponsors = [
-  { name: 'Salesforce' },
-  { name: 'Infosys' },
-  { name: 'Wipro' },
-  { name: 'TCS' },
-  { name: 'Capgemini' },
-  { name: 'Accenture' },
-  { name: 'Cognizant' },
-  { name: 'Mindtree' },
-];
+// const sponsors = [
+//   { name: 'Salesforce' },
+//   { name: 'Infosys' },
+//   { name: 'Wipro' },
+//   { name: 'TCS' },
+//   { name: 'Capgemini' },
+//   { name: 'Accenture' },
+//   { name: 'Cognizant' },
+//   { name: 'Mindtree' },
+// ];
 
 const navItems = [
   { label: 'About', id: 'about' },
