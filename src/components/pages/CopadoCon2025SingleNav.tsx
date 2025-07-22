@@ -268,21 +268,13 @@ const CopadoCon2025SingleNav: React.FC = () => {
         <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 8 }}>Our Sponsors</h2>
         <div style={{ fontSize: '1.3rem', color: '#0070f3', fontWeight: 600, padding: '0.5rem 0' }}>To Be Announced</div>
         <div style={{ marginTop: 24, marginBottom: 8 }}>
-          <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#2176ff', marginBottom: 8 }}>Title Sponsor</h3>
-          <img src={process.env.PUBLIC_URL + '/images/logos/copadomain-ddg-logo.svg'} alt="Copado Title Sponsor Logo" style={{ height: 30 }} />
+          <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#000000ff', marginBottom: 8 }}>Title Sponsor</h3>
+          <img src={process.env.PUBLIC_URL + '/images/logos/copadomain-ddg-logo.svg'} alt="Copado Title Sponsor Logo" style={{ height: 50 }} />
         </div>
       </section>
       {/* Speakers Section (swapped position) */}
       <section id="speakers" style={{ maxWidth: 1100, margin: '0 auto', padding: '4rem 1rem', textAlign: 'center' }}>
         <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 8 }}>Meet Our Speakers</h2>
-        <div style={{ fontSize: '1.3rem', color: '#0070f3', fontWeight: 600, padding: '0.5rem 0' }}>To Be Announced</div>
-      </section>
-
-      {/* Team Section removed as per request */}
-
-      {/* Sponsors Section */}
-      <section id="sponsors" style={{ maxWidth: 900, margin: '0 auto', padding: '4rem 1rem', textAlign: 'center' }}>
-        <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 8 }}>Our Sponsors</h2>
         <div style={{ fontSize: '1.3rem', color: '#0070f3', fontWeight: 600, padding: '0.5rem 0' }}>To Be Announced</div>
       </section>
 

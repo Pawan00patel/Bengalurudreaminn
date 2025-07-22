@@ -12,8 +12,7 @@ export const navItems: NavItem[] = [
   { id: 'blog', label: 'Blog', href: '/blog' },
   { id: 'our-initiatives', label: 'Our Initiatives', href: '/our-initiatives' },
   { id: 'contact', label: 'Contact', href: '/contact-us' },
-  { id: 'sponsors', label: 'Sponsors', href: '/sponsors' },
-  { id: 'copadocon2025', label: 'CopadoCon 2025', href: '/copadocon2025' }
+  { id: 'sponsors', label: 'Sponsors', href: '/sponsors' }
 ];
 
 export const speakers: Speaker[] = [

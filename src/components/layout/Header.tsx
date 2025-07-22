@@ -99,10 +99,10 @@ const Header: React.FC = () => {
             <li className="nav-item">
               <Link
                 className="nav-link text-white nav-link-underline"
-                to="/copadocon2025-single"
+                to="/copadocon2025"
                 onClick={scrollToTop}
               >
-                CopadoCon 2025 v2
+                CopadoCon 2025
               </Link>
             </li>
           </ul>

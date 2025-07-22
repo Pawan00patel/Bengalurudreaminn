@@ -13,8 +13,6 @@ import SponsorPage from './sections/SponsorPage';
 import Speakers from './sections/Speakers';
 import Blog from './sections/Blog';
 import BlogDetail from './sections/BlogDetail';
-
-import CopadoCon2025 from './pages/CopadoCon2025';
 import Events from './sections/Events';
            
 
@@ -24,7 +22,7 @@ const App: React.FC = () => {
       <Switch>
         {/* Main site routes with header/footer */}
         <Route
-          path="/copadocon2025-single"
+          path="/copadocon2025"
           render={() => (
             <div className="d-flex flex-column min-vh-100 bg-gradient-to-br from-blue-50 to-indigo-100">
               {/* No Header or Footer for CopadoCon2025SingleNav */}
@@ -49,7 +47,7 @@ const App: React.FC = () => {
                   <Route exact path="/blog" component={Blog} />
                   <Route path="/blog/:slug" component={BlogDetail} />
                   <Route path="/events" component={Events} />
-                  <Route path="/copadocon2025" component={CopadoCon2025} />
+                  {/* Route for CopadoCon2025 removed as file is deleted */}
                 </Switch>
               </div>
               <Footer />
