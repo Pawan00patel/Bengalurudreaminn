@@ -265,11 +265,9 @@ const CopadoCon2025SingleNav: React.FC = () => {
       {/* Speakers Section */}
       {/* Sponsors Section (swapped position) */}
       <section id="sponsors" style={{ maxWidth: 900, margin: '0 auto', padding: '4rem 1rem', textAlign: 'center' }}>
-        <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 8 }}>Our Sponsors</h2>
-        <div style={{ fontSize: '1.3rem', color: '#0070f3', fontWeight: 600, padding: '0.5rem 0' }}>To Be Announced</div>
+        <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 8 }}>Title Sponsor</h2>
         <div style={{ marginTop: 24, marginBottom: 8 }}>
-          <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#000000ff', marginBottom: 8 }}>Title Sponsor</h3>
-          <img src={process.env.PUBLIC_URL + '/images/logos/copadomain-ddg-logo.svg'} alt="Copado Title Sponsor Logo" style={{ height: 50 }} />
+          <img src={process.env.PUBLIC_URL + '/images/logos/copadomain-ddg-logo.svg'} alt="Copado Title Sponsor Logo" style={{ height: 80 }} />
         </div>
       </section>
       {/* Speakers Section (swapped position) */}
