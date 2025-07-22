@@ -189,27 +189,27 @@ const CopadoCon2025SingleNav: React.FC = () => {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        paddingTop: 100,
-        paddingBottom: 60,
+        paddingTop: 48,
+        paddingBottom: 48,
         textAlign: 'center',
-        background: 'linear-gradient(90deg, #301d71ff 0%, #0e516eff 100%, #0c0c4bff 100%)',
+        background: 'linear-gradient(285deg, #2463ea, #550cad 57%, #000)',
         color: '#fff',
         position: 'relative',
         overflow: 'hidden',
       }}>
-        <img src={process.env.PUBLIC_URL + '/images/logos/CopadoCon Logo_Blue and Black@2x.png'} alt="CopadoCon 2025 Logo" style={{ height: 250 , marginBottom: -40, zIndex: 1 }} />
+        <img src={process.env.PUBLIC_URL + '/images/logos/CopadoCon Logo_Blue and Black@2x.png'} alt="CopadoCon 2025 Logo" style={{ height: 220, marginBottom: 0, zIndex: 1 }} />
         <div style={{ maxWidth: 800, margin: '0 auto', zIndex: 1 }}>
-          <p style={{ fontSize: '1.3rem', marginBottom: 32, lineHeight: 1.6, wordBreak: 'break-word', whiteSpace: 'pre-line' }}>
+          <p style={{ fontSize: '1.3rem', marginBottom: 20, lineHeight: 1.6, wordBreak: 'break-word', whiteSpace: 'pre-line' }}>
             A flagship, community-focused conference proudly led by Copado, the global leader in DevOps and AI-driven transformation for the Salesforce ecosystem
           </p>
         </div>
-        <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap', zIndex: 1 }}>
+        <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap', zIndex: 1, marginBottom: 8 }}>
           <a
             href="https://konfhub.com/checkout/copadocon-2025"
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              background: 'linear-gradient(90deg, #2176ff 0%, #21a1ff 100% )',
+              background: '#2176ff',
               color: '#fff',
               fontWeight: 600,
               fontSize: '1.1rem',
@@ -229,7 +229,7 @@ const CopadoCon2025SingleNav: React.FC = () => {
       {/* About Section */}
       <section id="about" style={{ maxWidth: 900, margin: '0 auto', padding: '4rem 1rem', textAlign: 'center' }}>
         <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16 }}>About CopadoCon 2025</h2>
-        <p style={{ fontSize: '1.1rem', marginBottom: 24 }}>
+        <p style={{ fontSize: '1.1rem', marginBottom: 24, textAlign: 'justify' }}>
           CopadoCon 2025 is a flagship, community-focused conference proudly led by Copado the global leader in DevOps and AI-driven transformation for the Salesforce ecosystem. Curated to bring together DevOps engineers, developers, architects, admins, consultants, and technology leaders, CopadoCon 2025 is a celebration of innovation, learning, and the future of digital delivery.<br /><br />
           As the exclusive Title Sponsor and driving force behind the event, Copado is shaping this experience to highlight the power of DevOps, AI, and enterprise agility within the Salesforce platform. From deep-dive sessions and expert-led demos to visionary keynotes and hands-on learning zones, the event is designed to fuel every stage of your professional growth.<br /><br />
           Organized by the Bengaluru Dreamin’, the event brings community execution expertise to ensure a high-impact experience for every attendee amplifying Copado’s vision at scale.
@@ -237,17 +237,16 @@ const CopadoCon2025SingleNav: React.FC = () => {
         <div style={{ marginTop: 24, fontSize: '1.1rem', color: '#0070f3' }}>Date: 13 September 2025 | The Den Whitefield Bengaluru, India</div>
       </section>
       {/* Copado Community Section */}
-      <section id="community" style={{ maxWidth: 900, margin: '0 auto', padding: '2.5rem 1rem', textAlign: 'center' }}>
-        <h2 style={{ fontSize: '1.7rem', fontWeight: 700, marginBottom: 12, color: '#000000', borderRadius: 8, padding: '1rem 0' }}>
+      <section id="community" style={{ maxWidth: 900, margin: '0 auto', padding: '2rem 1rem', textAlign: 'center' }}>
+        <h2 style={{ fontSize: '1.7rem', fontWeight: 700, marginBottom: 12, color: '#000', borderRadius: 8, padding: '1rem 0' }}>
           Are you a Copado Community member?
         </h2>
-       
         <a
           href="https://www.copado.com/community"
           target="_blank"
           rel="noopener noreferrer"
           style={{
-            background: 'linear-gradient(90deg, #2176ff 0%, #21a1ff 100%)',
+            background: '#2176ff',
             color: '#fff',
             fontWeight: 600,
             fontSize: '1.1rem',
@@ -264,6 +263,16 @@ const CopadoCon2025SingleNav: React.FC = () => {
       </section>
 
       {/* Speakers Section */}
+      {/* Sponsors Section (swapped position) */}
+      <section id="sponsors" style={{ maxWidth: 900, margin: '0 auto', padding: '4rem 1rem', textAlign: 'center' }}>
+        <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 8 }}>Our Sponsors</h2>
+        <div style={{ fontSize: '1.3rem', color: '#0070f3', fontWeight: 600, padding: '0.5rem 0' }}>To Be Announced</div>
+        <div style={{ marginTop: 24, marginBottom: 8 }}>
+          <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#2176ff', marginBottom: 8 }}>Title Sponsor</h3>
+          <img src={process.env.PUBLIC_URL + '/images/logos/copadomain-ddg-logo.svg'} alt="Copado Title Sponsor Logo" style={{ height: 30 }} />
+        </div>
+      </section>
+      {/* Speakers Section (swapped position) */}
       <section id="speakers" style={{ maxWidth: 1100, margin: '0 auto', padding: '4rem 1rem', textAlign: 'center' }}>
         <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 8 }}>Meet Our Speakers</h2>
         <div style={{ fontSize: '1.3rem', color: '#0070f3', fontWeight: 600, padding: '0.5rem 0' }}>To Be Announced</div>
@@ -285,7 +294,7 @@ const CopadoCon2025SingleNav: React.FC = () => {
 
       {/* Footer */}
       <footer style={{
-        background: 'linear-gradient(90deg, #301d71ff 0%, #0e516eff 100%, #0c0c4bff 100%)',
+        background: 'linear-gradient(285deg, #2463ea, #550cad 57%, #000)',
         color: '#fff',
         padding: '2rem 0',
         textAlign: 'center',
@@ -323,6 +332,9 @@ const CopadoCon2025SingleNav: React.FC = () => {
           .navbar-brand {
             margin-left: 0 !important;
           }
+        }
+        .copado-nav-list button:hover {
+          color: #2176ff !important;
         }
       `}</style>
     </div>
