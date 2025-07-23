@@ -109,25 +109,46 @@ const CopadoCon2025SingleNav: React.FC = () => {
         transition: 'background 0.3s, box-shadow 0.3s',
         backdropFilter: navScrolled ? 'blur(12px)' : 'none',
       }}>
-        <nav style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          maxWidth: 1200,
-          margin: '0 auto',
-          padding: '0.5rem 2rem',
-        }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
+        <nav
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            maxWidth: 1200,
+            margin: '0 auto',
+            padding: '0.5rem 2rem',
+          }}
+        >
+          <div
+            className="navbar-logos"
+            style={{ display: 'flex', alignItems: 'center', gap: 16 }}
+          >
             <a
               className="navbar-brand d-flex align-items-center gap-2"
-              href="/"
-              style={{ marginLeft: '-125px' }}
+              href="https://bengalurudreamin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ marginLeft: '-125px', display: 'flex', alignItems: 'center' }}
             >
               <img
                 src={process.env.PUBLIC_URL + '/images/logos/New-Dreamin-Logo-White.png'}
                 alt="Bengaluru Dreamin Logo"
+                className="dreamin-logo"
                 style={{ height: '36px' }}
-                className="d-inline-block align-text-top"
+              />
+            </a>
+            <div className="logo-divider" style={{ height: 32, width: 1, background: '#e0e0e0', margin: '0 12px 0 2px' }} />
+            <a
+              href="https://www.copado.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: 'flex', alignItems: 'center' }}
+            >
+              <img
+                src={process.env.PUBLIC_URL + '/images/logos/00_Copado Logo_Blue and White.png'}
+                alt="Copado Logo"
+                className="copado-logo"
+                style={{ height: '32px', borderRadius: 4, padding: 2 }}
               />
             </a>
           </div>
@@ -197,10 +218,14 @@ const CopadoCon2025SingleNav: React.FC = () => {
         position: 'relative',
         overflow: 'hidden',
       }}>
-        <img src={process.env.PUBLIC_URL + '/images/logos/CopadoCon Logo_Blue and Black@2x.png'} alt="CopadoCon 2025 Logo" style={{ height: 220, marginBottom: 0, zIndex: 1 }} />
+        <img
+          src={process.env.PUBLIC_URL + '/images/logos/CopadoCon Logo_Blue and Black@2x.png'}
+          alt="CopadoCon 2025 Logo"
+          className="copadocon-hero-logo"
+        />
         <div style={{ maxWidth: 800, margin: '0 auto', zIndex: 1 }}>
-          <p style={{ fontSize: '1.3rem', marginBottom: 20, lineHeight: 1.6, wordBreak: 'break-word', whiteSpace: 'pre-line' }}>
-            A flagship, community-focused conference proudly led by Copado, the global leader in DevOps and AI-driven transformation for the Salesforce ecosystem
+          <p style={{ fontSize: '1.2rem', marginBottom: 20, lineHeight: 1.6, wordBreak: 'break-word', whiteSpace: 'pre-line' }}>
+            CopadoCon 2025 is the flagship, community-focused conference brought to you by Copado, the global leader in DevOps and AI-driven transformation for the Salesforce ecosystem
           </p>
         </div>
         <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap', zIndex: 1, marginBottom: 8 }}>
@@ -228,19 +253,23 @@ const CopadoCon2025SingleNav: React.FC = () => {
 
       {/* About Section */}
       <section id="about" style={{ maxWidth: 900, margin: '0 auto', padding: '4rem 1rem', textAlign: 'center' }}>
-        <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16 }}>About CopadoCon 2025</h2>
-        <p style={{ fontSize: '1.1rem', marginBottom: 24, textAlign: 'justify' }}>
-          CopadoCon 2025 is a flagship, community-focused conference proudly led by Copado the global leader in DevOps and AI-driven transformation for the Salesforce ecosystem. Curated to bring together DevOps engineers, developers, architects, admins, consultants, and technology leaders, CopadoCon 2025 is a celebration of innovation, learning, and the future of digital delivery.<br /><br />
-          As the exclusive Title Sponsor and driving force behind the event, Copado is shaping this experience to highlight the power of DevOps, AI, and enterprise agility within the Salesforce platform. From deep-dive sessions and expert-led demos to visionary keynotes and hands-on learning zones, the event is designed to fuel every stage of your professional growth.<br /><br />
-          Organized by the Bengaluru Dreamin’, the event brings community execution expertise to ensure a high-impact experience for every attendee amplifying Copado’s vision at scale.
+        <h2 className="about-copadocon-heading">About CopadoCon 2025</h2>
+        <p className="about-copadocon-desc">
+          CopadoCon 2025 is the flagship, community-focused conference brought to you by Copado, the global leader in DevOps and AI-driven transformation for the Salesforce ecosystem.
+          Designed to unite DevOps engineers, developers, architects, admins, consultants, and technology leaders, CopadoCon 2025 is a celebration of innovation, learning, and the future of digital delivery.<br /><br />
+          As the driving force behind this premier event, Copado is shaping the experience to showcase the transformative power of DevOps, AI, and enterprise agility within the Salesforce platform.
+          From deep-dive sessions and expert-led demos to visionary keynotes and hands-on learning zones, CopadoCon is built to inspire and accelerate every stage of your professional journey.<br /><br />
+          Organized by Bengaluru Dreamin’ in collaboration with seasoned community leaders to bring world-class execution and local expertise to deliver a high-impact experience that brings Copado’s vision to life at scale.
         </p>
         <div style={{ marginTop: 24, fontSize: '1.1rem', color: '#0070f3' }}>Date: 13 September 2025 | The Den Whitefield Bengaluru, India</div>
       </section>
       {/* Copado Community Section */}
       <section id="community" style={{ maxWidth: 900, margin: '0 auto', padding: '2rem 1rem', textAlign: 'center' }}>
-        <h2 style={{ fontSize: '1.7rem', fontWeight: 700, marginBottom: 12, color: '#000', borderRadius: 8, padding: '1rem 0' }}>
-          Are you a Copado Community member?
-        </h2>
+        <h2 style={{ fontSize: '1.7rem', fontWeight: 700, marginBottom: 10, color: '#000', borderRadius: 8, padding: '1rem 0' }}>
+          Are you a Copado Community member? </h2>  <h3  style={{ fontSize: '1.5rem', marginBottom: 16 }}>
+         <b>If not,  join today!</b> 
+        </h3>
+        
         <a
           href="https://www.copado.com/community"
           target="_blank"
@@ -265,14 +294,15 @@ const CopadoCon2025SingleNav: React.FC = () => {
       {/* Speakers Section */}
       {/* Sponsors Section (swapped position) */}
       <section id="sponsors" style={{ maxWidth: 900, margin: '0 auto', padding: '4rem 1rem', textAlign: 'center' }}>
-        <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 8 }}>Title Sponsor</h2>
-        <div style={{ marginTop: 24, marginBottom: 8 }}>
-          <img src={process.env.PUBLIC_URL + '/images/logos/copadomain-ddg-logo.svg'} alt="Copado Title Sponsor Logo" style={{ height: 80 }} />
-        </div>
+        <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 8 }}>Sponsor</h2>
+        <div style={{ fontSize: '1.3rem', color: '#0070f3', fontWeight: 600, padding: '0.5rem 0' }}>To Be Announced</div>
+        {/* <div style={{ marginTop: 24, marginBottom: 8 }}>
+         
+        </div> */}
       </section>
       {/* Speakers Section (swapped position) */}
       <section id="speakers" style={{ maxWidth: 1100, margin: '0 auto', padding: '4rem 1rem', textAlign: 'center' }}>
-        <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 8 }}>Meet Our Speakers</h2>
+        <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 8 }}>Speakers</h2>
         <div style={{ fontSize: '1.3rem', color: '#0070f3', fontWeight: 600, padding: '0.5rem 0' }}>To Be Announced</div>
       </section>
 
@@ -293,7 +323,31 @@ const CopadoCon2025SingleNav: React.FC = () => {
         <div style={{ fontWeight: 700, fontSize: '1.1rem' }}>© 2025 CopadoCon. All rights reserved.</div>
       </footer>
       <style>{`
+
+      .about-copadocon-heading {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+          }
+          .about-copadocon-desc {
+          font-size: 1.3rem;
+          margin-bottom: 24px;
+          text-align: justify;
+          }
+
+      
+
+    
+    
+     
         @media (max-width: 900px) {
+          .about-copadocon-heading {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+          }
+          .about-copadocon-desc {
+            font-size: 0.95rem;
+          }
           .copado-nav-list { gap: 1rem !important; }
         }
         @media (max-width: 768px) {
@@ -315,16 +369,74 @@ const CopadoCon2025SingleNav: React.FC = () => {
             -webkit-backdrop-filter: blur(16px) saturate(180%);
           }
           .copado-hamburger { display: block !important; }
-          .navbar-brand img {
-            height: 28px !important;
+          .navbar-logos {
+            gap: 8px !important;
+          }
+          .dreamin-logo {
+            height: 24px !important;
             margin-left: 0 !important;
+          }
+          .copado-logo {
+            height: 22px !important;
+          }
+          .logo-divider {
+            height: 22px !important;
+            margin: 0 6px 0 2px !important;
           }
           .navbar-brand {
             margin-left: 0 !important;
           }
         }
+        @media (max-width: 480px) {
+          .about-copadocon-heading {
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+          }
+          .about-copadocon-desc {
+          font-size: 1.0rem;
+          margin-bottom: 24px;
+          text-align: justify;
+          }
+          .navbar-logos {
+            gap: 4px !important;
+          }
+          .dreamin-logo {
+            height: 27px !important;
+          }
+          .copado-logo {
+            height: 30px !important;
+          }
+          .logo-divider {
+            height: 16px !important;
+            margin: 0 3px 0 -4px !important;
+          }
+        }
         .copado-nav-list button:hover {
           color: #2176ff !important;
+        }
+        .copadocon-hero-logo {
+          height: 300px;
+          margin-bottom: 0;
+          z-index: 1;
+          max-width: 90vw;
+          width: auto;
+          display: block;
+        }
+        @media (max-width: 900px) {
+          .copadocon-hero-logo {
+            height: 220px;
+          }
+        }
+        @media (max-width: 768px) {
+          .copadocon-hero-logo {
+            height: 140px;
+          }
+        }
+        @media (max-width: 480px) {
+          .copadocon-hero-logo {
+            height: 200px;
+          }
         }
       `}</style>
     </div>
