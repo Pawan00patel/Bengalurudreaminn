@@ -330,7 +330,7 @@ const CopadoCon2025SingleNav: React.FC = () => {
             margin-bottom: 16px;
           }
           .about-copadocon-desc {
-          font-size: 1.3rem;
+          font-size: 1.2rem;
           margin-bottom: 24px;
           text-align: justify;
           }
