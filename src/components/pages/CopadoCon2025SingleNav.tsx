@@ -219,12 +219,12 @@ const CopadoCon2025SingleNav: React.FC = () => {
         overflow: 'hidden',
       }}>
         <img
-          src={process.env.PUBLIC_URL + '/images/logos/CopadoCon Logo_Blue and Black@2x.png'}
+          src={process.env.PUBLIC_URL + '/images/logos/CopadoCon Logo_Blue and White@2x.png'}
           alt="CopadoCon 2025 Logo"
           className="copadocon-hero-logo"
         />
         <div style={{ maxWidth: 800, margin: '0 auto', zIndex: 1 }}>
-          <p style={{ fontSize: '1.2rem', marginBottom: 20, lineHeight: 1.6, wordBreak: 'break-word', whiteSpace: 'pre-line' }}>
+              <p style={{ fontSize: '1.2rem', marginBottom: 53, lineHeight: 1.6, wordBreak: 'break-word', whiteSpace: 'pre-line' }}>
             CopadoCon 2025 is the flagship, community-focused conference brought to you by Copado, the global leader in DevOps and AI-driven transformation for the Salesforce ecosystem
           </p>
         </div>
@@ -234,7 +234,7 @@ const CopadoCon2025SingleNav: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              background: '#2176ff',
+              background: '#01c3ee',
               color: '#fff',
               fontWeight: 600,
               fontSize: '1.1rem',
@@ -275,7 +275,7 @@ const CopadoCon2025SingleNav: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
           style={{
-            background: '#2176ff',
+            background: '#01c3ee',
             color: '#fff',
             fontWeight: 600,
             fontSize: '1.1rem',
@@ -330,9 +330,15 @@ const CopadoCon2025SingleNav: React.FC = () => {
             margin-bottom: 16px;
           }
           .about-copadocon-desc {
-          font-size: 1.2rem;
-          margin-bottom: 24px;
-          text-align: justify;
+            font-size: 1.2rem;
+            margin-bottom: 24px;
+            text-align: justify;
+            padding-left: 16px;
+            padding-right: 16px;
+          }
+          .hero-desc {
+            padding-left: 16px;
+            padding-right: 16px;
           }
 
       
@@ -413,7 +419,7 @@ const CopadoCon2025SingleNav: React.FC = () => {
           }
         }
         .copado-nav-list button:hover {
-          color: #2176ff !important;
+          color: #01c3ee !important;
         }
         .copadocon-hero-logo {
           height: 300px;
