@@ -92,8 +92,7 @@ const Gallery: React.FC<GalleryProps> = ({ autoPlay = true, autoPlayInterval = 5
   return (
     <div className="min-vh-100" style={{ background: 'linear-gradient(135deg,rgb(0, 0, 0) 0%,rgb(0, 0, 0) 50%,rgb(87, 32, 32) 100%)', color: '#fff', overflow: 'hidden' }}>
       <div className="container py-5">
-        <h1 className="text-center display-3 fw-bold mb-5" style={{ background: 'linear-gradient(90deg, #f472b6, #60a5fa, #34d399)', WebkitBackgroundClip: 'text', color: 'transparent', WebkitTextFillColor: 'transparent' }}>Gallery</h1>
-        {/* Flex row for category (left) and year (right) */}
+       
         <div className="d-flex justify-content-between align-items-center mb-4 flex-wrap" style={{gap: 16}}>
           <div className="d-flex flex-wrap gap-2">
             {categories.map(category => (

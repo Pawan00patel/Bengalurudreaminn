@@ -1,105 +1,112 @@
-.speakersPage {
-    background: #232323;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.speakers--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-.speakersPage--header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem 0 1rem 0;
-}
-.speakersPage--header h1 {
-    color: #fff;
-    font-size: 3rem;
-    font-family: var(--primaryFont, 'Noto Sans TC', sans-serif);
-    font-weight: 700;
-}
-.speakersPage--container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 2rem 0;
-}
-.speakers--search {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 2rem;
-}
-.speakers--input {
-    width: 40%;
-    height: 2.75rem;
-    outline: none;
-    border: none;
-    border-radius: 20px;
-    padding: 0.95rem 1rem;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-weight: 500;
-    font-size: 1rem;
-    background-color: #fff;
-    color: #333;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-}
-.speakers--input::placeholder {
-    color: #aaa;
-}
-.speakers--grid {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2.5rem;
-    justify-content: center;
-}
 .speaker-card-modern {
-    background: #232323;
-    border-radius: 12px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-    overflow: hidden;
-    width: 370px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2rem;
-    transition: transform 0.2s, box-shadow 0.2s;
+  background: white;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 1;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
+
 .speaker-card-modern:hover {
-    transform: translateY(-6px) scale(1.03);
-    box-shadow: 0 8px 32px rgba(255, 87, 34, 0.18);
+  transform: translateY(-5px);
 }
+
 .speaker-img-container {
-    width: 100%;
-    height: 260px;
-    background: #181818;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background: #e0f7fa;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
 }
+
 .speaker-img-modern {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0;
-    display: block;
-    transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
-.speaker-img-container:hover .speaker-img-modern {
-    transform: scale(1.12);
-}
+
 .speaker-content-block {
-    background: #ff7043;
-    padding: 1.5rem 1.2rem 1.2rem 1.2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
 }
+
+.speaker-card-modern:hover .speaker-content-block {
+  transform: translateY(0);
+}
+
+.speaker-name-modern {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.speaker-role-modern {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.speaker-experience-modern {
+  font-size: 0.8rem;
+  color: #888;
+  margin: 0;
+}
+
+.speaker-linkedin-modern {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.3rem 1rem;
+  background: #0077b5;
+  color: white;
+  text-decoration: none;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  transition: background-color 0.2s ease;
+}
+
+.speaker-linkedin-modern:hover {
+  background: #005e93;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .speakers--grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .speaker-name-modern {
+    font-size: 1rem;
+  }
+  
+  .speaker-role-modern {
+    font-size: 0.8rem;
+  }
+}
+    
 .speaker-name-modern {
     color: #232323;
     font-size: 1.3rem;

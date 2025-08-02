@@ -1,24 +1,15 @@
 import React, { useState } from 'react';
 import { volunteers } from '../../data/volunteer';
 
-const getYears = (data: typeof volunteers) => {
-  const years = Array.from(new Set(data.map(item => item.year))).sort((a, b) => b - a);
-  return years;
-};
 const getDepartments = (data: typeof volunteers) => {
   return Array.from(new Set(data.map(item => item.department)));
 };
 
 const Volunteers: React.FC = () => {
-  const years = getYears(volunteers);
   const departments = getDepartments(volunteers);
-  const [activeYear, setActiveYear] = useState<number | 'all'>('all');
   const [activeDept, setActiveDept] = useState<string>('all');
 
-  const filtered = volunteers.filter(v =>
-    (activeYear === 'all' || v.year === activeYear) &&
-    (activeDept === 'all' || v.department === activeDept)
-  );
+  const filtered = volunteers.filter(v => activeDept === 'all' || v.department === activeDept);
 
   return (
     <div className="min-vh-100 our-team-page-bg py-5" style={{ background: 'linear-gradient(135deg,rgb(0, 0, 0) 0%,rgb(0, 0, 0) 50%,rgb(87, 32, 32) 100%)', color: '#fff', overflow: 'hidden' }}>
@@ -26,13 +17,6 @@ const Volunteers: React.FC = () => {
       <div className="container">
         <div className="row mb-4">
           <div className="col-12 col-md-6 d-flex align-items-center justify-content-md-start justify-content-center gap-3">
-            <div className="d-flex flex-column flex-md-row align-items-center gap-2">
-              <label className="me-2 fw-semibold">Select Year:</label>
-              <select className="form-select w-auto" value={activeYear} onChange={e => setActiveYear(e.target.value === 'all' ? 'all' : Number(e.target.value))}>
-                <option value="all">All</option>
-                {years.map(year => <option key={year} value={year}>{year}</option>)}
-              </select>
-            </div>
             <div className="d-flex flex-column flex-md-row align-items-center gap-2">
               <label className="me-2 fw-semibold">Select Department:</label>
               <select className="form-select w-auto" value={activeDept} onChange={e => setActiveDept(e.target.value)}>
@@ -52,7 +36,7 @@ const Volunteers: React.FC = () => {
                 </div>
                 <div className="flex-grow-1 d-flex flex-column justify-content-center p-4 volunteer-desc-col">
                   <h4 className="fw-bold mb-1" style={{ color: '#f472b6' }}>{vol.name}</h4>
-                  <div className="mb-2 text-white-50">{vol.department} | {vol.year}</div>
+                  <div className="mb-2 text-white-50">{vol.department}</div>
                   {vol.bio.map((line, i) => <div className="mb-2" key={i}>{line}</div>)}
                   {vol.linkedin && (
                     <div className="d-flex align-items-center mt-2">
