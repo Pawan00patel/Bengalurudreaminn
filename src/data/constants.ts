@@ -3,8 +3,7 @@ import { Speaker, Reason, Stat, Event, NavItem, CoreTeamMember } from '../types'
 export const PUBLIC_URL = process.env.PUBLIC_URL || '';
 
 export const navItems: NavItem[] = [
-  { id: 'home', label: 'Home', href: '/' },
-  { id: 'bengaluru-dreamin-2025', label: 'Bengaluru Dreamin 2025', href: '/BengaluruDreamin2025' },
+
   { id: 'about', label: 'About', href: '/about' },
   { id: 'speakers', label: 'Speakers', href: '/speakers' },
   { id: 'events', label: 'Events', href: '/events' },
@@ -13,7 +12,8 @@ export const navItems: NavItem[] = [
   { id: 'blog', label: 'Blog', href: '/blog' },
   { id: 'our-initiatives', label: 'Our Initiatives', href: '/our-initiatives' },
   { id: 'contact', label: 'Contact', href: '/contact-us' },
-  { id: 'sponsors', label: 'Sponsors', href: '/sponsors' }
+  { id: 'sponsors', label: 'Sponsors', href: '/sponsors' },           
+ { id: 'bengaluru-dreamin-2025', label: 'Bengaluru Dreamin 2024', href: '/BengaluruDreamin2025' }
 ];
 
 export const speakers: Speaker[] = [

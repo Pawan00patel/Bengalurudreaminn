@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import Slider, { Settings } from 'react-slick';
 import { Calendar, Clock, MapPin, Users, ArrowRight, Star, Sparkles } from 'lucide-react';
 import { upcomingEvents, UpcomingEvent } from '../../data/upcomingEvents';
 import '../../styles/UpcomingEventsComponent.css';
+
+// Import only here
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 interface TimeLeft {
   days: number;
@@ -59,24 +64,21 @@ const UpcomingEventsComponent: React.FC = () => {
     </div>
   );
 
-  const EventCard: React.FC<{ event: UpcomingEvent; index: number }> = ({ event, index }) => {
+  const EventCard: React.FC<{ event: UpcomingEvent }> = ({ event }) => {
     const timeLeft = calculateTimeLeft(event.date);
     const isExpired = timeLeft.days === 0 && timeLeft.hours === 0 && timeLeft.minutes === 0 && timeLeft.seconds === 0;
 
     return (
-      <div 
+      <div
         className={`event-card group ${event.featured ? 'col-span-2 row-span-2' : ''}`}
-        style={{ animationDelay: `${index * 0.1}s`, background: event.gradient }}
+        style={{ background: event.gradient, position: "relative" }}
       >
-        {/* Animated background elements */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
         <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
         <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12 group-hover:scale-125 transition-transform duration-700"></div>
-        {/* Event image if available */}
         {event.image && (
           <img src={event.image} alt={event.title} className="event-image" />
         )}
-        {/* Content */}
         <div className="event-content">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
@@ -92,16 +94,13 @@ const UpcomingEventsComponent: React.FC = () => {
             </div>
             <Sparkles className="w-5 h-5 text-white/60 group-hover:text-white group-hover:scale-110 transition-all duration-300" />
           </div>
-          <h3 className="event-title">
-            {event.title}
-          </h3>
+          <h3 className="event-title">{event.title}</h3>
           <div className="event-meta">
             <span><Calendar className="w-4 h-4" />{formatDate(event.date)}</span>
             <span><Clock className="w-4 h-4" />{formatTime(event.date)}</span>
             <span><MapPin className="w-4 h-4" />{event.location}</span>
             <span><Users className="w-4 h-4" />{event.attendees.toLocaleString()} attending</span>
           </div>
-          {/* Countdown Timer */}
           <div className="event-timer">
             {!isExpired ? (
               <>
@@ -116,7 +115,10 @@ const UpcomingEventsComponent: React.FC = () => {
               </div>
             )}
           </div>
-          <button className="event-register-btn">
+          <button
+            className="event-register-btn"
+            onClick={() => event.link && window.open(event.link, '_blank')}
+          >
             <span>Register Now</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
           </button>
@@ -125,20 +127,43 @@ const UpcomingEventsComponent: React.FC = () => {
     );
   };
 
+  // Carousel settings
+  const settings: Settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 2 }
+      },
+      {
+        breakpoint: 768,
+        settings: { slidesToShow: 1 }
+      }
+    ]
+  };
+
   return (
     <section className="upcoming-events-section">
       <div className="upcoming-events-header">
         <h2>Upcoming Events</h2>
         <p>
-          Join thousands of professionals at our carefully curated events. 
+          Join thousands of professionals at our carefully curated events.
           Don't miss out on the next big opportunity to learn, network, and grow.
         </p>
       </div>
-      <div className="upcoming-events-grid">
-        {upcomingEvents.map((event, index) => (
-          <EventCard key={event.id} event={event} index={index} />
+      <Slider {...settings}>
+        {upcomingEvents.map((event) => (
+          <div key={event.id} style={{ padding: '0 10px', height: "100%" }}>
+            {/* Card heights/widths are controlled by your own CSS! */}
+            <EventCard event={event} />
+          </div>
         ))}
-      </div>
+      </Slider>
       <div className="upcoming-events-cta">
         <h3>Don't Miss Out on Future Events!</h3>
         <p>
@@ -148,7 +173,7 @@ const UpcomingEventsComponent: React.FC = () => {
           <span>Subscribe to Updates</span>
           <ArrowRight className="w-4 h-4" />
         </button>
-        <button className="cta-btn" style={{ border: '2px solid #fff', background: 'transparent', color: '#fff' }}>
+        <button className="cta-btn">
           Browse All Events
         </button>
       </div>

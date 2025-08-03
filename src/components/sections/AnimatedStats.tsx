@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { stats } from '../../data/stats';
+import '../../styles/AnimatedStats.css';
 
 interface AnimatedCounterProps {
   targetValue: number;
@@ -59,7 +60,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   }, [isVisible, targetValue, duration, delay]);
 
   return (
-    <div ref={counterRef} style={{ fontSize: '3rem', fontWeight: 700, color: '#fff', lineHeight: 1 }}>
+    <div ref={counterRef} className="stat-value">
       {count}{suffix}
     </div>
   );
@@ -67,21 +68,18 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 
 const AnimatedStats: React.FC = () => {
   return (
-    <div  style={{ background: 'linear-gradient(135deg,rgb(0, 0, 0) 0%,rgb(0, 0, 0) 50%,rgb(63, 17, 17) 100%)', color: '#fff', overflow: 'hidden', padding: '4rem 0' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem' }}>
+    <div className="stats-container">
+      <div className="stats-wrapper">
+        <div className="stats-grid glass-card">
           {stats.map((stat, index) => (
-            <div
-              key={index}
-              style={{ flex: '1 1 200px', minWidth: 200, textAlign: 'center' }}
-            >
+            <div key={index} className="stat-item">
               <AnimatedCounter
                 targetValue={stat.value}
                 suffix={stat.suffix}
                 duration={2000}
                 delay={index * 200}
               />
-              <div style={{ color: '#fff', fontSize: '1.25rem', marginTop: 16, fontWeight: 500 }}>
+              <div className="stat-label">
                 {stat.label}
               </div>
             </div>
