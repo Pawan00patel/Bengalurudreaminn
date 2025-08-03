@@ -25,16 +25,9 @@ const BengaluruDreaminNavbar: React.FC = () => {
   return (
     <nav className="bengaluru-dreamin-nav">
       <div className="container">
-          <img
-                    src={`${PUBLIC_URL}/images/logos/New-Dreamin-Logo-White.png`}
-                    alt="Bengaluru Dreamin Logo"
-                    style={{ height: '36px' }}
-                    className="d-inline-block align-text-top"
-                    
-                  />
-        {/* <Link to="/BengaluruDreamin2025" className="nav-brand">
-          Bengaluru Dreamin 2025
-        </Link> */}
+        <Link to="/BengaluruDreamin2025" className="nav-brand">
+          Bengaluru Dreamin 2024
+        </Link>
         
         <button
           className="mobile-menu-button"
