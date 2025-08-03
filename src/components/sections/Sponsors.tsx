@@ -6,9 +6,7 @@ import { sponsorsData } from '../../data/sponsorsData';
 const Sponsors: React.FC = () => {
   return (
     <div id="sponsors" className="sponsors">
-      <div className="sponsorsHeader">
-        <h2>Sponsors</h2>
-      </div>
+      
       <div className="sponsorsContainer">
         <div className="sponsor--scroll">
           <Marquee 

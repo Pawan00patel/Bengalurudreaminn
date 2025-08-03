@@ -56,7 +56,6 @@ export interface CoreTeamMember {
   bio: string[];
   linkedin?: string;
   x?: string;
-  year: number;
 }
 
 export interface ButtonProps {

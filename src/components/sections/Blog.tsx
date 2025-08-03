@@ -26,7 +26,6 @@ const Blog: React.FC = () => {
 
   return (
     <div className="blog-page container py-5">
-      <h1 className="mb-4 text-center">Blog</h1>
       <div className="d-flex flex-wrap gap-3 justify-content-between align-items-center mb-4">
         <input
           type="text"

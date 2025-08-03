@@ -1,0 +1,147 @@
+.bengaluru-dreamin-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(17, 24, 39, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bengaluru-dreamin-nav .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bengaluru-dreamin-nav .nav-brand {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.bengaluru-dreamin-nav .nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.bengaluru-dreamin-nav .nav-link {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.bengaluru-dreamin-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.bengaluru-dreamin-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #3b82f6;
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+
+.bengaluru-dreamin-nav .nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.bengaluru-dreamin-nav .mobile-menu-button {
+  display: none;
+  padding: 0.5rem;
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.bengaluru-dreamin-hero {
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+  background: linear-gradient(to right, #1e40af, #3b82f6);
+  color: #ffffff;
+  text-align: center;
+}
+
+.bengaluru-dreamin-hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.bengaluru-dreamin-hero p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .bengaluru-dreamin-nav .nav-links {
+    display: none;
+  }
+
+  .bengaluru-dreamin-nav .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(17, 24, 39, 0.95);
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .bengaluru-dreamin-nav .mobile-menu-button {
+    display: block;
+  }
+
+  .bengaluru-dreamin-hero h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Content sections styling */
+.section {
+  padding: 4rem 0;
+}
+
+.section-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #fff;
+}
+
+.section-dark {
+  background-color: #111827;
+  color: #000000;
+}
+
+.section-dark .section-title {
+  color: #ffffff;
+}
