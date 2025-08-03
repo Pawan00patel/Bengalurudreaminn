@@ -1,0 +1,154 @@
+.agenda-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 48px 16px;
+  background: #f5f8fa;
+}
+
+.agenda-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 32px;
+  color: #24324d;
+  letter-spacing: 0.02em;
+}
+
+.agenda-nav {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.agenda-nav a {
+  color: #2270ee;
+  font-weight: 500;
+  font-size: 1.05rem;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+  padding-bottom: 2px;
+}
+.agenda-nav a:hover,
+.agenda-nav a:focus {
+  color: #1b4686;
+  border-color: #2270ee;
+}
+
+.agenda-day {
+  margin-bottom: 56px;
+}
+
+.agenda-day-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1b4686;
+  margin-bottom: 36px;
+}
+
+.agenda-tracks {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+@media (min-width: 768px) {
+  .agenda-tracks {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.agenda-track-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(40, 61, 118, 0.10);
+  overflow: hidden;
+  border: 2px solid #e3e9f3;
+  display: flex;
+  flex-direction: column;
+}
+
+.agenda-track-header {
+  background: linear-gradient(90deg, #3756ff 10%, #60a3f7 100%);
+  color: #fff;
+  padding: 18px 22px;
+  font-size: 1.22rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.agenda-sessions-list {
+  border-top: 1px solid #e3e9f3;
+}
+
+.agenda-session {
+  padding: 18px 22px;
+  border-bottom: 1px solid #f5f8fa;
+  transition: background 0.15s;
+}
+.agenda-session:last-child {
+  border-bottom: none;
+}
+.agenda-session:hover {
+  background: #f7fafc;
+}
+
+.session-time {
+  color: #4985e1;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.session-title {
+  font-size: 1.10rem;
+  font-weight: 510;
+  margin-bottom: 2px;
+  color: #222a3a;
+}
+
+.session-speakers {
+  color: #556072;
+  font-size: 0.99rem;
+  margin-top: 2px;
+}
+
+.closing-section {
+  margin-top: 40px;
+}
+.closing-title {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3e59;
+  margin-bottom: 18px;
+}
+
+.closing-card {
+  background: #f8fafc;
+  border-radius: 14px;
+  box-shadow: 0 3px 8px rgba(50, 70, 130, 0.05);
+  overflow: hidden;
+}
+.closing-session {
+  padding: 16px 22px;
+  border-bottom: 1px solid #e3e9f3;
+  transition: background 0.15s;
+}
+.closing-session:last-child {
+  border-bottom: none;
+}
+.closing-session:hover {
+  background: #eaf2fb;
+}
+
+/* Responsive titles for mobile */
+@media (max-width: 600px) {
+  .agenda-title {
+    font-size: 2rem;
+  }
+  .agenda-day-title {
+    font-size: 1.25rem;
+  }
+}

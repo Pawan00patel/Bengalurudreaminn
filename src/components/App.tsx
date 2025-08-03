@@ -14,8 +14,8 @@ import Speakers from './sections/Speakers';
 import Blog from './sections/Blog';
 import BlogDetail from './sections/BlogDetail';
 import Events from './sections/Events';
+import BengaluruDreamin2025 from './pages/BengaluruDreamin2025';
            
-
 const App: React.FC = () => {
   return (
     <Router>
@@ -27,6 +27,14 @@ const App: React.FC = () => {
             <div className="d-flex flex-column min-vh-100 bg-gradient-to-br from-blue-50 to-indigo-100">
               {/* No Header or Footer for CopadoCon2025SingleNav */}
               {React.createElement(require('./pages/CopadoCon2025SingleNav').default)}
+            </div>
+          )}
+        />
+        <Route
+          path="/BengaluruDreamin2025"
+          render={() => (
+            <div className="min-h-screen">
+              <BengaluruDreamin2025 />
             </div>
           )}
         />
