@@ -14,31 +14,39 @@ const About: React.FC = () => {
         <div className="style-circle"></div>
         <div className="style-line"></div>
       </div>
-      <div className="about-body">
-        <div className="about-description">
+
+      {/* Top Row */}
+      <div className="about-top">
+        <div className="about-top-text">
           <h2>{aboutData.title}</h2>
-          <p className="text-lg md:text-xl font-light text-gray-200 mb-8 text-left">
-            {aboutData.intro}
-          </p>
-          <div className="space-y-6 text-base md:text-lg leading-relaxed text-gray-100">
-            {aboutData.paragraphs.map((para, idx) => (
-              <p key={idx} dangerouslySetInnerHTML={{ __html: para }} />
-            ))}
+          <p className="intro-text">{aboutData.intro}</p>
+        </div>
+        <div className="about-top-img">
+          <div className="gradient-border">
+            <img
+              src={
+                aboutData.image === 2
+                  ? '/images/Gallary/Others/1-3-1-scaled.jpg'
+                  : '/images/aboutimg2.png'
+              }
+              alt="About section visual"
+            />
           </div>
         </div>
-        <div className="about-img">
-          <img
-            src={aboutData.image === 2 ? '/images/Gallary/Others/1-3-1-scaled.jpg' : '/images/aboutimg2.png'}
-            alt="About section visual"
+      </div>
+
+      {/* Bottom Section */}
+      <div className="about-bottom">
+        {aboutData.paragraphs.slice(1).map((para, idx) => (
+          <p
+            key={idx}
+            className="bottom-paragraph"
+            dangerouslySetInnerHTML={{ __html: para }}
           />
-        </div>
+        ))}
       </div>
     </div>
   );
 };
 
 export default About;
-
-
-
-

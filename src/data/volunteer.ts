@@ -17,18 +17,18 @@ export const volunteers: Volunteer[] = [
       'Managed logistics for multiple events.',
       'Ensured smooth transportation and setup.'
     ],
-    linkedin: 'https://www.linkedin.com/in/ravi-kumar/'
+    linkedin: 'https://www.linkedin.com/in/aakashtotlani/'
   },
   {
     id: 'vol-2',
     name: 'Abhishek Thulasi',
     department: 'Hospitality',
-    image: '/images/Volunteers/Abhishek.jpeg',
+    image: '/images/Volunteers/Abhishek2.png',
     bio: [
       'Led the hospitality team for 2024 events.',
       'Coordinated with vendors and guests.'
     ],
-    linkedin: 'https://www.linkedin.com/in/priya-sharma/'
+    linkedin: 'https://www.linkedin.com/in/abhishek-thulasi-860656258/'
   },
   {
     id: 'vol-3',
@@ -39,7 +39,7 @@ export const volunteers: Volunteer[] = [
       'Handled technical setup and troubleshooting.',
       'Supported speakers with AV needs.'
     ],
-    linkedin: 'https://www.linkedin.com/in/amit-singh/'
+    linkedin: 'https://www.linkedin.com/in/abdul-rahman-420774249/'
   },
   {
     id: 'vol-4',
@@ -61,18 +61,18 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/aniket-jangale-a10a7114b/'
   },
   {
     id: 'vol-6',
     name: 'Anarbasha B',
     department: 'Marketing',
-    image: '/images/Volunteers/anas.jpg',
+    image: '/images/Volunteers/ansar.png',
     bio: [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/ansar-basha/'
   },
   {
     id: 'vol-7',
@@ -83,7 +83,7 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/ashish-s-188119151/'
   },
   {
     id: 'vol-8',
@@ -94,7 +94,7 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/bharatnaik/'
   },
   {
     id: 'vol-9',
@@ -116,7 +116,7 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/dasari-saisri-abhiram/'
   },
   {
     id: 'vol-11',
@@ -127,18 +127,18 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/davidrajah/'
   },
   {
     id: 'vol-11',
     name: 'Deepak Kumar',
     department: 'Marketing',
-    image: '/images/Volunteers/deepak.jpg',
+    image: '/images/Volunteers/deepak2.png',
     bio: [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/idkumar/'
   },
   {
     id: 'vol-11',
@@ -149,7 +149,7 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/gowthamikalaignanam/'
   },
   {
     id: 'vol-11',
@@ -160,7 +160,7 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/hasita-karanam-72351b165/'
   },
   {
     id: 'vol-11',
@@ -171,7 +171,7 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/hemananthan-shanmuganathan-58a45615/'
   },
   {
     id: 'vol-11',
@@ -182,7 +182,7 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/hira-k-ab5229221/'
   },
   {
     id: 'vol-11',
@@ -193,7 +193,7 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/jayanth-r-15397aa0/'
   },
   {
     id: 'vol-11',
@@ -204,7 +204,7 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/shyam-p-248579126/'
   },
   {
     id: 'vol-11',
@@ -215,7 +215,7 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/krishnendu-chakraborty/'
   },
   {
     id: 'vol-11',
@@ -226,29 +226,29 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/kiran-kumar-reddy-y7893105625/'
   },
   {
     id: 'vol-11',
     name: 'Milind Gite',
     department: 'Marketing',
-    image: '/images/Volunteers/milind.jpg',
+    image: '/images/Volunteers/milind2.png',
     bio: [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/milind-gite-b35990127/'
   },
   {
     id: 'vol-11',
     name: 'Mohammad Kaleem',
     department: 'Marketing',
-    image: '/images/Volunteers/mohammad.jpeg',
+    image: '/images/Volunteers/kaleem.png',
     bio: [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/kaleemmd9866/'
   },
   {
     id: 'vol-11',
@@ -259,7 +259,7 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/neha-rananaware-b726b5178/'
   },
   {
     id: 'vol-11',
@@ -270,7 +270,7 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/palanichinnasamy/'
   },
   {
     id: 'vol-11',
@@ -281,18 +281,18 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/pawan-kumar-patel-r-7445ba202/'
   },
   {
     id: 'vol-11',
     name: 'Prabhu N',
     department: 'Marketing',
-    image: '/images/Volunteers/prabhu.jpg',
+    image: '/images/Volunteers/prabhu2.png',
     bio: [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/prabhu-n-1b888b149/'
   },
   {
     id: 'vol-11',
@@ -303,18 +303,18 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/raghavi-maddisetty-54952b173/'
   },
   {
     id: 'vol-11',
-    name: 'RajaprashanthNaidu',
+    name: 'Rajaprashanth Naidu',
     department: 'Marketing',
-    image: '/images/Volunteers/RajaprashanthNaidu.jpg',
+    image: '/images/Volunteers/naidu.png',
     bio: [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/rajaprashanth-naidu-548199123/'
   },
   {
     id: 'vol-11',
@@ -325,7 +325,7 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/rajeshwari-jain-96287a137/'
   },
   {
     id: 'vol-11',
@@ -336,7 +336,7 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/ranjana-bramhane/'
   },
   {
     id: 'vol-11',
@@ -347,7 +347,7 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/ravi-bhaktharaj-14103b171/'
   },
   {
     id: 'vol-11',
@@ -358,7 +358,7 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/rizwan-shaik/'
   },
   {
     id: 'vol-11',
@@ -369,7 +369,7 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/sadhana-vijayakumar-845319224/'
   },
   {
     id: 'vol-11',
@@ -380,7 +380,7 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/shravani-nevagi-5b76a9223/'
   },
   {
     id: 'vol-11',
@@ -391,18 +391,18 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/sonalisatsangi2207/'
   },
   {
     id: 'vol-11',
     name: 'SP Harshini',
     department: 'Marketing',
-    image: '/images/Volunteers/SP.jpg',
+    image: '/images/Volunteers/SP2.PNG',
     bio: [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/harshini-s/'
   },
   {
     id: 'vol-11',
@@ -413,7 +413,7 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/vaishnavilokhande/'
   },
   {
     id: 'vol-11',
@@ -424,7 +424,7 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/venkatramanakapavari/'
   },
   {
     id: 'vol-11',
@@ -435,7 +435,7 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/vighnesh-nayak-279732125/'
   },
   {
     id: 'vol-11',
@@ -446,7 +446,7 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/vijaylaxmi-mathpati-164b56218/'
   },
   {
     id: 'vol-11',
@@ -457,7 +457,7 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/sanjana1805/'
   },
   {
     id: 'vol-11',
@@ -468,7 +468,7 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/debasmita-barik/'
   },
   {
     id: 'vol-11',
@@ -479,6 +479,6 @@ export const volunteers: Volunteer[] = [
       'Managed social media campaigns.',
       'Designed event posters and banners.'
     ],
-    linkedin: 'https://www.linkedin.com/in/sneha-rao/'
+    linkedin: 'https://www.linkedin.com/in/somnath1690/'
   },
 ];

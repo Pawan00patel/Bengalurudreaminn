@@ -1,0 +1,59 @@
+.volunteers-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.volunteer-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.volunteer-card:hover {
+  transform: translateY(-5px);
+}
+
+.volunteer-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.volunteer-name {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #0077b5; /* LinkedIn Blue */
+  margin-bottom: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.volunteer-name:hover {
+  text-decoration: underline;
+}
+
+.volunteer-department {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.volunteer-bio {
+  list-style: none;
+  padding: 0;
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.volunteer-bio li {
+  margin-bottom: 4px;
+}
