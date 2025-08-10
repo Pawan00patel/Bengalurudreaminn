@@ -1,7 +1,7 @@
 .sponsors {
   min-height: 40vh;
   position: relative;
-  background: #fff;
+  background: #000000;
   padding: 3rem 0;
 }
 
@@ -31,7 +31,7 @@
   flex-direction: column;
   align-items: center;
   margin: 0 2rem;
-  background: #f7f7f7;
+  background:  rgba(0,0,0,0.08);
   border-radius: 1rem;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   padding: 1.5rem 2rem;
@@ -58,13 +58,96 @@
   margin: 0;
 }
 
-@media (max-width: 600px) {
-  .sponsor--box {
-    margin: 0 0.5rem;
-    padding: 1rem 0.5rem;
+.sponsors-page-bg {
+  background: #fff;
+  min-height: 100vh;
+  padding-top: 2rem;
+}
+
+.sponsor-section {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.sponsor-tier-heading {
+  color: #34a853;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.sponsor-tier-heading:after {
+  content: '';
+  display: block;
+  margin: 0.3rem auto 0 auto;
+  width: 120px;
+  height: 2px;
+  background: #34a853;
+  border-radius: 2px;
+}
+
+.sponsor-card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem 2.5rem;
+  margin: 1.5rem 0 0 0;
+}
+
+.sponsor-card {
+  background: #f8f8f8;
+  border-radius: 18px;
+  padding: 1.2rem 2.5rem;
+  min-width: 180px;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s;
+}
+
+.sponsor-card:hover {
+  box-shadow: 0 4px 24px rgba(52,168,83,0.13);
+}
+
+.sponsor-logo {
+  max-width: 300px;
+  max-height: 60px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .sponsor-card-row {
+    gap: 1.2rem 1.2rem;
   }
-  .sponsor--box img {
-    width: 80px;
-    height: 40px;
+  .sponsor-card {
+    padding: 1rem 1.2rem;
+    min-width: 120px;
+  }
+  .sponsor-logo {
+    max-width: 90px;
+    max-height: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sponsor-card-row {
+    gap: 0.7rem 0.7rem;
+  }
+  .sponsor-card {
+    padding: 0.7rem 0.7rem;
+    min-width: 90px;
+  }
+  .sponsor-logo {
+    max-width: 100px;
+    max-height: 50px;
   }
 }

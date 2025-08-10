@@ -14,10 +14,11 @@ const EventFounders: React.FC = () => {
             <div className="col-md-4 col-12 d-flex flex-column align-items-center mb-4" key={founder.name}>
               <div
                 className="modern-founder-card founder-hover-zoom"
-                style={{ position: 'relative', width: '100%', maxWidth: 350, borderRadius: 20, overflow: 'hidden', boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)', background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(8px)', border: '1px solid rgba(236, 12, 12, 0.18)', cursor: 'pointer', margin: '0 auto', transition: 'transform 0.3s cubic-bezier(.4,2,.6,1)' }}
+                style={{ position: 'relative', width: '100%', maxWidth: 350, borderRadius: 20, overflow: 'hidden', background: 'linear-gradient(180deg, #34a853, #2daeb8, #4285f4), rgba(255,255,255,0.05)' }}
                 onClick={() => setSelected(founder)}
               >
-                <img src={founder.image} alt={founder.name} style={{ width: '100%', height: 320, objectFit: 'cover', display: 'block', transition: 'transform 0.3s cubic-bezier(.4,2,.6,1)' }} />
+                <img src={founder.image} alt={founder.name}
+                 style={{ width: '100%', height: 320, objectFit: 'cover', display: 'block', transition: 'transform 0.3s cubic-bezier(.4,2,.6,1)' }} />
                 <div style={{ position: 'absolute', left: 0, right: 0, bottom: 0, padding: '1.5rem 1rem 1rem 1rem', background: 'linear-gradient(0deg, rgba(0,0,0,0.85) 70%, rgba(241, 85, 0, 0.0) 100%)', color: '#fff' }}>
                   <h4 style={{ margin: 0, fontWeight: 700 }}>{founder.name}</h4>
                   <div style={{ fontWeight: 500, fontSize: 16, marginBottom: 8 }}>{founder.title}</div>
@@ -34,7 +35,10 @@ const EventFounders: React.FC = () => {
                 <div className="modal-content" style={{
                   background: 'linear-gradient(135deg, #2d0b3a 0%, #5a1e2e 100%)',
                   color: '#fff',
-                  border: 'none',
+                  border: '4px solid transparent',
+                  backgroundImage: 'linear-gradient(135deg, #2d0b3a 0%, #5a1e2e 100%)',
+                  backgroundOrigin: 'border-box',
+                  backgroundClip: 'padding-box, border-box',
                   boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
                   borderRadius: 18,
                   overflow: 'hidden',

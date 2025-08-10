@@ -4,7 +4,7 @@ export const PUBLIC_URL = process.env.PUBLIC_URL || '';
 
 export const navItems: NavItem[] = [
   { id: 'home', label: 'Home', href: '/' },
-  { id: 'bengaluru-dreamin-2025', label: 'Bengaluru Dreamin 2024', href: '/BengaluruDreamin2025' },
+
   { id: 'about', label: 'About', href: '/about' },
   { id: 'speakers', label: 'Speakers', href: '/speakers' },
   { id: 'events', label: 'Events', href: '/events' },

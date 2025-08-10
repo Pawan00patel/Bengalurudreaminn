@@ -1,5 +1,5 @@
+import React, { useState, useEffect } from 'react';
 import {  PUBLIC_URL } from '../../data/constants';
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import '../../styles/BengaluruDreamin2025.css';
@@ -21,9 +21,31 @@ const navItems: NavItem[] = [
 
 const BengaluruDreaminNavbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 40);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <nav className="bengaluru-dreamin-nav">
+    <nav
+      className={`bengaluru-dreamin-nav${scrolled ? ' scrolled' : ' transparent'}`}
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        zIndex: 100,
+        background: scrolled ? 'rgba(15, 11, 11, 0.85)' : 'transparent',
+        boxShadow: scrolled ? '0 2px 16px 0 rgba(0,0,0,0.10)' : 'none',
+        transition: 'background 0.3s, box-shadow 0.3s',
+        backdropFilter: scrolled ? 'blur(12px)' : 'none',
+      }}
+    >
       <div className="container">
         <Link to="/BengaluruDreamin2025" className="nav-brand">
           Bengaluru Dreamin 2024

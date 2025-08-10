@@ -1,11 +1,15 @@
 import React from 'react';
+
 import BengaluruDreaminNavbar from '../layout/BengaluruDreaminNavbar';
+import Hero from '../sections/hero';
 import Speakers from '../sections/Speakers';
-import AgendaSection from '../sections/AgendaSection';
 import OurTeam from '../pages/OurTeam';
 import Gallery from '../pages/Gallery';
 import Blog from '../sections/Blog';
+
 import Sponsors from '../sections/Sponsors';
+import SponsorsPage from '../pages/SponsorsPage';
+import AgendaPDFViewer from '../sections/AgendaPDFViewer';
 import '../../styles/BengaluruDreamin2025.css';
 
 const BengaluruDreamin2025: React.FC = () => {
@@ -13,13 +17,9 @@ const BengaluruDreamin2025: React.FC = () => {
     <div className="min-h-screen">
       <BengaluruDreaminNavbar />
       
+
       {/* Hero Section */}
-      <section className="bengaluru-dreamin-hero">
-        <div className="section-container">
-          <h1>Bengaluru Dreamin 2024</h1>
-          <p>Join us for the biggest Salesforce community event in Bengaluru</p>
-        </div>
-      </section>
+      <Hero />
 
       {/* Content Sections */}
       <section id="speakers" className="section">
@@ -32,7 +32,7 @@ const BengaluruDreamin2025: React.FC = () => {
       <section id="agenda" className="section section-dark">
         <div className="section-container">
           <h2 className="section-title">Event Agenda</h2>
-          <AgendaSection />
+          <AgendaPDFViewer />
         </div>
       </section>
 
@@ -60,9 +60,16 @@ const BengaluruDreamin2025: React.FC = () => {
       <section id="sponsors" className="section section-dark">
         <div className="section-container">
           <h2 className="section-title">Our Sponsors</h2>
-          <Sponsors />
+          <SponsorsPage />
         </div>
       </section>
+
+        {/* <section id="sponsors" className="section section-dark">
+        <div className="section-container">
+          <h2 className="section-title">Our Sponsors</h2>
+          <Sponsors />
+        </div>
+      </section> */}
     </div>
   );
 };

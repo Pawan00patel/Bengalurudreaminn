@@ -23,13 +23,15 @@ const CoreTeam: React.FC = () => {
                   boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.18)',
                   background: 'rgba(255, 255, 255, 0.10)',
                   backdropFilter: 'blur(6px)',
-                  border: '1.5px solid rgb(236, 14, 14)',
-                  cursor: 'pointer',
+                  border: '4px solid transparent',
+                  backgroundImage: 'linear-gradient(180deg, #ff0000ff, #000000ff, #ff0000ff)',
+                
                   margin: '0 auto',
-                  transition: 'transform 0.3s cubic-bezier(.4,2,.6,1)',
+          
                 }}
                 onClick={() => setSelected(member)}
               >
+
                 <img
                   src={`${PUBLIC_URL}${member.image}`}
                   alt={member.name}

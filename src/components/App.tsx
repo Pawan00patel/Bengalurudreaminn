@@ -9,7 +9,6 @@ import ContactUs from './pages/ContactUs';
 import Footer from './layout/Footer';
 import About from './sections/About';
 import Sponsors from './sections/Sponsors';
-import SponsorPage from './sections/SponsorPage';
 import Speakers from './sections/Speakers';
 import Blog from './sections/Blog';
 import BlogDetail from './sections/BlogDetail';
@@ -48,7 +47,6 @@ const App: React.FC = () => {
                   <Route path="/speakers" component={Speakers} />
                   <Route path="/about" component={About} />
                   <Route exact path="/sponsors" component={Sponsors} />
-                  <Route path="/sponsors/:sponsorId" component={SponsorPage} />
                   <Route path="/our-team" component={OurTeam} />
                   <Route path="/gallery" component={Gallery} />
                   <Route path="/contact-us" component={ContactUs} />
