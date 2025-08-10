@@ -54,9 +54,7 @@ const SponsorModal: React.FC<SponsorModalProps> = ({ sponsor, isOpen, onClose })
 
   if (!sponsor || !isOpen) return null;
 
-  // Extract website URL from description
-  const websiteUrl = sponsor.description.match(/Visit us at (https?:\/\/[^\s.]+\.[^\s]+)/)?.[1];
-
+  
   return (
     <div 
       className={`sponsor-modal-overlay ${isOpen ? 'active' : ''}`}

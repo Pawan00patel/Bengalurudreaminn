@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import {  PUBLIC_URL } from '../../data/constants';
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import '../../styles/BengaluruDreamin2025.css';

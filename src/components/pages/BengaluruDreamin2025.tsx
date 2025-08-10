@@ -6,8 +6,6 @@ import Speakers from '../sections/Speakers';
 import OurTeam from '../pages/OurTeam';
 import Gallery from '../pages/Gallery';
 import Blog from '../sections/Blog';
-
-import Sponsors from '../sections/Sponsors';
 import SponsorsPage from '../pages/SponsorsPage';
 import AgendaPDFViewer from '../sections/AgendaPDFViewer';
 import '../../styles/BengaluruDreamin2025.css';
