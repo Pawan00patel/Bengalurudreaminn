@@ -1,0 +1,69 @@
+.copadocon-nav {
+  background: #1a1a1a;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.copadocon-nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copadocon-nav-left {
+  flex: 1;
+}
+
+.copadocon-nav-logo {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.copadocon-nav-center {
+  flex: 2;
+}
+
+.copadocon-nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.copadocon-nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.copadocon-nav-links li a:hover {
+  color: #1e88e5;
+}
+
+.copadocon-nav-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .copadocon-nav-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .copadocon-nav-links {
+    gap: 1rem;
+  }
+}

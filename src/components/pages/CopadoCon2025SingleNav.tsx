@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CopadoSponsor from '../sections/CopadoSponsor';
 
 // const speakers = [
 //   {
@@ -294,11 +295,10 @@ const CopadoCon2025SingleNav: React.FC = () => {
       {/* Speakers Section */}
       {/* Sponsors Section (swapped position) */}
       <section id="sponsors" style={{ maxWidth: 900, margin: '0 auto', padding: '4rem 1rem', textAlign: 'center' }}>
-        <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 8 }}>Sponsors</h2>
-        <div style={{ fontSize: '1.3rem', color: '#0070f3', fontWeight: 600, padding: '0.5rem 0' }}>To Be Announced</div>
-        {/* <div style={{ marginTop: 24, marginBottom: 8 }}>
+        <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 8 }}>Exclusive Sponsor</h2>
+     
+            <CopadoSponsor />
          
-        </div> */}
       </section>
       {/* Speakers Section (swapped position) */}
       <section id="speakers" style={{ maxWidth: 1100, margin: '0 auto', padding: '4rem 1rem', textAlign: 'center' }}>
