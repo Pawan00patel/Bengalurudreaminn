@@ -12,7 +12,7 @@ export type GalleryItem = {
 
 export const galleryData: GalleryItem[] = [
     // Conferences
-    { src: '/images/coreteamandfounders/Akshay-1-scaled.jpg', type: 'photo', category: 'Conferences', title: 'Conference 1', description: 'A moment from Conference 1.', year: 2024 },
+    { src: '/images/Gallary/Conferences/copadocon.png', type: 'photo', category: 'Conferences', title: 'Conference 1', description: 'A moment from Conference 1.', year: 2024 },
     { src: '/images/coreteamandfounders/Sesha-bro-dp.jpg', type: 'photo', category: 'Conferences', title: 'Conference 2', description: 'A moment from Conference 2.', year: 2025 },
     { src: '', type: 'video', category: 'Conferences', title: 'Conference Video', description: 'Highlights from the conference.', year: 2025, thumbnail: '/images/logos/New-Dreamin-Logo-White.png', youtubeUrl: 'https://www.youtube.com/watch?v=abcdefghij' },
     // Roadshows
