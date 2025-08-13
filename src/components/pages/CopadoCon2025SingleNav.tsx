@@ -262,7 +262,7 @@ const CopadoCon2025SingleNav: React.FC = () => {
           From deep-dive sessions and expert-led demos to visionary keynotes and hands-on learning zones, CopadoCon is built to inspire and accelerate every stage of your professional journey.<br /><br />
           Organized by Bengaluru Dreamin’ in collaboration with seasoned community leaders to bring world-class execution and local expertise to deliver a high-impact experience that brings Copado’s vision to life at scale.
         </p>
-        <div style={{ marginTop: 24, fontSize: '1.1rem', color: '#0070f3' }}>Date: 13 September 2025 | The Den Whitefield Bengaluru, India</div>
+        <div style={{ marginTop: 24, fontSize: '1.1rem', color: '#0070f3' }}>Date: 13 September 2025 | Sheraton Grand Whitefield, Bengaluru, India</div>
       </section>
       {/* Copado Community Section */}
       <section id="community" style={{ maxWidth: 900, margin: '0 auto', padding: '2rem 1rem', textAlign: 'center' }}>
