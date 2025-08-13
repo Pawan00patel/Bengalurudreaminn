@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sponsor, sponsors } from '../../data/copadocon2025/sponsors';
+import {  sponsors } from '../../data/copadocon2025/sponsors';
 import '../../styles/CopadoSponsor.css';
 
 const CopadoSponsor: React.FC = () => {
