@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
+import {  PUBLIC_URL } from '../../data/constants';
 import '../../styles/BengaluruDreamin2025.css';
 
 interface NavItem {
@@ -46,10 +47,18 @@ const BengaluruDreaminNavbar: React.FC = () => {
       }}
     >
       <div className="container">
-        <Link to="/BengaluruDreamin2025" className="nav-brand">
-          Bengaluru Dreamin 2024
-        </Link>
-        
+         <a
+                 className="navbar-brand d-flex align-items-center gap-2"
+                 href="/"
+                 style={{ marginLeft: '1px' }}
+               >
+                 <img
+                   src={`${PUBLIC_URL}/images/logos/New-Dreamin-Logo-White.png`}
+                   alt="Bengaluru Dreamin Logo"
+                   style={{ height: '36px' }}
+                   className="d-inline-block align-text-top"
+                 />
+               </a>
         <button
           className="mobile-menu-button"
           onClick={() => setIsMenuOpen(!isMenuOpen)}

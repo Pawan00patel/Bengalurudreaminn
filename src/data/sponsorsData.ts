@@ -8,7 +8,44 @@ export const sponsorsData = [
     linkedin: 'https://www.linkedin.com/company/ntt-data-americas/',
     twitter: 'https://x.com/NTT_DATA_NA',
     instagram: 'https://www.instagram.com/nttdataplus/',
-    youtube: 'https://www.youtube.com/@nttdatanorthamerica' 
+    youtube: 'https://www.youtube.com/@nttdatanorthamerica',
+    blogs: [
+      {
+        title: 'NTT DATA: A blend of leadership, culture and creativity',
+        url: 'https://us.nttdata.com/en/blog/2024/april/a-blend-of-leadership-culture-and-creativity',
+        date: 'April 18, 2024'
+      },
+      {
+        title: 'A journey of opportunities and growth',
+        url: 'https://us.nttdata.com/en/blog/2024/january/a-journey-of-opportunities-and-growth',
+        date: 'January 24, 2024'
+      },
+      {
+        title: 'A dive into personal growth and culture at NTT DATA',
+        url: 'https://us.nttdata.com/en/blog/2023/november/a-dive-into-personal-growth-and-culture-at-ntt-data',
+        date: 'November 07, 2023'
+      },
+      {
+        title: 'Upward leap: Growing through enriching experiences at NTT DATA',
+        url: 'https://us.nttdata.com/en/blog/2023/october/growing-through-enriching-experiences-at-ntt-data',
+        date: 'October 09, 2023'
+      },
+      {
+        title: 'NTT DATA Embraces Differences, Promotes Fairness',
+        url: 'https://us.nttdata.com/en/blog/2023/june/ntt-data-embraces-differences',
+        date: 'June 08, 2023'
+      },
+      {
+        title: 'The Journey to Success: Rising Through the Ranks at NTT DATA',
+        url: 'https://us.nttdata.com/en/blog/2023/april/rising-through-the-ranks-at-ntt-data',
+        date: 'April 20, 2023'
+      },
+      {
+        title: 'Taking Your Career to the Next Level at NTT DATA',
+        url: 'https://us.nttdata.com/en/blog/2023/february/taking-your-career-to-the-next-level-at-ntt-data',
+        date: 'February 07, 2023'
+      }
+    ]
   },
   {
     name: 'Salesforce',
@@ -18,6 +55,11 @@ export const sponsorsData = [
     description: `Salesforce is the world’s #1 customer relationship management (CRM) platform. We help your marketing, sales, commerce, service and IT teams work as one from anywhere — so you can keep your customers happy everywhere. Learn more at https://www.salesforce.com/`,
     linkedin: 'https://www.linkedin.com/company/salesforce/',
     twitter: 'https://twitter.com/salesforce',
+          blogs: [
+            { title: 'Five Ways of Dealing with Change Fatigue in Digital Transformation', url: 'https://www.criticalriver.com/chin-up-five-ways-of-dealing-with-change-fatigue-in-digital-transformation/' },
+            { title: 'Top Real Estate Firm’s Email Automation with Cloud Data Integration', url: 'https://www.criticalriver.com/case-study-real-estate-email-automation-with-cloud-data-integration/' },
+            { title: 'Pushing Beyond the Initial Hype: How Organizations Can Create Value with Generative AI?', url: 'https://www.criticalriver.com/pushing-beyond-the-initial-hype-how-organizations-can-create-value-with-generative-ai/' }
+          ],
     instagram: 'https://www.instagram.com/salesforce/',
     youtube: 'https://www.youtube.com/user/salesforce' 
   },
@@ -30,10 +72,35 @@ export const sponsorsData = [
     linkedin: 'https://www.linkedin.com/company/provar-testing',
     twitter: 'https://twitter.com/ProvarTesting',
     instagram: '',
-    youtube: 'https://www.youtube.com/c/ProvarTesting'
+    youtube: 'https://www.youtube.com/c/ProvarTesting',
+      blogs: [
+        {
+          title: 'The Top 5 Reasons to Choose Provar for Automated Testing',
+          url: 'https://provar.com/blog/product/top-5-reasons-choose-provar-automated-testing/',
+          date: 'May 9, 2024'
+        },
+        {
+          title: 'Salesforce Testing 101: Why Test and Where to Start?',
+          url: 'https://provar.com/blog/thought-leadership/salesforce-testing-101-why-test-where-to-start/',
+          date: 'January 16, 2024'
+        },
+        {
+          title: 'How Does Provar Automation Stack Up to Tools Using Robotic Capabilities?',
+          url: 'https://provar.com/blog/thought-leadership/how-does-provar-automation-stack-up-to-tools-using-robotic-capabilities/',
+          date: 'January 9, 2024'
+        },
+        {
+          title: 'How to Pick Your Salesforce Consulting Partner',
+          url: 'https://bengalurudreamin.com/how-to-pick-your-salesforce-consulting-partner/',
+          date: 'January 16, 2024'
+        }
+      ]
   },
   {
     name: 'CriticalRiver',
+          blogs: [
+            { title: 'A Comprehensive Guide to Salesforce CTI Integration', url: 'https://360smsapp.com/blog/a-comprehensive-guide-to-salesforce-cti-integration/', date: 'March 20, 2024' }
+          ],
     logo: '/images/sponsors/criticalriver.png',
     url: '/BengaluruDreamin2025/event-founders/sponsors/criticalriver',
     tier: 'silver',
@@ -45,6 +112,11 @@ export const sponsorsData = [
   },
   {
     name: 'UST',
+          blogs: [
+            { title: 'Testsigma Salesforce Testing Launch', url: 'https://testsigma.com/blog/testsigma-salesforce-testing-launch/' },
+            { title: 'Salesforce Testing Low Code Platform', url: 'https://testsigma.com/blog/salesforce-testing-low-code-platform/' },
+            { title: 'Simplify Your Salesforce Testing With Testsigma', url: 'https://docs.google.com/document/d/1QInFNvSOM5v2fTaNNePBKdyBVNZo2stsz-O8_t-ojbc/edit' }
+          ],
     logo: '/images/sponsors/ust.png',
     url: '/BengaluruDreamin2025/event-founders/sponsors/ust',
     tier: 'silver',
@@ -56,6 +128,9 @@ export const sponsorsData = [
   },
   {
     name: 'Cloud',
+          blogs: [
+            { title: "LET'S BUILD THE FUTURE OF YOUR CUSTOMER RELATIONSHIP.", url: 'https://www.springfive.com/en/let-s-build-the-future-of-your-customer-relationship' }
+          ],
     logo: '/images/sponsors/360DegreeCloud.png',
     url: '/BengaluruDreamin2025/event-founders/sponsors/360-degree-cloud-technologies',
     tier: 'bronze',

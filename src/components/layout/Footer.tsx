@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
           <div className="col-md-4 col-12 text-center mb-3 mb-md-0">
             <div className="d-flex justify-content-center align-items-center gap-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/bengalurudreamin?igsh=amc5a3luM2gxYmFh"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
                 />
               </a>
               <a
-                href="https://youtube.com"
+                href="https://www.youtube.com/@BengaluruDreamin"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"
@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
                 />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/bengaluru-dreamin/posts/?feedView=all"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import '../../styles/Sponsors.css';
 import { sponsorsData } from '../../data/sponsorsData';
-import SponsorModal from '../sections/SponsorModal';
 
 const groupedSponsors: { [key: string]: any[] } = {
   diamond: [],
@@ -20,26 +20,27 @@ sponsorsData.forEach((sponsor) => {
 interface SponsorSectionProps {
   title: string;
   sponsors: typeof sponsorsData;
-  onSponsorClick: (sponsor: typeof sponsorsData[0]) => void;
 }
 
-const SponsorSection: React.FC<SponsorSectionProps> = ({ title, sponsors, onSponsorClick }) => {
+const SponsorSection: React.FC<SponsorSectionProps> = ({ title, sponsors }) => {
   return (
     <div className="sponsor-section">
       <h3 className="sponsor-tier-heading">{title}</h3>
       <div className="sponsor-card-row">
         {sponsors.map((sponsor, i) => {
           const cardId = `sponsor-card-${sponsor.name.replace(/\s+/g, '')}`;
+          // Extract sponsorId from sponsor.url
+          const sponsorId = sponsor.url.split('/').pop();
           return (
             <div className="sponsor-card" key={i} id={cardId}>
-              <button
+              <Link
                 className="sponsor-link-btn"
-                style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
-                onClick={() => onSponsorClick(sponsor)}
+                to={`/BengaluruDreamin2025/event-founders/sponsors/${sponsorId}`}
                 aria-label={sponsor.name}
+                style={{ display: 'block' }}
               >
                 <img src={sponsor.logo} alt={sponsor.name} className="sponsor-logo" />
-              </button>
+              </Link>
             </div>
           );
         })}
@@ -50,14 +51,6 @@ const SponsorSection: React.FC<SponsorSectionProps> = ({ title, sponsors, onSpon
 
 
 const SponsorsPage: React.FC = () => {
-  const [selectedSponsor, setSelectedSponsor] = useState<typeof sponsorsData[0] | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleSponsorClick = (sponsor: typeof sponsorsData[0]) => {
-    setSelectedSponsor(sponsor);
-    setIsModalOpen(true);
-  };
-
   useEffect(() => {
     // Restore scroll to sponsor card if available
     const cardId = sessionStorage.getItem('sponsorsPageCardId');
@@ -82,30 +75,21 @@ const SponsorsPage: React.FC = () => {
       <div className="container py-5">
         <SponsorSection 
           title="DIAMOND SPONSORS" 
-          sponsors={groupedSponsors.diamond} 
-          onSponsorClick={handleSponsorClick}
+          sponsors={groupedSponsors.diamond}
         />
         <SponsorSection 
           title="SILVER SPONSORS" 
-          sponsors={groupedSponsors.silver} 
-          onSponsorClick={handleSponsorClick}
+          sponsors={groupedSponsors.silver}
         />
         <SponsorSection 
           title="BRONZE SPONSORS" 
-          sponsors={groupedSponsors.bronze} 
-          onSponsorClick={handleSponsorClick}
+          sponsors={groupedSponsors.bronze}
         />
         <SponsorSection 
           title="ASSOCIATE SPONSORS" 
-          sponsors={groupedSponsors.associate} 
-          onSponsorClick={handleSponsorClick}
+          sponsors={groupedSponsors.associate}
         />
       </div>
-      <SponsorModal
-        sponsor={selectedSponsor}
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-      />
     </div>
   );
 };
