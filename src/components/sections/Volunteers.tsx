@@ -31,18 +31,43 @@ const Volunteers: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={vol.image} alt={vol.name} />
+                {/* Profile Picture */}
+                <img
+                  src={vol.image}
+                  alt={vol.name}
+                  className="profile-pic"
+                />
               </a>
-              <a
+
+                            <a
                 href={vol.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ textDecoration: 'none' }}
               >
-                <h4 className="fw-bold mb-1" style={{ color: '#f472b6' }}>
+                <h4 className="fw-bold mb-1" style={{ color: '#fff' }}>
                   {vol.name}
                 </h4>
               </a>
+
+
+              {/* LinkedIn Logo */}
+              {vol.linkedin && (
+                <div className="d-flex justify-content-center mt-2">
+                  <a
+                    href={vol.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                  >
+                    <img
+                      src="/images/socialmediaicons/icons8-linkedin-48.png"
+                      alt="LinkedIn"
+                      className="linkedin-icon"
+                    />
+                  </a>
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -68,13 +93,33 @@ const Volunteers: React.FC = () => {
           transform: scale(1.04);
         }
 
-        .volunteer-card img {
+        /* Profile Picture */
+        .volunteer-card img.profile-pic {
           width: 160px;
           height: 160px;
           object-fit: cover;
           border-radius: 50%;
-          border: 4px solid #fff;
+          border: 4px solid #fff; /* white border only for profile pic */
           margin-bottom: 16px;
+          transition: transform 0.2s ease;
+        }
+
+        /* Profile picture hover effect */
+        .volunteer-card a:hover img.profile-pic {
+          transform: scale(1.05);
+        }
+
+        /* LinkedIn icon (no border) */
+        .volunteer-card img.linkedin-icon {
+          width: 28px;
+          height: 28px;
+          border: none;
+          transition: transform 0.2s ease;
+        }
+
+        /* LinkedIn icon hover */
+        .volunteer-card a:hover img.linkedin-icon {
+          transform: scale(1.15);
         }
 
         @media (max-width: 992px) {
