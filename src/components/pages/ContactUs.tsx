@@ -97,9 +97,9 @@ const ContactUs: React.FC = () => {
         </p>
         <h3 className="contact-follow">Follow Us</h3>
         <div className="contact-socials">
-          <a href="#">facebook</a>
-          <a href="#">instagram</a>
-          <a href="#">vimeo</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">facebook</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">instagram</a>
+          <a href="https://vimeo.com" target="_blank" rel="noopener noreferrer">vimeo</a>
         </div>
       </div>
     </div>
