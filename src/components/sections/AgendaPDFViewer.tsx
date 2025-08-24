@@ -14,7 +14,7 @@ const AgendaPDFViewer: React.FC = () => {
         minHeight: '120px',
         padding: '3vw 0',
         width: '100%',
-        background: 'linear-gradient(180deg, #000000ff 0%,  #000000ff 100%)',
+        background: 'radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%)',
       }}
     >
       <a

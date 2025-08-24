@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
+import '../../styles/ContactUs.css';
+ // Import the CSS file
+
 
 const ContactUs: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    firstName: '',
+    lastName: '',
+    mail: '',
+    phone: '',
     message: ''
   });
 
@@ -14,53 +19,89 @@ const ContactUs: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Thank you for your inquiry! We will get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
+    alert('Thank you for contacting us!');
+    setFormData({
+      firstName: '',
+      lastName: '',
+      mail: '',
+      phone: '',
+      message: ''
+    });
   };
 
   return (
-    <div className="container py-5" style={{ backdropFilter: 'blur(10px)', backgroundColor: 'rgba(128, 128, 128, 0.2)', border: '1px solid rgba(128, 128, 128, 0.5)', borderRadius: '8px' }}>
-      <h1 className="text-center mb-4">Contact Us</h1>
-      <form onSubmit={handleSubmit} className="mx-auto" style={{ maxWidth: '500px' }}>
-        <div className="mb-3">
-          <label htmlFor="name" className="form-label">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            className="form-control"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="email" className="form-label">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            className="form-control"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="message" className="form-label">Message</label>
+    <div className="contact-container">
+      <div className="contact-form">
+        <h2>Just say <span className="contact-pink">Hello !</span></h2>
+        <p>Let us know more about you !</p>
+        <form onSubmit={handleSubmit}>
+          <div className="form-row">
+            <input
+              type="text"
+              name="firstName"
+              placeholder="First Name"
+              value={formData.firstName}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="text"
+              name="lastName"
+              placeholder="Last Name"
+              value={formData.lastName}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-row">
+            <input
+              type="email"
+              name="mail"
+              placeholder="Mail"
+              value={formData.mail}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="text"
+              name="phone"
+              placeholder="Phone"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+            />
+          </div>
           <textarea
-            id="message"
             name="message"
-            className="form-control"
-            rows={5}
+            placeholder="Message"
             value={formData.message}
             onChange={handleChange}
             required
-          ></textarea>
+          />
+          <button type="submit" className="contact-btn">SUBMIT</button>
+        </form>
+      </div>
+      <div className="contact-info">
+        <h2>Contact <span className="contact-pink">Information</span></h2>
+        <p>
+          77 Baker Street<br />
+          Bondowoso. 87655<br />
+          Indonesia
+        </p>
+        <p>
+          Call Us : +62 81 334 61 00
+          <br />
+          <br />
+          We are open from Monday - Friday<br />
+          08.00 am - 05.00 pm
+        </p>
+        <h3 className="contact-follow">Follow Us</h3>
+        <div className="contact-socials">
+          <a href="#">facebook</a>
+          <a href="#">instagram</a>
+          <a href="#">vimeo</a>
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
-      </form>
+      </div>
     </div>
   );
 };

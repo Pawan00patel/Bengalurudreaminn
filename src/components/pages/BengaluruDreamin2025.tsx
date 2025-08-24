@@ -17,6 +17,8 @@ const BengaluruDreamin2025: React.FC = () => {
       <BengaluruDreaminNavbar />
         <div className="min-h-screen">
           <BengaluruDreaminNavbar />
+
+             
           {/* Hero Section */}
           <Hero />
           {/* Content Sections */}

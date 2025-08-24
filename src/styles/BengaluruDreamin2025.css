@@ -138,9 +138,11 @@
 }
 
 .section-dark {
-  background-color: #111827;
+  background-color: #000000;
   color: #000000;
 }
+
+
 
 .section-dark .section-title {
   color: #ffffff;

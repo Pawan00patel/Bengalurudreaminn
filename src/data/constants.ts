@@ -6,18 +6,110 @@ export const navItems: NavItem[] = [
   { id: 'home', label: 'Home', href: '/' },
 
   { id: 'about', label: 'About', href: '/about' },
-  { id: 'speakers', label: 'Speakers', href: '/speakers' },
+  // { id: 'speakers', label: 'Speakers', href: '/speakers' },
   { id: 'events', label: 'Events', href: '/events' },
-  { id: 'our-team', label: 'Our Team', href: '/our-team' },
-  { id: 'gallery', label: 'Gallery', href: '/gallery' },
-  { id: 'blog', label: 'Blog', href: '/blog' },
+  // { id: 'our-team', label: 'Our Team', href: '/our-team' },
+  // { id: 'gallery', label: 'Gallery', href: '/gallery' },
+  // { id: 'blog', label: 'Blog', href: '/blog' },
   { id: 'our-initiatives', label: 'Our Initiatives', href: '/our-initiatives' },
-  { id: 'contact', label: 'Contact', href: '/contact-us' },
-  { id: 'sponsors', label: 'Sponsors', href: '/sponsors' },           
- { id: 'bengaluru-dreamin-2025', label: 'Bengaluru Dreamin 2024', href: '/BengaluruDreamin2025' }
+
+  // { id: 'sponsors', label: 'Sponsors', href: '/sponsors' },           
+ { id: 'bengaluru-dreamin-2025', label: 'Bengaluru Dreamin 2024', href: '/BengaluruDreamin2025' },
+  
+   { id: 'copadocon2025', label: 'CopadoCon 2025', href: '/copadocon2025' },
+    { id: 'contact', label: 'Contact Us', href: '/contact-us' }
 ];
 
 export const speakers: Speaker[] = [
+  {
+    id: 'nalini-sharma',
+    name: "Nalini Sharma",
+    topic: "Driving Salesforce Adoption in Large Enterprises",
+    experience: "24 years",
+    image: '/images/coreteamandfounders/Sukesh-1-1.jpg',
+    linkedin: 'https://www.linkedin.com/in/nalinik/',
+    dateSpoken: '2023-06-24'
+  },
+   {
+    id: 'nalini-sharma',
+    name: "Nalini Sharma",
+    topic: "Driving Salesforce Adoption in Large Enterprises",
+    experience: "24 years",
+    image: '/images/coreteamandfounders/Sukesh-1-1.jpg',
+    linkedin: 'https://www.linkedin.com/in/nalinik/',
+    dateSpoken: '2023-06-24'
+  }, {
+    id: 'nalini-sharma',
+    name: "Nalini Sharma",
+    topic: "Driving Salesforce Adoption in Large Enterprises",
+    experience: "24 years",
+    image: '/images/coreteamandfounders/Sukesh-1-1.jpg',
+    linkedin: 'https://www.linkedin.com/in/nalinik/',
+    dateSpoken: '2023-06-24'
+  },
+  {
+    id: 'shibu-mathew',
+    name: "Shibu Mathew",
+    topic: "Salesforce Best Practices and Tips",
+    experience: "17 years",
+    image:'/images/coreteamandfounders/Sukesh-1-1.jpg',
+    linkedin: 'https://www.linkedin.com/in/nalinik/',
+    dateSpoken: '2023-10-28'
+  },
+  {
+    id: 'kannan-narayanan',
+    name: "Kannan Narayanan",
+    topic: "Advanced Salesforce Architectures",
+    experience: "11 years",
+    image:'/images/coreteamandfounders/Sukesh-1-1.jpg',
+    linkedin: 'https://www.linkedin.com/in/nalinik/',
+    dateSpoken: '2024-02-10'
+  },
+  {
+    id: 'roshan-dsouza',
+    name: "Roshan D'Souza",
+    topic: "Building a Career in Salesforce",
+    experience: "10 years",
+    image: '/images/coreteamandfounders/Sukesh-1-1.jpg',
+    linkedin: 'https://www.linkedin.com/in/nalinik/',
+    dateSpoken: '2023-07-22'
+  },
+{
+    id: 'nalini-sharma',
+    name: "Nalini Sharma",
+    topic: "Driving Salesforce Adoption in Large Enterprises",
+    experience: "24 years",
+    image: '/images/coreteamandfounders/Sukesh-1-1.jpg',
+    linkedin: 'https://www.linkedin.com/in/nalinik/',
+    dateSpoken: '2023-06-24'
+  },
+  {
+    id: 'shibu-mathew',
+    name: "Shibu Mathew",
+    topic: "Salesforce Best Practices and Tips",
+    experience: "17 years",
+    image:'/images/coreteamandfounders/Sukesh-1-1.jpg',
+    linkedin: 'https://www.linkedin.com/in/nalinik/',
+    dateSpoken: '2023-10-28'
+  },
+  {
+    id: 'kannan-narayanan',
+    name: "Kannan Narayanan",
+    topic: "Advanced Salesforce Architectures",
+    experience: "11 years",
+    image:'/images/coreteamandfounders/Sukesh-1-1.jpg',
+    linkedin: 'https://www.linkedin.com/in/nalinik/',
+    dateSpoken: '2024-02-10'
+  },
+  {
+    id: 'roshan-dsouza',
+    name: "Roshan D'Souza",
+    topic: "Building a Career in Salesforce",
+    experience: "10 years",
+    image: '/images/coreteamandfounders/Sukesh-1-1.jpg',
+    linkedin: 'https://www.linkedin.com/in/nalinik/',
+    dateSpoken: '2023-07-22'
+  },
   {
     id: 'nalini-sharma',
     name: "Nalini Sharma",
@@ -53,7 +145,8 @@ export const speakers: Speaker[] = [
     image: '/images/coreteamandfounders/Sukesh-1-1.jpg',
     linkedin: 'https://www.linkedin.com/in/nalinik/',
     dateSpoken: '2023-07-22'
-  }
+  },
+
 ];
 
 export const reasons: Reason[] = [

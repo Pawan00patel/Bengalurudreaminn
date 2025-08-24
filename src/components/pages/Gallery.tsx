@@ -36,7 +36,16 @@ const Gallery: React.FC<GalleryProps> = () => {
   const prevLightbox = () => setLightboxIndex(i => Math.max(0, i - 1));
 
   return (
-    <div className="min-vh-100" style={{ background: 'linear-gradient(135deg,rgb(0, 0, 0) 0%,rgb(0, 0, 0) 50%,rgb(87, 32, 32) 100%)', color: '#fff', overflow: 'hidden' }}>
+    <div className="min-vh-100" 
+       style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: '120px',
+        padding: '3vw 0',
+        width: '100%',
+        background: 'radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%)',
+      }}>
       <div className="container py-5">
         <div className="d-flex flex-wrap gap-2 mb-4">
           {categories.map(category => (

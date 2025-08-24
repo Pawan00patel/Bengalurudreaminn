@@ -2,39 +2,48 @@ import React from 'react';
 import { speakers } from '../../data/constants';
 import { Speaker } from '../../types';
 import '../../styles/Speakers.css';
+// Dynamically generate topics from speakers data
 
 const Speakers: React.FC = () => {
+
+
   return (
-    <div className="speakers--grid">
-      {speakers.map((speaker: Speaker) => (
-        <div key={speaker.id} className="speaker-card-modern">
-          <div className="speaker-img-container">
-            <img
-              src={speaker.image}
-              alt={speaker.name}
-              className="speaker-img-modern"
-            />
-          </div>
-          <div className="speaker-content-block card-blur-content">
-            <h3 className="speaker-name-modern">{speaker.name}</h3>
-            <p className="speaker-role-modern">{speaker.topic}</p>
-            <p className="speaker-experience-modern">{speaker.experience}</p>
-            {speaker.dateSpoken && (
-              <p className="speaker-date-modern">Spoke on: {speaker.dateSpoken}</p>
-            )}
-            {speaker.linkedin && (
-              <a 
-                href={speaker.linkedin} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="speaker-linkedin-modern"
-              >
-                Know more
-              </a>
-            )}
-          </div>
+    <div
+       style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: '120px',
+        padding: '3vw 0',
+        width: '100%',
+        background: 'radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%)',
+      }}
+    >
+      <div className="speakersPage--container" style={{ background: 'transparent', color: '#fff' }}>
+        <div className="speakers--grid-flat">
+          {speakers.map((speaker: Speaker) => (
+            <div key={speaker.id} className="speaker-flat-card">
+              <div className="speaker-flat-img-container">
+                <a href={speaker.linkedin} target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={speaker.image}
+                    alt={speaker.name}
+                    className="speaker-flat-img"
+                    style={{ cursor: 'pointer' }}
+                  />
+                </a>
+              </div>
+              <div className="speaker-flat-info">
+                <div className="speaker-flat-name">{speaker.name}</div>
+                <div className="speaker-flat-title">{speaker.topic}</div>
+                {speaker.experience && (
+                  <div className="speaker-flat-experience">{speaker.experience}</div>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
   );
 };
