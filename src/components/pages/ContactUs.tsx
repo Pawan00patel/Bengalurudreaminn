@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import '../../styles/ContactUs.css';
  // Import the CSS file
 
@@ -16,9 +17,20 @@ const ContactUs: React.FC = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+  const now = new Date().toLocaleString();
+  emailjs.send(
+    'service_lsrd8nd', // Your service ID
+    'template_3v8ji3n', // Your template ID
+    {
+      name: `${formData.firstName} ${formData.lastName}`,
+      time: now,
+      message: formData.message
+    },
+    'tJ20SOMZhyCTD1TcS' // Your EmailJS user ID
+  )
+  .then(() => {
     alert('Thank you for contacting us!');
     setFormData({
       firstName: '',
@@ -27,7 +39,11 @@ const ContactUs: React.FC = () => {
       phone: '',
       message: ''
     });
-  };
+  })
+  .catch(() => {
+    alert('Failed to send email. Please try again.');
+  });
+};
 
   return (
     <div className="contact-container">

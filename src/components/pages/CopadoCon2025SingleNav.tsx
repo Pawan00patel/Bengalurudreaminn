@@ -229,27 +229,7 @@ const CopadoCon2025SingleNav: React.FC = () => {
             CopadoCon 2025 is the flagship, community-focused conference brought to you by Copado, the global leader in DevOps and AI-driven transformation for the Salesforce ecosystem
           </p>
         </div>
-        <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap', zIndex: 1, marginBottom: 8 }}>
-          <a
-            href="https://konfhub.com/checkout/copadocon-2025"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              background: '#01c3ee',
-              color: '#fff',
-              fontWeight: 600,
-              fontSize: '1.1rem',
-              padding: '0.75rem 2rem',
-              borderRadius: 8,
-              textDecoration: 'none',
-              boxShadow: 'none',
-              marginTop: 8,
-              border: 'none',
-              transition: 'background 0.2s',
-              display: 'inline-block',
-            }}
-          >Register Your Interest</a>
-        </div>
+    
       </section>
 
       {/* About Section */}
@@ -295,8 +275,6 @@ const CopadoCon2025SingleNav: React.FC = () => {
       {/* Speakers Section */}
       {/* Sponsors Section (swapped position) */}
       <section id="sponsors" style={{ maxWidth: 900, margin: '0 auto', padding: '4rem 1rem', textAlign: 'center' }}>
-        <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 8 }}>Exclusive Sponsor</h2>
-     
             <CopadoSponsor />
          
       </section>
