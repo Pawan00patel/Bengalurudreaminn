@@ -99,7 +99,7 @@ export const speakers: Speaker[] = [
   {
     id: '12',
     name: 'Lee Cunningham',
-    photo: '/images/copadospeaker/lee.jpg',
+    photo: '/images/copadospeaker/Lee C image.jpeg',
     social: {
       linkedin: 'https://www.linkedin.com/in/lee-cunningham-53a791b3/',
     },
@@ -216,14 +216,14 @@ export const speakers: Speaker[] = [
       linkedin: 'https://www.linkedin.com/in/stevesimpson6/',
     },
   },
-  {
-    id: '27',
-    name: 'Swapnil Dongare',
-    photo: '/images/copadospeaker/swapnil.jpg',
-    social: {
-      linkedin: 'https://www.linkedin.com/in/swapnil-dongare/',
-    },
-  },
+  // {
+  //   id: '27',
+  //   name: 'Swapnil Dongare',
+  //   photo: '/images/copadospeaker/swapnil.jpg',
+  //   social: {
+  //     linkedin: 'https://www.linkedin.com/in/swapnil-dongare/',
+  //   },
+  // },
   {
     id: '28',
     name: 'Tulsi Krishnaa D',
@@ -251,7 +251,7 @@ export const speakers: Speaker[] = [
   {
     id: '31',
     name: 'Vikas Khandelwal',
-    photo: '/images/copadospeaker/.jpg',
+    photo: '/images/copadospeaker/vikas khandewal.png',
     social: {
       linkedin: 'https://www.linkedin.com/in/vikas-khandelwal-b7314b35/',
     },

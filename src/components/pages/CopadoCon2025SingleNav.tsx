@@ -66,34 +66,33 @@ const CopadoCon2025SingleNav: React.FC = () => {
             className="navbar-logos"
             style={{ display: 'flex', alignItems: 'center', gap: 16 }}
           >
-            <a
-              className="navbar-brand d-flex align-items-center gap-2"
-              href="https://bengalurudreamin.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ marginLeft: '-125px', display: 'flex', alignItems: 'center' }}
-            >
-              <img
-                src={process.env.PUBLIC_URL + '/images/logos/New-Dreamin-Logo-White.png'}
-                alt="Bengaluru Dreamin Logo"
-                className="dreamin-logo"
-                style={{ height: '36px' }}
-              />
-            </a>
-            <div className="logo-divider" style={{ height: 32, width: 1, background: '#e0e0e0', margin: '0 12px 0 2px' }} />
-            <a
-              href="https://www.copado.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ display: 'flex', alignItems: 'center' }}
-            >
-              <img
-                src={process.env.PUBLIC_URL + '/images/logos/00_Copado Logo_Blue and White.png'}
-                alt="Copado Logo"
-                className="copado-logo"
-                style={{ height: '32px', borderRadius: 4, padding: 2 }}
-              />
-            </a>
+            <div className="logo-container">
+              <a
+                className="navbar-brand"
+                href="https://bengalurudreamin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={process.env.PUBLIC_URL + '/images/logos/New-Dreamin-Logo-White.png'}
+                  alt="Bengaluru Dreamin Logo"
+                  className="dreamin-logo"
+                />
+              </a>
+              <div className="logo-divider" />
+              <a
+                href="https://www.copado.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="copado-link"
+              >
+                <img
+                  src={process.env.PUBLIC_URL + '/images/logos/00_Copado Logo_Blue and White.png'}
+                  alt="Copado Logo"
+                  className="copado-logo"
+                />
+              </a>
+            </div>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
             <button
@@ -167,7 +166,7 @@ const CopadoCon2025SingleNav: React.FC = () => {
           className="copadocon-hero-logo"
         />
         <div style={{ maxWidth: 800, margin: '0 auto', zIndex: 1 }}>
-              <p style={{ fontSize: '1.2rem', marginBottom: 53, lineHeight: 1.6, wordBreak: 'break-word', whiteSpace: 'pre-line' }}>
+              <p style={{ fontSize: '1.2rem', marginBottom: 53, lineHeight: 1.6, wordBreak: 'break-word', whiteSpace: 'pre-line', padding: '17px', textAlign: 'justify' }}>
             CopadoCon 2025 is the flagship, community-focused conference brought to you by Copado, the global leader in DevOps and AI-driven transformation for the Salesforce ecosystem
           </p>
         </div>
@@ -238,38 +237,119 @@ const CopadoCon2025SingleNav: React.FC = () => {
         <div style={{ fontWeight: 700, fontSize: '1.1rem' }}>© 2025 CopadoCon. All rights reserved.</div>
       </footer>
       <style>{`
+        .logo-container {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 0 8px 0 0;  /* Reduced padding, especially on the left */
+          max-width: 100%;
+          overflow: visible;
+          margin-left: 8px;  /* Add a small margin instead of padding for finer control */
+        }
+        
+        .navbar-brand {
+          display: flex;
+          align-items: center;
+          padding: 4px;
+          transition: transform 0.2s ease;
+        }
+        
+        .dreamin-logo {
+          height: 36px;
+          width: auto;
+          max-width: 100%;
+        }
+        
+        .logo-divider {
+          height: 32px;
+          width: 1px;
+          background: #e0e0e0;
+          margin: 0 8px;
+        }
+        
+        .copado-link {
+          display: flex;
+          align-items: center;
+          padding: 4px;
+        }
+        
+        .copado-logo {
+          height: 32px;
+          border-radius: 4px;
+          padding: 2px;
+          width: auto;
+          max-width: 100%;
+        }
+
+        @media (max-width: 1024px) {
+          .navbar-brand {
+            margin-left: -80px !important;
+          }
+          .about-copadocon-desc {
+            padding: 0 20px;
+          }
+        }
+        
+        @media (max-width: 912px) {
+          .navbar-brand {
+            margin-left: -60px !important;
+          }
+          .about-copadocon-desc {
+            padding: 0 16px;
+          }
+        }
+
+        @media (max-width: 853px) {
+          .navbar-brand {
+            margin-left: -40px !important;
+          }
+        }
+
+        @media (max-width: 820px) {
+          .navbar-brand {
+            margin-left: -20px !important;
+          }
+          .about-copadocon-desc {
+            padding: 0 12px;
+          }
+        }
+
         @media (max-width: 600px) {
-  #hero {
-    padding-top: 16px !important;
-    padding-bottom: 16px !important;
-    min-height: 80vh !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(285deg, #2463ea, #550cad 57%, #000);
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-  }
-}
+          #hero {
+            padding-top: 16px !important;
+            padding-bottom: 16px !important;
+            min-height: 90vh !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(285deg, #2463ea, #550cad 57%, #000);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+          }
+          .navbar-brand {
+            margin-left: 0 !important;
+          }
+        }
 
       .about-copadocon-heading {
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 16px;
+            padding: 0 15px;
           }
           .about-copadocon-desc {
             font-size: 1.2rem;
             margin-bottom: 24px;
             text-align: justify;
-            padding-left: 16px;
-            padding-right: 16px;
+            padding: 0 30px;
+            line-height: 1.6;
           }
           .hero-desc {
-            padding-left: 16px;
-            padding-right: 16px;
+            padding: 0 20px;
+            text-align: justify;
           }
 
       
@@ -308,6 +388,7 @@ const CopadoCon2025SingleNav: React.FC = () => {
           .copado-hamburger { display: block !important; }
           .navbar-logos {
             gap: 8px !important;
+            padding: 0 10px;
           }
           .dreamin-logo {
             height: 24px !important;
@@ -322,31 +403,97 @@ const CopadoCon2025SingleNav: React.FC = () => {
           }
           .navbar-brand {
             margin-left: 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
           }
         }
         @media (max-width: 480px) {
           .about-copadocon-heading {
-            font-size: 1.7rem;
+            font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 5x
+            margin-bottom: 10px;
+            padding: 0 10px;
           }
           .about-copadocon-desc {
-          font-size: 1.0rem;
-          margin-bottom: 5px;
-          text-align: justify;
+            font-size: 1.0rem;
+            margin-bottom: 15px;
+            text-align: justify;
+            padding: 0 15px;
+            line-height: 1.5;
           }
-          .navbar-logos {
-            gap: 4px !important;
+          .hero-desc {
+            padding: 0 15px;
+            font-size: 0.95rem;
+          }
+          .logo-container {
+            gap: 6px;
+            padding: 0 8px;
+          }
+          .navbar-brand {
+            padding: 2px;
           }
           .dreamin-logo {
-            height: 27px !important;
+            height: 22px;
           }
           .copado-logo {
-            height: 30px !important;
+            height: 20px;
           }
           .logo-divider {
-            height: 16px !important;
-            margin: 0 3px 0 -4px !important;
+            height: 16px;
+            margin: 0 2px;
+          }
+          .copado-link {
+            padding: 2px;
+          }
+        }
+
+        /* Additional breakpoints for better logo handling */
+        @media (max-width: 1200px) {
+          .logo-container {
+            padding: 0 14px;
+          }
+        }
+
+        @media (max-width: 992px) {
+          .logo-container {
+            padding: 0 12px;
+          }
+          .dreamin-logo {
+            height: 32px;
+          }
+          .copado-logo {
+            height: 28px;
+          }
+        }
+
+        @media (max-width: 820px) {
+          .logo-container {
+            padding: 0 10px;
+          }
+          .dreamin-logo {
+            height: 28px;
+          }
+          .copado-logo {
+            height: 26px;
+          }
+          .logo-divider {
+            margin: 0 6px;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .logo-container {
+            padding: 0 8px;
+          }
+          .dreamin-logo {
+            height: 24px;
+          }
+          .copado-logo {
+            height: 22px;
+          }
+          .logo-divider {
+            margin: 0 4px;
           }
         }
         .copadocon-hero-logo {
