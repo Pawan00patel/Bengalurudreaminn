@@ -1,0 +1,82 @@
+/* CopadoConSpeaker.css */
+.speaker-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.speaker-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  text-align: center;
+  transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.speaker-card:hover {
+  box-shadow: 0 4px 24px rgba(36, 8, 78, 0.94);
+}
+
+.speaker-photo {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid #e0e0e0;
+}
+
+.speaker-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.speaker-title {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.speaker-social {
+  margin-top: 0.5rem;
+}
+
+.speaker-social a {
+  color: #0077b5;
+  font-size: 1.5rem;
+  margin: 0 0.25rem;
+  transition: color 0.2s;
+}
+
+.speaker-social a:hover {
+  color: #005983;
+}
+
+@media (max-width: 1024px) {
+  .speaker-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .speaker-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .speaker-card {
+    padding: 1rem;
+  }
+  .speaker-photo {
+    width: 160px;
+    height: 160px;
+  }
+}

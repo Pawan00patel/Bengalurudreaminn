@@ -20,16 +20,45 @@ const App: React.FC = () => {
   return (
     <Router>
       <Switch>
-        {/* Main site routes with header/footer */}
+        {/* CopadoCon2025 dedicated routes */}
         <Route
+          exact
+          path="/copadocon2025/sponsors"
+          render={() => (
+            <div className="d-flex flex-column min-vh-100 bg-gradient-to-br from-blue-50 to-indigo-100">
+              {React.createElement(require('./sections/CopadoSponsor').default)}
+            </div>
+          )}
+        />
+        <Route
+          exact
+          path="/copadocon2025/speakers"
+          render={() => (
+            <div className="d-flex flex-column min-vh-100 bg-gradient-to-br from-blue-50 to-indigo-100">
+              {React.createElement(require('./sections/CopadoConSpeaker').default)}
+            </div>
+          )}
+        />
+        <Route
+          exact
+          path="/copadocon2025/agenda"
+          render={() => (
+            <div className="d-flex flex-column min-vh-100 bg-gradient-to-br from-blue-50 to-indigo-100">
+              {React.createElement(require('./sections/CopadoConAgenda').default)}
+            </div>
+          )}
+        />
+        {/* Main CopadoCon2025 landing page (with navigation, hero, about, etc.) */}
+        <Route
+          exact
           path="/copadocon2025"
           render={() => (
             <div className="d-flex flex-column min-vh-100 bg-gradient-to-br from-blue-50 to-indigo-100">
-              {/* No Header or Footer for CopadoCon2025SingleNav */}
               {React.createElement(require('./pages/CopadoCon2025SingleNav').default)}
             </div>
           )}
         />
+        {/* BengaluruDreamin routes (unchanged) */}
         <Route
           exact
           path="/BengaluruDreamin2025/event-founders/sponsors"
@@ -55,6 +84,7 @@ const App: React.FC = () => {
             </div>
           )}
         />
+        {/* Main site routes with header/footer */}
         <Route
           render={() => (
             <div className="d-flex flex-column min-vh-100 bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -64,14 +94,13 @@ const App: React.FC = () => {
                   <Route exact path="/" component={Home} />
                   <Route path="/speakers" component={Speakers} />
                   <Route path="/about" component={About} />
-                      <Route path="/our-team" component={OurTeam} />
+                  <Route path="/our-team" component={OurTeam} />
                   <Route path="/gallery" component={Gallery} />
                   <Route path="/sponsors" component={SponsorsPage} />
                   <Route path="/contact-us" component={ContactUs} />
                   <Route exact path="/blog" component={Blog} />
                   <Route path="/blog/:slug" component={BlogDetail} />
                   <Route path="/events" component={Events} />
-                  {/* Route for CopadoCon2025 removed as file is deleted */}
                 </Switch>
               </div>
               <Footer />

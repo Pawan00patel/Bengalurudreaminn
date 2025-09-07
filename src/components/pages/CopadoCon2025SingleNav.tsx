@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CopadoSponsor from '../sections/CopadoSponsor';
 import CopadoConSpeaker from '../sections/CopadoConSpeaker';
+import CopadoConAgenda from '../sections/CopadoConAgenda';
 
 // const speakers = [
 //   {
@@ -73,7 +74,8 @@ const navItems = [
 const scrollToSection = (id: string) => {
   const el = document.getElementById(id);
   if (el) {
-    const yOffset = -90; // height of fixed header
+    let yOffset = -90;
+    if (window.innerWidth <= 600) yOffset = -40;
     const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
     window.scrollTo({ top: y, behavior: 'smooth' });
   }
@@ -212,8 +214,8 @@ const CopadoCon2025SingleNav: React.FC = () => {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        paddingTop: 48,
-        paddingBottom: 48,
+        paddingTop: window.innerWidth <= 600 ? 16 : 48,
+        paddingBottom: window.innerWidth <= 600 ? 16 : 48,
         textAlign: 'center',
         background: 'linear-gradient(285deg, #2463ea, #550cad 57%, #000)',
         color: '#fff',
@@ -273,19 +275,17 @@ const CopadoCon2025SingleNav: React.FC = () => {
         >Join Copado Community</a>
       </section>
 
+      {/* Sponsors Section */}
+      <section id="sponsors">
+        <CopadoSponsor />
+      </section>
       {/* Speakers Section */}
-      {/* Sponsors Section (swapped position) */}
-            <CopadoSponsor />
-         
-      
-      {/* Speakers Section (swapped position) */}
-       <CopadoConSpeaker />
-    
-
-      {/* Agenda Section (replacing Contact) */}
-      <section id="agenda" style={{ maxWidth: 800, margin: '0 auto', padding: '4rem 1rem', textAlign: 'center' }}>
-        <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 8 }}>Agenda</h2>
-        <div style={{ fontSize: '1.3rem', color: '#0070f3', fontWeight: 600, padding: '0.5rem 0' }}>To Be Announced</div>
+      <section id="speakers">
+        <CopadoConSpeaker />
+      </section>
+      {/* Agenda Section */}
+      <section id="agenda">
+        <CopadoConAgenda />
       </section>
 
       {/* Footer */}
@@ -299,6 +299,22 @@ const CopadoCon2025SingleNav: React.FC = () => {
         <div style={{ fontWeight: 700, fontSize: '1.1rem' }}>© 2025 CopadoCon. All rights reserved.</div>
       </footer>
       <style>{`
+        @media (max-width: 600px) {
+  #hero {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+    min-height: 80vh !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(285deg, #2463ea, #550cad 57%, #000);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+}
 
       .about-copadocon-heading {
             font-size: 2rem;
@@ -373,11 +389,11 @@ const CopadoCon2025SingleNav: React.FC = () => {
           .about-copadocon-heading {
             font-size: 1.7rem;
             font-weight: 700;
-            margin-bottom: 16px;
+            margin-bottom: 5x
           }
           .about-copadocon-desc {
           font-size: 1.0rem;
-          margin-bottom: 24px;
+          margin-bottom: 5px;
           text-align: justify;
           }
           .navbar-logos {
@@ -393,9 +409,6 @@ const CopadoCon2025SingleNav: React.FC = () => {
             height: 16px !important;
             margin: 0 3px 0 -4px !important;
           }
-        }
-        .copado-nav-list button:hover {
-          color: #01c3ee !important;
         }
         .copadocon-hero-logo {
           height: 300px;
