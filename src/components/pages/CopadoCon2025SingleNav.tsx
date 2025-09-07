@@ -391,11 +391,11 @@ const CopadoCon2025SingleNav: React.FC = () => {
             padding: 0 10px;
           }
           .dreamin-logo {
-            height: 24px !important;
+            height: 26px !important;
             margin-left: 0 !important;
           }
           .copado-logo {
-            height: 22px !important;
+            height: 26px !important;
           }
           .logo-divider {
             height: 22px !important;
@@ -516,7 +516,7 @@ const CopadoCon2025SingleNav: React.FC = () => {
         }
         @media (max-width: 480px) {
           .copadocon-hero-logo {
-            height: 200px;
+            height: 250px;
           }
         }
       `}</style>
