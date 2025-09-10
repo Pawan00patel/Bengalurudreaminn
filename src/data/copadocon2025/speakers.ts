@@ -155,7 +155,7 @@ export const speakers: Speaker[] = [
   {
     id: '19',
     name: 'Prashanth Krishnamurthy',
-    photo: '/images/copadospeaker/Pranshanth.jpg',
+    photo: '/images/copadospeaker/Pranshanth.png',
     social: {
       linkedin: 'https://www.linkedin.com/in/prashanthkrishnamurthy/',
     },
